@@ -1,0 +1,1497 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<base href="http://nautiecgialong.com/">
+<link id="favicon" rel="shortcut icon" href="upload/hinhanh/nguyenhadasdamsau109-6340_40x35.038759689922.png" type="image/x-icon" />
+
+<title>NH?N Ð?T N?U TI?C T?I NHÀ TR?N GÓI-D?CH V? GIA LONG</title>
+<meta name="description" content="nh?n d?t ti?c t?i nhà tr?n gói giá ch? t? 1,2tri?u/1bàn. Bao Ngon, Bao R?, Bao Ch?t Lu?ng. LH: 0909340797-0969156575 
+">
+<meta name="keywords" content=" n?u ti?c t?i nhà, D?ch v? n?u ti?c Gia Long, d?ch v? n?u an,d?ch v? n?u ti?c t?i nhà, d?t ti?c t?i nhà, n?u ti?c t?i nhà tr?n gói,n?u ti?c giá r?, n?u ti?c ngon tp hcm, nh?n n?u ti?c t?i nhà,d?ch v? n?u an,d?ch v? n?u an,">
+
+<meta name="robots" content="noodp,index,follow" />
+<meta name="google" content="notranslate" />
+<meta name='revisit-after' content='1 days' />
+<meta name="ICBM" content="10.8069368,106.6195479,17">
+<meta name="geo.position" content="10.8069368,106.6195479,17">
+<meta name="geo.placename" content="77/4 B? Bao Tân Th?ng, Phu?ng Son Ký, Qu?n Tân Phú, Tp. H? Chí Minh">
+<meta name="author" content=" ">
+<link rel="stylesheet" href="plugin/font-awesome-4.3.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/reset.css">
+<!-- <link href="js/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="css/style.css">
+<link href="css/media.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,greek-ext,cyrillic-ext,vietnamese,greek' rel='stylesheet' type='text/css'>
+
+
+<script language="javascript" type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<!-- <script language="javascript" type="text/javascript" src="js/bootstrap/js/bootstrap.min.js"></script> -->
+<link rel="stylesheet" type="text/css" href="css/jqueryslidemenu.css">
+<script src="js/jqueryslidemenu.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/owl.carousel.min.css" />
+<link rel="stylesheet" href="css/owl.theme.default.min.css" />
+<script src="js/owl.carousel.js"></script>
+<!-- slick -->
+<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+<link rel="stylesheet" type="text/css" href="css/slick-theme2.css"/>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        
+        jQuery(".fancybox").fancybox();
+        jQuery(".various3").fancybox({
+            'width'             : '70%',
+            'height'            : '60%',
+            'autoScale'         : false,
+            'transitionIn'      : 'none',
+            'transitionOut'     : 'none',
+            'type'              : 'iframe'
+        });  
+        $('.content iframe').each(function(index, el) {
+            $(this).wrap( "<div class='video-container'></div>" );
+
+        });
+        $('.content table').each(function(index, el) {
+            $(this).wrap( "<div class='table-responsive'></div>" );
+
+        });           
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('body').append('<div id="top" ></div>');
+        $(window).scroll(function() {
+            if($(window).scrollTop() > 100) {
+                $('#top').fadeIn();
+            } else {
+                $('#top').fadeOut();
+            }
+        });
+        $('#top').click(function() {
+            $('html, body').animate({scrollTop:0},500);
+        });
+
+    
+    });
+</script>
+<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>   
+<script type="text/javascript">
+$(document).ready(function() {
+    $('nav#menu').mmenu();
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('a.add_to_basket').click(function(){
+            var pid=$(this).attr('rel');
+             $.ajax({
+              type: "POST",
+              url: "ajax/add_giohang.php",
+              data: "pid="+pid,
+              dataType: 'json',
+              success:function(data){
+                    alert('Ðua vào gi? hàng thành công');
+                    $('.count_cart').html(data.count);
+                }
+            });
+        });
+
+    });
+</script>  
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAL928AIsIDYz9oUb-ILO5LTe_7MQnVgDA"></script>
+                    
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89709083-1', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+<link  href="css/fotorama.css" rel="stylesheet">
+<script src="js/fotorama.js"></script>
+<link rel="stylesheet" href="css/animate.css">
+<script src="js/wow.min.js"></script>
+<script> new WOW().init(); </script>
+<script src="js/lucid.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <style>
+    .header{
+            background:url(upload/hinhanh/1-8460.jpg);background-size:cover;box-sizing: border-box;    padding:5px 0px;}
+</style>
+<div class="header"  >
+            <div class="wrapper">
+            <div class="logo">
+                <a href="index.php">
+                     <img src="upload/hinhanh/nguyenhadasdamsau1095468130x113-9243_130x115.png" alt="logo"  />
+                </a>
+            </div>
+            <div class="banner">
+              <img class="left" src="upload/hinhanh/nguyenhadasdamsau1062970420x160sssss-7997_420x160.png" alt=" ">
+              <div class="clear"></div>
+              <div class="hotline_hd">Hotline : 0909 340 797 - 0969 156 575 (Anh Phong)</div>
+              
+            </div>
+                          <div class="address">
+                <!-- <img class="left" src="upload/hinhanh/5-5325_505x180.png"> -->
+                </div>
+            <div class="clear"></div>
+           
+            </div>
+            
+<div class="clear"></div>
+
+</div>     
+    </div>
+    <div id="menu">
+        <div class="wrapper">
+<div class="menu">
+        <ul>
+            <li  class="active"><a href="index.php">Trang ch? </a></li>   
+            <li class=""><a href="gioi-thieu.html"> Gi?i thi?u </a></li>
+            <li class=""><a href="san-pham.html">Menu s?n ph?m</a>
+                <ul>
+                 
+                    <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-tai-nha">N?U TI?C T?I NHÀ</a>
+                        <ul>
+                                                        <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-dam-cuoi-136.html">N?u ti?c dám cu?i</a></li>
+                                                        <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-dam-hoi-135.html">N?u ti?c dám h?i</a></li>
+                                                        <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-tai-tan-gia-138.html">N?u ti?c t?i tân gia</a></li>
+                                                        <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-sinh-nhat-134.html">N?u ti?c sinh nh?t</a></li>
+                                                        <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-dam-gio-150.html">N?u ti?c dám gi?</a></li>
+                                                        <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-lien-hoan-151.html">N?u ti?c liên hoan</a></li>
+                                                        <li ><a href="san-pham/nau-tiec-tai-tp-hcm-152.html">N?u ti?c t?i Tp HCM</a></li>
+                                                    </ul>
+                    </li>
+                     
+                    <li ><a href="san-pham/to-chuc-tiec">T? CH?C TI?C</a>
+                        <ul>
+                                                        <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/to-chuc-tiec-cuoi-nam-155.html">T? ch?c ti?c Cu?i nam</a></li>
+                                                        <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/to-chuc-tiec-tai-cong-ty-154.html">T? ch?c ti?c t?i Công ty</a></li>
+                                                        <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/to-chuc-tiec-cuoi-153.html">T? ch?c ti?c cu?i</a></li>
+                                                        <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/to-chuc-tiec-dam-hoi-139.html">T? ch?c ti?c dám h?i</a></li>
+                                                        <li ><a href="san-pham/to-chuc-tiec-sinh-nhat-140.html">T? ch?c ti?c sinh nh?t</a></li>
+                                                    </ul>
+                    </li>
+                                    </ul>
+            </li>
+            <li class=""><a href="menu-tu-chon.html">Menu t? ch?n</a></li>
+               
+            </li>
+            <li class=""><a href="tin-tuc.html">Tin t?c - S? ki?n</a></li>
+            <li class=""><a href="lien-he.html">Liên h?</a></li>
+                <div class="search"><script type="text/javascript">
+    function doEnter(evt){
+        var key;
+        if(evt.keyCode == 13 || evt.which == 13){
+            onSearch(evt);
+        }
+    }
+    function onSearch(evt) {
+        var keyword = document.getElementById("keyword").value;
+        if(keyword=='' || keyword=='Nh?p t? khoá...')
+            alert('B?n chua nh?p t? khóa tìm ki?m!');
+        else{
+            location.href = "tim-kiem.html&keywords="+keyword;
+            loadPage(document.location);            
+        }
+    }
+</script>
+<div id="search">
+    <div class='txtsrch'><input type="text" class="txtsearch" name="keyword" id="keyword" value="" onkeypress="doEnter(event,'keyword');" placeholder="Tìm ki?m ..." /></div>
+    <div class='btnsrch'><input type="button" class="button-s" Onclick='onSearch(event)' value="" /></div>
+    <div class="clear"></div>
+</div></div>
+            
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.lockfixed.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $.lockfixed("#menu_lock",{offset: {top: 0, bottom:0}});
+  });
+</script>
+        <div class="clear"></div>
+    </div>
+            <div id="slider">
+            
+<script src="plugin4/amazingslider.js"></script>
+<link rel="stylesheet" type="text/css" href="plugin4/amazingslider-1.css">
+<script src="plugin4/initslider-1.js"></script>
+<div style="width: 1050px;float: left;">
+ <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:100%;margin:0 auto;">
+        <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-slides" style="display:none;">
+                                  <li><a href=""><img src="upload/hinhanh/851030260805617_1050x430.jpg" alt="B?n c?n d?t ti?c g?p - Liên h? ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="B?n c?n d?t ti?c g?p - Liên h? ngay 0909 340 797 - 0969 156 575 (Anh Phong)"></a></li>
+                                  <li><a href=""><img src="upload/hinhanh/514788675288178_1050x430.jpg" alt="B?n c?n d?t ti?c g?p - Liên h? ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="B?n c?n d?t ti?c g?p - Liên h? ngay 0909 340 797 - 0969 156 575 (Anh Phong)"></a></li>
+                                  <li><a href=""><img src="upload/hinhanh/178565249131446_1050x430.jpg" alt="B?n c?n d?t ti?c g?p - Liên h? ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="B?n c?n d?t ti?c g?p - Liên h? ngay 0909 340 797 - 0969 156 575 (Anh Phong)"></a></li>
+                                  <li><a href=""><img src="upload/hinhanh/469799659221213_1050x430.jpg" alt="B?n c?n d?t ti?c g?p - Liên h? ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="B?n c?n d?t ti?c g?p - Liên h? ngay 0909 340 797 - 0969 156 575 (Anh Phong)"></a></li>
+                                  <li><a href=""><img src="upload/hinhanh/096712954104955_1050x430.jpg" alt="B?n c?n d?t ti?c g?p - Liên h? ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="B?n c?n d?t ti?c g?p - Liên h? ngay 0909 340 797 - 0969 156 575 (Anh Phong)"></a></li>
+                            </ul>
+            <ul class="amazingslider-thumbnails" style="display:none;">
+                                 <li><a href=""><img src="upload/hinhanh/851030260805617_1050x430.jpg"></a></li>
+                                  <li><a href=""><img src="upload/hinhanh/514788675288178_1050x430.jpg"></a></li>
+                                  <li><a href=""><img src="upload/hinhanh/178565249131446_1050x430.jpg"></a></li>
+                                  <li><a href=""><img src="upload/hinhanh/469799659221213_1050x430.jpg"></a></li>
+                                  <li><a href=""><img src="upload/hinhanh/096712954104955_1050x430.jpg"></a></li>
+                            </ul>
+        </div>
+    </div>
+</div>
+<div style="width:250px;float: right; ">
+  <div class="autoplay">
+          <div class="box_hma">
+        <img src="upload/hinhanh/051185044820462_245x140.jpg" alt="sliderbn" class="doitac-img" />
+        <div class="ten_ma">Món 2</div>
+      </div>
+          <div class="box_hma">
+        <img src="upload/hinhanh/226400877209925_245x140.jpg" alt="sliderbn" class="doitac-img" />
+        <div class="ten_ma">Món 3</div>
+      </div>
+          <div class="box_hma">
+        <img src="upload/hinhanh/204724704372010_245x140.jpg" alt="sliderbn" class="doitac-img" />
+        <div class="ten_ma">Món 4</div>
+      </div>
+          <div class="box_hma">
+        <img src="upload/hinhanh/760471701623413_245x140.jpg" alt="sliderbn" class="doitac-img" />
+        <div class="ten_ma">Món 5</div>
+      </div>
+          <div class="box_hma">
+        <img src="upload/hinhanh/590621763702625_245x140.jpg" alt="sliderbn" class="doitac-img" />
+        <div class="ten_ma"> </div>
+      </div>
+          <div class="box_hma">
+        <img src="upload/hinhanh/889074175570069_245x140.jpg" alt="sliderbn" class="doitac-img" />
+        <div class="ten_ma"> </div>
+      </div>
+          <div class="box_hma">
+        <img src="upload/hinhanh/948506278675926_245x140.jpg" alt="sliderbn" class="doitac-img" />
+        <div class="ten_ma"> </div>
+      </div>
+          <div class="box_hma">
+        <img src="upload/hinhanh/611748870699656_245x140.jpg" alt="sliderbn" class="doitac-img" />
+        <div class="ten_ma"> </div>
+      </div>
+      </div>
+</div>
+<div class="clear"></div>
+
+  <script type="text/javascript">
+  $('.autoplay').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  vertical:true,
+  autoplaySpeed: 2000,
+});
+  </script>
+
+          </div>
+        <div id="content">
+    <div class="wrapper">
+        <div id="content_left">
+             <div class="container-left">
+    <div class="tt_gt"><h3 class="title">Danh m?c s?n ph?m</h3></div>
+      <div class="moudle-left danhmuc">
+      <div class="navi-left">
+                        <div class="tieude_mn"><h3>N?U TI?C T?I NHÀ</h3></div>
+
+            <div class="item-list">
+              <ul>
+                                <li><a href="san-pham/nau-tiec-dam-cuoi-136.html"><span>N?u ti?c dám cu?i</span></a></li>
+                                <li><a href="san-pham/nau-tiec-dam-hoi-135.html"><span>N?u ti?c dám h?i</span></a></li>
+                                <li><a href="san-pham/nau-tiec-tai-tan-gia-138.html"><span>N?u ti?c t?i tân gia</span></a></li>
+                                <li><a href="san-pham/nau-tiec-sinh-nhat-134.html"><span>N?u ti?c sinh nh?t</span></a></li>
+                                <li><a href="san-pham/nau-tiec-dam-gio-150.html"><span>N?u ti?c dám gi?</span></a></li>
+                                <li><a href="san-pham/nau-tiec-lien-hoan-151.html"><span>N?u ti?c liên hoan</span></a></li>
+                                <li><a href="san-pham/nau-tiec-tai-tp-hcm-152.html"><span>N?u ti?c t?i Tp HCM</span></a></li>
+                              </ul>
+              <div class="clear"></div>
+            </div>
+                      <div class="tieude_mn"><h3>T? CH?C TI?C</h3></div>
+
+            <div class="item-list">
+              <ul>
+                                <li><a href="san-pham/to-chuc-tiec-cuoi-nam-155.html"><span>T? ch?c ti?c Cu?i nam</span></a></li>
+                                <li><a href="san-pham/to-chuc-tiec-tai-cong-ty-154.html"><span>T? ch?c ti?c t?i Công ty</span></a></li>
+                                <li><a href="san-pham/to-chuc-tiec-cuoi-153.html"><span>T? ch?c ti?c cu?i</span></a></li>
+                                <li><a href="san-pham/to-chuc-tiec-dam-hoi-139.html"><span>T? ch?c ti?c dám h?i</span></a></li>
+                                <li><a href="san-pham/to-chuc-tiec-sinh-nhat-140.html"><span>T? ch?c ti?c sinh nh?t</span></a></li>
+                              </ul>
+              <div class="clear"></div>
+            </div>
+                </div>
+    </div>
+ 
+
+</div>
+<div class="container-left">
+    <div class="tt_gt"><h3 class="title">Menu t? ch?n</h3></div>
+      <div class="moudle-left danhmuc">
+      <div class="navi-left">
+                        <div class="tieude_mn"><h3><a href="menu-tu-chon/menu-tu-chon-1-168.html" title="">Menu t? ch?n 1</a></h3></div>
+                </div>
+    </div>
+ 
+
+</div>
+<div class="container-left">
+<div class="tt_gt"><h3 class="title">H? tr? tr?c tuy?n</h3></div>
+      <div class=" danhmuc">
+      <div class="navi-left">
+        <div class="item-list">
+        <div class="box_img_ht">
+            <img style="width: 100%;" src="images/img/brht.png">
+            <div class="td">H? tr? online</div>
+        </div>
+                 <div class="box_hotro">
+            <div class="mxh_ht">
+              <ul>
+                <li><a href="test" title="test"><img  src="images/img/sky.png"></a></li>
+                <li><a href="test" title="test"><img  src="images/img/viber.png"></a></li>
+                <li><a href="test" title="test"><img  src="images/img/zalo.png"></a></li>
+              </ul>
+            </div>
+            <div class="dt_ht">
+              <div class="sodt"><span>Mr. Phong</span></div>
+              <div class="emailtv"><span>0909 340 797 </span></div>
+            </div>
+            <div class="clear"></div>
+         </div>
+                   <div class="box_hotro">
+            <div class="mxh_ht">
+              <ul>
+                <li><a href="test" title="test"><img  src="images/img/sky.png"></a></li>
+                <li><a href="test" title="test"><img  src="images/img/viber.png"></a></li>
+                <li><a href="test" title="test"><img  src="images/img/zalo.png"></a></li>
+              </ul>
+            </div>
+            <div class="dt_ht">
+              <div class="sodt"><span>Mr. Phong</span></div>
+              <div class="emailtv"><span>0969 156 575 </span></div>
+            </div>
+            <div class="clear"></div>
+         </div>
+                  </div>
+    </div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+(function($) {
+    $(function() {
+        $(".scroller").simplyScroll({orientation:'vertical',customClass:'vert'});
+    });
+})(jQuery);
+</script>        
+        </div>      
+        <div id="content_right">
+            <h1 class="visit_hidden"> </h1>
+<h2 class="visit_hidden"> </h2>
+<h3 class="visit_hidden"> </h3>
+<h4 class="visit_hidden"> </h4>
+<h5 class="visit_hidden"> </h5>
+<h6 class="visit_hidden"> </h6>
+<!-- end -->
+
+<script src="js/parallax.js"></script>
+<div class="content-right">
+    <div class="spnoibat">
+        <div class="tieude"><h3>Menu nh?n d?t ti?c</h3></div>
+        
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 1: <span> 1.200.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width: 54px;"><span style="color:#FF0000;">1</span></td>
+			<td style="width: 857px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Súp h?i s?n n?m tuy?t nhi</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 54px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></strong></span></td>
+			<td style="width: 857px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Bò né + bông thiên lý</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 54px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></strong></span></td>
+			<td style="width: 857px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Gà h?p lá chanh+ xoi</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 54px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span></td>
+			<td style="width: 857px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">L?u h?i s?n</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 54px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span></td>
+			<td style="width: 857px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Rau câu dùa</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 54px;"> </td>
+			<td style="width: 857px;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="color:#008000;"> </span></span></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 2: <span> 1.200.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width: 37px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></strong></span></td>
+			<td style="width: 874px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">G?i c? h? dùa tôm th?t</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 37px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></strong></span></td>
+			<td style="width: 874px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Gà h?p hành + xôi</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 37px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></strong></span></td>
+			<td style="width: 874px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Bò n?u tiêu xanh + bánh mì</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 37px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span></td>
+			<td style="width: 874px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">L?u thái</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 37px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span></td>
+			<td style="width: 874px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Trái cây thap c?m</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 37px;"> </td>
+			<td style="width: 874px;"> </td>
+		</tr>
+	</tbody>
+</table>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" style="margin-right:0;">
+                <div >
+                  <div class="item-gia">Menu 3: <span> 1.350.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width: 38px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></strong></span></td>
+			<td style="width: 873px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Súp b?p cua</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 38px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></strong></span></td>
+			<td style="width: 873px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Tôm h?p bia</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 38px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></strong></span></td>
+			<td style="width: 873px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Su?n n?u d?u</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 38px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span></td>
+			<td style="width: 873px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">L?u riêu cua h?i s?n</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 38px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span></td>
+			<td style="width: 873px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Rau câu dùa</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 38px;"> </td>
+			<td style="width: 873px;"> </td>
+		</tr>
+	</tbody>
+</table>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <div class='clear'></div>
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 4: <span> 1.350.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width: 34px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></strong></span></td>
+			<td style="width: 877px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">G?i ngó sen tôm th?t</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 34px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></strong></span></td>
+			<td style="width: 877px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Ch? gò h?i s?n</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 34px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></strong></span></td>
+			<td style="width: 877px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Gà bó xôi</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 34px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span></td>
+			<td style="width: 877px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">L?u h?i s?n kim chi hàn qu?c</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 34px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span></td>
+			<td style="width: 877px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Rau câu dùa</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 34px;"> </td>
+			<td style="width: 877px;"> </td>
+		</tr>
+	</tbody>
+</table>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 5: <span> 1.550.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width: 35px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></strong></span></td>
+			<td style="width: 876px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">G?i b?n b?n tôm th?t</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 35px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></strong></span></td>
+			<td style="width: 876px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Cá tai tu?ng chiên xù</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 35px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></strong></span></td>
+			<td style="width: 876px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Bò né + bông thiên lý</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 35px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span></td>
+			<td style="width: 876px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Gà h?p lá chanh</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 35px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span></td>
+			<td style="width: 876px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">L?u n?m h?i s?n</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 35px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></strong></span></td>
+			<td style="width: 876px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Trái cây</span></span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" style="margin-right:0;">
+                <div >
+                  <div class="item-gia">Menu 6: <span> 1.450.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width: 34px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></strong></span></td>
+			<td style="width: 877px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">G?i c? h? dùa tôm th?t</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 34px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></strong></span></td>
+			<td style="width: 877px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Ch? gòi h?i s?n</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 34px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></strong></span></td>
+			<td style="width: 877px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Cánh gà chiên nu?c m?m</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 34px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span></td>
+			<td style="width: 877px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Cá ch?m h?p h?ng kông</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 34px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span></td>
+			<td style="width: 877px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">L?u bò</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 34px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></strong></span></td>
+			<td style="width: 877px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Rau câu d?a</span></span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <div class='clear'></div>
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 7: <span> 1.550.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width: 42px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></strong></span></td>
+			<td style="width: 869px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">G?i ti?n vua h?i s?n</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 42px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></strong></span></td>
+			<td style="width: 869px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">B?p bó h?p hành g?ng</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 42px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></strong></span></td>
+			<td style="width: 869px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Gà h?p lá chanh</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 42px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span></td>
+			<td style="width: 869px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Tôm rang mu?i h?ng kông</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 42px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span></td>
+			<td style="width: 869px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">L?u riêu cua h?i s?n</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 42px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></strong></span></td>
+			<td style="width: 869px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Trái cây</span></span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 8: <span> 1.550.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width: 36px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></strong></span></td>
+			<td style="width: 875px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Súp h?i s?n</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 36px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></strong></span></td>
+			<td style="width: 875px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Cá ch?m h?p h?ng kông</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 36px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></strong></span></td>
+			<td style="width: 875px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Su?n nu?ng mu?i ?t</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 36px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span></td>
+			<td style="width: 875px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Bò n?u h?t sen +bánh mì</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 36px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span></td>
+			<td style="width: 875px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">L?u thái h?i s?n</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 36px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></strong></span></td>
+			<td style="width: 875px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Rau câu d?a</span></span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" style="margin-right:0;">
+                <div >
+                  <div class="item-gia">Menu 9: <span> 1.600.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width: 46px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></strong></span></td>
+			<td style="width: 865px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Goi +ch? gò</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 46px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></strong></span></td>
+			<td style="width: 865px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">M?c ?ng h?p hành g?ng</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 46px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></strong></span></td>
+			<td style="width: 865px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">V?t quay b?c kinh</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 46px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span></td>
+			<td style="width: 865px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Bò né + bông thiên lý</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 46px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span></td>
+			<td style="width: 865px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">L?u riêu cua h?i s?n</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 46px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></strong></span></td>
+			<td style="width: 865px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Trái cây</span></span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <div class='clear'></div>
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 10: <span> 1.600.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width: 38px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></strong></span></td>
+			<td style="width: 873px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Súp b?p cua gà xé</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 38px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></strong></span></td>
+			<td style="width: 873px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Cá ch?m s?t chua cay</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 38px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></strong></span></td>
+			<td style="width: 873px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Su?n nu?ng ngu v?</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 38px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span></td>
+			<td style="width: 873px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Bò n?u tiêu xanh +bánh mì</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 38px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span></td>
+			<td style="width: 873px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">L?u h?i s?n kim chi hàn qu?c</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 38px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></strong></span></td>
+			<td style="width: 873px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Rau câu d?a</span></span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 11: <span> 1.650.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width: 44px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></strong></span></td>
+			<td style="width: 867px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">G?i bò ngu sác</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 44px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></strong></span></td>
+			<td style="width: 867px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">M?c chiên vòng</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 44px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></strong></span></td>
+			<td style="width: 867px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Su?n n?u tiêu xanh +bánh mì </span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 44px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span></td>
+			<td style="width: 867px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Cá b?ng mú h?p mi?n trung</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 44px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span></td>
+			<td style="width: 867px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">L?u th?p c?m</span></span></strong></span></td>
+		</tr>
+		<tr>
+			<td style="width: 44px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></strong></span></td>
+			<td style="width: 867px;"><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Trái cây</span></span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" style="margin-right:0;">
+                <div >
+                  <div class="item-gia">Menu 12: <span> 1.650.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width: 43px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></strong></span></td>
+			<td style="width: 868px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">G?i + nem nu?ng</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 43px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></strong></span></td>
+			<td style="width: 868px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Cá tai tu?ng chiên xù </span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 43px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></strong></span></td>
+			<td style="width: 868px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Bò né + bông thien lý</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 43px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span></td>
+			<td style="width: 868px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Gà bó xôi</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 43px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span></td>
+			<td style="width: 868px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> L?u bao t? h?m tiêu xanh</span></span></span></strong></td>
+		</tr>
+		<tr>
+			<td style="width: 43px;"><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></strong></span></td>
+			<td style="width: 868px;"><strong><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> Rau câu d?a</span></span></span></strong></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <div class='clear'></div>
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 13: <span> 1.700.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span font-size:="" new="" times="">1</span></span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span font-size:="" new="" times="">   G?i + ch? giò +nem nu?ng</span></span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2 </span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  M?c ?ng h?p g?ng </span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3 </span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Gà bó xôi</span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">   Su?n n?u tiêu xanh</span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">   L?u h?i s?n </span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6 </span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Râu câu</span></span></strong></span></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 14: <span> 1.700.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><span style="color:#FF0000;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">1 </span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">  G?i+cá thác lác +nem nu?ng</span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">2</span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">   Bò né bông thiên lý</span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">3 </span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;"> Tôm h?p d?a</span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">4</span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">  Gà bó xôi</span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">5 </span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;"> L?u riêu cua h?i s?n</span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">6</span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">  Trái cây</span></span></strong></span></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" style="margin-right:0;">
+                <div >
+                  <div class="item-gia">Menu 15: <span> 1.750.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><span style="color:#FF0000;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">1</span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">  G?i+nem nu?ng+m?c d?n th?t</span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">2</span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">  Bò cu?n n?m kim châm nu?ng</span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">3</span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">  Gà h?p lá chanh</span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">4</span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">  Cá Bóng mú h?p h?ng kông</span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">5</span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">  L?u n?m h?i s?n</span></span></strong></span></p>
+
+<p><span style="color:#FF0000;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">6</span></span></strong></span><span style="color:#0000FF;"><strong><span style="font-family:times new roman,times,serif;"><span style="font-size:20px;">  Râu câu</span></span></strong></span></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <div class='clear'></div>
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 16: <span> 1.750.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1 </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> G?i+tôm lan c?m+ch? giò</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  B?p bò h?p hành tây</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Cá lang nu?ng mu?i ?t</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Gà bó xôi</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  L?u n?m h?i s?n kim chi</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> Râu câu </span></span></span></strong></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 17: <span> 1.800.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  G?i+m?c chiên xù+nem nu?ng</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Tôm rang mu?i h?ng kông</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Bò cu?n n?m nu?ng</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Cá bóng mú h?p H?ng Kông</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  L?u riêu cua h?i s?n/ b?p bò</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Râu câu</span></span></span></strong></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" style="margin-right:0;">
+                <div >
+                  <div class="item-gia">Menu 18: <span> 1.800.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  G?i+m?c d?n th?t+ch? giò</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Su?n nu?ng mu?i ?t</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> Tôm h?p bia</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Gà bó xôi</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  L?u n?m thái lan h?i s?n</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6 </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> Trái cây</span></span></span></strong></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <div class='clear'></div>
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 19: <span> 1.850.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  G?i+tôm lan c?m+ch? giò</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2 </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> Cá bóng mú h?p qu?ng dông</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3 </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> Bò n?u d?u</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4 </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> Gà bó xôi</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5  </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">L?u h?i s?n kim chi hàn qu?c</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6  </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Trái cây</span></span></span></strong></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 20: <span> 1.850.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  G?i c? h? d?a tôm th?t</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Cá bóng mú h?p mi?n trung</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Gà h?p lá chanh</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> Bò né bông thiên lý</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  L?u h?i s?n n?m</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Râu câu</span></span></span></strong></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" style="margin-right:0;">
+                <div >
+                  <div class="item-gia">Menu 21: <span> 1.900.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    G?i ti?n vua tôm th?t</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2 </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">   Tôm h?p bia</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    Cá b?ng mú h?p tri?u châu</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    Heo s?a quay</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    L?u riêu cua h?i s?n</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    trái cây</span></span></span></strong></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <div class='clear'></div>
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 22: <span> 1.900.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    G?i +ch? giò</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2  </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Bò cu?n n?m kim châm </span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3 </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">   Heo s?a quay</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4   </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> Gà bó xôi</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    L?u n?m h?i s?n</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6  </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Rau câu</span></span></span></strong></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 23: <span> 1.950.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    G?i +ch? giò +nem nu?ng</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2   </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> Gà h?p lá chanh</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    Tôm h?p bia </span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4    </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Heo s?a quay</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    L?u bò</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    Rau câu</span></span></span></strong></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" style="margin-right:0;">
+                <div >
+                  <div class="item-gia">Menu 24: <span> 1.950.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><strong><span style="color:#0000FF;"><span font-size:="" new="" style="font-family: " times="">1          </span></span></strong><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><strong><span style="color: rgb(0, 0, 255);"><span font-size:="" new="" times="">G?i +cá thác</span><span font-size:="" new="" times=""> chiên</span><span font-size:="" new="" times="">+ch? giò</span></span></strong></span></span></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    Muc ?ng h?p hành g?ng</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3 </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">   Cá b?ng mú h?p mi?n trung</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    Ba ch? bò m? cu?n tôm nu?ng</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5  </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  L?u bao t? h?m tiêu xanh</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6    </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">Rau câu</span></span></span></strong></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <div class='clear'></div>
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 25: <span> 2.000.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1   </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> G?i +nem nu?ng+ ch? giò</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2  </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Tôm h?p d?a</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    Cá b?ng mú h?p tri?u châu</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4  </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Gà bó xôi</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5 </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">   L?u bò</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6  </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Trái cây</span></span></span></strong></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" >
+                <div >
+                  <div class="item-gia">Menu 26: <span> 2.000.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    G?i +ch? giò +m?c chiên mè</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2  </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Cá ch?m h?p h?ng kông</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    Heo s?a quay</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    Ba ch? bò m? cu?n tôm nu?ng</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5   </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> L?u h?i s?n kim chi hàn qu?c</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6 </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Rau câu</span></span></span></strong></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="item-wr3" style="margin-right:0;">
+                <div >
+                  <div class="item-gia">Menu 27: <span> 2.100.000 d?ng/bàn</span></div>
+                  <div class="clear"></div>
+                  <div style="border: 1px solid #00B204;padding: 3px;">
+                    <div class="hover3">
+                        <div><p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">1 </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">   G?i +ch? gòi +m?c d?n th?t</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">2  </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Tôm rang mu?i huong c?ng</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">3  </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Cá b?p nu?ng mu?i ?t</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">4  </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">  Gà bó xôi</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">5</span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">    L?u riêu cua h?i s?n+bò</span></span></span></strong></p>
+
+<p><strong><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">6 </span></span></span><span style="color:#0000FF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;">   Trái cây</span></span></span></strong></p>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <div class='clear'></div>        <div class="clear"></div>
+    </div>
+
+    <div class="clear"></div>
+   <div class="spnoibat">
+        <div class="tieude"><h3>Tin t?c</h3></div>
+        <div class='owl-carousel'>
+                  <div>
+          <div class="cottt ">
+              <a href="tin-tuc/nhung-ai-khong-nen-an-rau-muong-128.html"><img src="upload/baiviet/14523128911711414149-1693_290x130.jpg" alt="Nh?ng ai không nên an rau mu?ng?"></a>
+              <div class="dmtt">
+                  <div class="tentt"><a href="nhung-ai-khong-nen-an-rau-muong">Nh?ng ai không nên an rau mu?ng?</a></div>
+                  <div class="motatt"></div>
+                  <div class="xemthem"><a href="tin-tuc/nhung-ai-khong-nen-an-rau-muong-128.html" title="Nh?ng ai không nên an rau mu?ng?">Xem thêm</a></div>
+              </div>
+              <div class="clear"></div>
+          </div>
+          </div>
+                   <div>
+          <div class="cottt ">
+              <a href="tin-tuc/cach-lam-mut-dau-ngu-thom-ngon-ngay-tet-129.html"><img src="upload/baiviet/cachlammutdaungudontetmutdaungu101482391199width500height375-7427_290x130.jpg" alt="Cách làm m?t d?u ng? thom ngon ngày T?t"></a>
+              <div class="dmtt">
+                  <div class="tentt"><a href="cach-lam-mut-dau-ngu-thom-ngon-ngay-tet">Cách làm m?t d?u ng? thom ngon ngày T?t</a></div>
+                  <div class="motatt"></div>
+                  <div class="xemthem"><a href="tin-tuc/cach-lam-mut-dau-ngu-thom-ngon-ngay-tet-129.html" title="Cách làm m?t d?u ng? thom ngon ngày T?t">Xem thêm</a></div>
+              </div>
+              <div class="clear"></div>
+          </div>
+          </div>
+                   <div>
+          <div class="cottt ">
+              <a href="tin-tuc/5-cach-thuong-thuc-chanh-leo-moi-la-moi-phu-nu-can-biet-167.html"><img src="upload/baiviet/5cachthuongthucchanhleomoilamoiphunucanbietpushchanhleo31481100861width473height315-7210_290x130.jpg" alt="5 cách thu?ng th?c chanh leo m?i l? m?i ph? n? c?n bi?t."></a>
+              <div class="dmtt">
+                  <div class="tentt"><a href="5-cach-thuong-thuc-chanh-leo-moi-la-moi-phu-nu-can-biet">5 cách thu?ng th?c chanh leo m?i l? m?i ph? n? c?n bi?t.</a></div>
+                  <div class="motatt"></div>
+                  <div class="xemthem"><a href="tin-tuc/5-cach-thuong-thuc-chanh-leo-moi-la-moi-phu-nu-can-biet-167.html" title="5 cách thu?ng th?c chanh leo m?i l? m?i ph? n? c?n bi?t.">Xem thêm</a></div>
+              </div>
+              <div class="clear"></div>
+          </div>
+          </div>
+                   <div>
+          <div class="cottt ">
+              <a href="tin-tuc/tuyet-chieu-luoc-phan-nao-cua-heo-cung-trang-thom-ngon-gion-173.html"><img src="upload/baiviet/nhungtuyetchieuluocphannaocuaheocungtrangdep11482978201width600height400-9892_290x130.jpg" alt="Tuy?t chiêu lu?c ph?n nào c?a heo cung tr?ng thom, ngon giòn"></a>
+              <div class="dmtt">
+                  <div class="tentt"><a href="tuyet-chieu-luoc-phan-nao-cua-heo-cung-trang-thom-ngon-gion">Tuy?t chiêu lu?c ph?n nào c?a heo cung tr?ng thom, ngon giòn</a></div>
+                  <div class="motatt"></div>
+                  <div class="xemthem"><a href="tin-tuc/tuyet-chieu-luoc-phan-nao-cua-heo-cung-trang-thom-ngon-gion-173.html" title="Tuy?t chiêu lu?c ph?n nào c?a heo cung tr?ng thom, ngon giòn">Xem thêm</a></div>
+              </div>
+              <div class="clear"></div>
+          </div>
+          </div>
+                  </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+    autoplay : true,
+    nav : true,
+    navText : true,
+    dots : true, 
+    autoplaySpeed : 500, 
+    loop:true  ,  
+    margin:2,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:3,
+        },
+        600:{
+            items:3,
+        },
+        1000:{
+            items:3,
+        }
+    }
+})
+  });
+</script>
+     
+        </div>
+    <div class="clear"></div>
+    </div>
+    </div>
+    <div class="clear"></div>   
+    <div class="bottom">
+            </div>
+    <div id="footer">
+    <link rel="stylesheet" type="text/css" href="css/jquery.simplyscroll.css">
+<script type="text/javascript" src="js/jquery.simplyscroll.js"></script>
+
+
+<div class="footer ">
+    <div class="fixed-ft">
+        <div class="box_footer">
+            <div class="ft-ds">
+                2016 Copyright © <span style="color:#ff0; font-weight: bold;"> </span> .All rights reserved.
+            </div>
+        </div>
+    </div>
+    <div class="footer-address">
+        <div class="box_footer ">  
+            <div class="box_ft1">     
+            <div class="ft-1 wow fadeInLeft">
+                <h3 class="fadeInLeft"> </h3>
+                <p style="line-height: 20.8px;"><span style="font-size:20px;"><span style="color:#FFFF00;"><span style="font-family:arial,helvetica,sans-serif;"><strong>CÔNG TY TNHH D?CH V? N?U TI?C GIA LONG</strong></span></span></span></p>
+
+<p style="line-height: 20.8px;"><span style="color:#FFFF00;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><strong>Ð?a ch?:</strong> <span style="text-align: center;">77/4 B? Bao Tân Th?ng, Phu?ng Son K?, Qu?n Tân Phú, Tp. H? Chí Minh</span></span></span></span></p>
+
+<p style="line-height: 20.8px;"><span style="color:#FFFF00;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><strong>Ði?n tho?i:</strong></span></span></span><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> </span></span></span><span style="color:#FFFFFF;"><span style="font-size: 20px; text-align: center; line-height: 1.6;"><span new="" times=""><span style="font-family:times new roman,times,serif;"><span style="font-size: 22px;"><strong>0909 340 797</strong></span></span> </span></span><span style="text-align: center; font-size: 22px;"><span new="" times=""><span font-size:="" new="" text-align:="" times=""><strong> </strong></span></span></span><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="text-align: center;">(Anh Phong) </span></span></span></span></p>
+
+<p style="line-height: 20.8px;"><span style="color:#000000;"><span style="font-size:22px;"><span style="font-family:times new roman,times,serif;"><span style="text-align: center;">                 </span></span></span></span><span style="color:#FFFFFF;"><span style="font-size:22px;"><span style="font-family:times new roman,times,serif;"><span style="text-align: center;"> <strong>0969 156 575</strong> </span></span><span style="font-family: &quot;times new roman&quot;, times, serif;"><span style="text-align: center;">(</span></span><span style="font-family: &quot;times new roman&quot;, times, serif; text-align: center;">Anh Phong) </span></span></span></p>
+
+<p style="line-height: 20.8px;"><span style="color:#FFFF00;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><strong>Email: </strong></span></span></span><span style="color:#FFFFFF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="background-color: transparent;">thuynguyen162694@gmail.com </span></span></span></span></p>
+
+<p style="margin: 0px; padding: 0px; list-style: none; color: rgb(27, 25, 25); font-family: Arial, Helvetica, sans-serif; font-size: 14px;"><span style="color:#FFFF00;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent; line-height: 1.6;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><strong style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline;">Website: </strong></span></span></span></span></span></span><span style="color:#FFFFFF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent; line-height: 1.6;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">http://nautiecgialong.com/</span></span></span></span></span></span></span></p>
+                                <div class="ft-ds wow fadeInLeft">
+                    <div class="addthis_native_toolbox"></div> 
+                </div>
+
+            </div>
+            <div class="clear"></div>
+            <div class="td_lk">LIÊN K?T M?NG XÃ H?I</div>
+             <div class="mxh_ft">
+                <ul>
+                                           <li><a href=""><img src="upload/hinhanh/nguyenhamsau10103-3622.png" alt=""></a></li>
+                                           <li><a href=""><img src="upload/hinhanh/nguyenhamsau10108-8463.png" alt=""></a></li>
+                                           <li><a href=""><img src="upload/hinhanh/nguyenhamsau10110-6415.png" alt=""></a></li>
+                                           <li><a href=""><img src="upload/hinhanh/nguyenhamsau10106-9454.png" alt=""></a></li>
+                                    </ul>
+            </div>
+            </div>
+            <div class="box_ft2">
+
+                <div class="box_dangky"  style='background:
+                        url(upload/hinhanh/timthumb-6466.png) fixed;    padding: 35px 100px;     margin: 20px 0;' >
+                  <div class="tieude_lydo"><h3>ÐANG KÝ NH?N MAIL KHUY?N MÃI</h3></div>
+                  <form action="" method="POST" class="frmdk" accept-charset="utf-8">
+                    <div class="frm_dk">
+                        <div class="dk">
+                          <input type="email" id="txtemail" name="txtemail" class=" txtdk" required="required" placeholder="Nh?p mail c?a b?n..."/> 
+                          <input type="submit" name="btnemail" class="btn btnemail" value="G?i"/>
+                        </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="clear"></div>
+                <div class="box_bot_ft">
+                <div class="ft-2 wow fadeInDown">
+                       <h3>V? chúng tôi</h3>
+                       <div><a href="gioi-thieu.html" >Gi?i thi?u</a></div>
+                       <div><a href="lien-he.html" >Liên h?</a></div> 
+                       <div><a href="san-pham.html" >Menu s?n ph?m</a></div>    
+                       <div><a href="menu-tu-chon.html" >Menu t? ch?n</a></div>   
+                    <div class="clear"></div> 
+
+                </div>
+                <div class="ft-5 wow fadeInDown">
+                       <h3>Tin t?c</h3>
+                                              <div><a href="tin-tuc/nhung-ai-khong-nen-an-rau-muong-128.html">Nh?ng ai không nên an rau mu?ng?</a></div>
+                                               <div><a href="tin-tuc/cach-lam-mut-dau-ngu-thom-ngon-ngay-tet-129.html">Cách làm m?t d?u ng? thom ngon ngày T?t</a></div>
+                                               <div><a href="tin-tuc/5-cach-thuong-thuc-chanh-leo-moi-la-moi-phu-nu-can-biet-167.html">5 cách thu?ng th?c chanh leo m?i l? m?i ph? n? c?n bi?t.</a></div>
+                                               <div><a href="tin-tuc/tuyet-chieu-luoc-phan-nao-cua-heo-cung-trang-thom-ngon-gion-173.html">Tuy?t chiêu lu?c ph?n nào c?a heo cung tr?ng thom, ngon giòn</a></div>
+                               
+                    <div class="clear"></div> 
+                </div>
+                <div class="ft-3 wow fadeInRight">
+
+                <div class="tketruycap">
+                    <h3>Th?ng kê truy c?p</h3>  
+                    <div  class="khungtt">
+                        <div>S? ngu?i online:<span>1</span></div>
+                        <div>Hôm nay:<span>10</span></div> 
+                        <div>Tu?n này:<span>145</span></div> 
+                        <div>T?ng truy c?p:<span>23082</span></div> 
+                        
+                        <div class="clear"></div>
+                    </div>   
+                    <div class="clear"></div>
+                </div>                    
+            </div>
+            </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+    </div>
+<script type="text/javascript">
+(function($) {
+    $(function() {
+        $(".scroller").simplyScroll({orientation:'vertical',customClass:'vert'});
+    });
+})(jQuery);
+</script>    </div>
+</body>
+</html>
