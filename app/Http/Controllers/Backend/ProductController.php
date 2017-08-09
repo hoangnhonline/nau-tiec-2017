@@ -68,7 +68,11 @@ class ProductController extends Controller
             $cateArr = (object) [];
         }
 
-        return view('backend.product.index', compact( 'items', 'arrSearch', 'loaiSpArr', 'cateArr'));
+        return view('backend.product.index', compact( 
+                                                    'items', 
+                                                    'arrSearch', 
+                                                    'loaiSpArr', 
+                                                    'cateArr'));
     }
     public function short(Request $request)
     {

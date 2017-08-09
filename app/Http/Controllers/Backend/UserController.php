@@ -55,15 +55,10 @@ class UserController extends Controller
         if (Auth::validate($dataArr)) {
 
             if (Auth::attempt($dataArr)) {
-              if($request->email == "huongll@annammobile.com"){
-                return redirect()->route('product.short');
-              }else{
-                return redirect()->route('product.index');
-              }
               
-
+                return redirect()->route('product.index');
+              
             }
-
         }else {
             // if any error send back with message.
             Session::flash('error', 'Email hoặc mật khẩu không đúng.'); 

@@ -12,7 +12,9 @@ class Helper
     {
         return strtoupper($string);
     }
-
+    public static function getNextOrder($table, $where = []){
+        return DB::table($table)->where($where)->max('display_order') + 1;
+    }
     public static function showImage($image_url, $type = 'original'){
 
         //return strpos($image_url, 'http') === false ? config('annam.upload_url') . $type . '/' . $image_url : $image_url;        
