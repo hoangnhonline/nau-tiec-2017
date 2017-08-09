@@ -3,16 +3,16 @@
 use Illuminate\Database\Eloquent\Model;
 
 
-class Menu extends Model  {
+class FoodGroup extends Model  {
 
-    /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected $table = 'menu';
+	/**
+	 * The database table used by the model.
+	 *
+	 * @var string
+	 */
+	protected $table = 'food_group';
 
-     /**
+	 /**
      * Indicates if the model should be timestamped.
      *
      * @var bool
@@ -25,11 +25,9 @@ class Menu extends Model  {
      */
     protected $fillable = [
                             'name', 
-                            'slug',
-                            'price',
-                            'image_url',
-                            'display_order',
-                            'status',                                                       
+                            'slug', 
+                            'food_group_id',                     
+                            'display_order',                           
                             'created_user', 
                             'updated_user'
                         ];

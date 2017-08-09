@@ -3,14 +3,14 @@
 use Illuminate\Database\Eloquent\Model;
 
 
-class ThuocTinh extends Model  {
+class FoodType extends Model  {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'thuoc_tinh';	
+	protected $table = 'food_type';
 
 	 /**
      * Indicates if the model should be timestamped.
@@ -23,10 +23,12 @@ class ThuocTinh extends Model  {
      *
      * @var array
      */
-    protected $fillable = ['name', 'alias', 'status', 'loai_id', 'loai_thuoc_tinh_id','display_order', 'created_user', 'updated_user'];
-
-    public function thuocTinh()
-    {
-        return $this->hasMany('App\Models\ThuocTinh', 'loai_id');
-    }
+    protected $fillable = [
+                            'name', 
+                            'slug',
+                            'display_order',                           
+                            'created_user', 
+                            'updated_user'
+                        ];
+    
 }

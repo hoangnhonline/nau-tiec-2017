@@ -3,16 +3,16 @@
 use Illuminate\Database\Eloquent\Model;
 
 
-class LoaiThuocTinh extends Model  {
+class FoodMenu extends Model  {
 
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
-	protected $table = 'loai_thuoc_tinh';	
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = 'food_menu';
 
-	 /**
+     /**
      * Indicates if the model should be timestamped.
      *
      * @var bool
@@ -25,16 +25,13 @@ class LoaiThuocTinh extends Model  {
      */
     protected $fillable = [
                             'name', 
-                            'alias', 
-                            'status', 
-                            'loai_id', 
-                            'display_order', 
+                            'slug',
+                            'menu_id',
+                            'price',
+                            'image_url',
+                            'display_order',                                                                            
                             'created_user', 
                             'updated_user'
                         ];
-
-    public function thuocTinh()
-    {
-        return $this->hasMany('App\Models\ThuocTinh', 'loai_id');
-    }
+    
 }

@@ -3,14 +3,14 @@
 use Illuminate\Database\Eloquent\Model;
 
 
-class Menu extends Model  {
+class Food extends Model  {
 
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'menu';
+    protected $table = 'food';
 
      /**
      * Indicates if the model should be timestamped.
@@ -26,10 +26,12 @@ class Menu extends Model  {
     protected $fillable = [
                             'name', 
                             'slug',
+                            'food_type_id',
+                            'food_group_id',
                             'price',
+                            'mon_bac',
                             'image_url',
-                            'display_order',
-                            'status',                                                       
+                            'display_order',                                                                            
                             'created_user', 
                             'updated_user'
                         ];
