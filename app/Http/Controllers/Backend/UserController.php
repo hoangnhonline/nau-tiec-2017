@@ -27,6 +27,9 @@ class UserController extends Controller
             'status' => 1
         ));*/
         //dd(Hash::make('123465@'));
+        if(Auth::check()){
+            return redirect()->route('menu.index');
+        }
         return view('backend.login');
     }
 
@@ -56,7 +59,7 @@ class UserController extends Controller
 
             if (Auth::attempt($dataArr)) {
               
-                return redirect()->route('product.index');
+                return redirect()->route('menu.index');
               
             }
         }else {

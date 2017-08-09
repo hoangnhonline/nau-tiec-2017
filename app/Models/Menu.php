@@ -33,5 +33,7 @@ class Menu extends Model  {
                             'created_user', 
                             'updated_user'
                         ];
-    
+    public function foodMenu(){
+        return $this->hasMany('App\Models\FoodMenu', 'menu_id');
+    }
 }

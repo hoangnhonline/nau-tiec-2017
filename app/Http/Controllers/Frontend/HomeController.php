@@ -5,26 +5,18 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\LoaiSp;
-use App\Models\Cate;
-use App\Models\Product;
-use App\Models\SpThuocTinh;
-use App\Models\ProductImg;
-use App\Models\ThuocTinh;
-use App\Models\LoaiThuocTinh;
+
 use App\Models\Banner;
-use App\Models\HoverInfo;
-use App\Models\Location;
-use App\Models\TinhThanh;
+
+
 use App\Models\Articles;
 use App\Models\ArticlesCate;
-use App\Models\Customer;
+use App\Models\Menu;
+
 use App\Models\Newsletter;
-use App\Models\PriceRange;
+
 use App\Models\Settings;
-use App\Models\LinkSite;
-use App\Models\LinkImage;
-use App\Models\CustomerNotification;
+
 use Helper, File, Session, Auth, Hash;
 
 class HomeController extends Controller
@@ -43,59 +35,8 @@ class HomeController extends Controller
     */    
     public function index(Request $request)
     {             
-        $productArr = $manhinhArr = [];
-        $loaiSp = LoaiSp::where('status', 1)->get();
-        $bannerArr = [];
-        $hoverInfo = [];
-        foreach( $loaiSp as $loai){            
-            $query = Product::where( [ 'status' => 1, 'loai_id' => $loai->id ])
-                            ->where('so_luong_ton', '>', 0)
-                            ->where('price', '>', 0)            
-                            ->leftJoin('product_img', 'product_img.id', '=','product.thumbnail_id')            
-                            ->select('product_img.image_url', 'product.*')                        
-                            ->orderBy('product.id', 'desc')            
-                            ->limit(15);
-           
-            $productArr[$loai->id] = $query->get();
-
-            if( $loai->home_style > 0 ){
-                $bannerArr[$loai->id] = Banner::where(['object_id' => $loai->id, 'object_type' => 1])->orderBy('display_order', 'asc')->orderBy('id', 'asc')->get();
-            }       
-
-           
-            if(count($productArr) > 0){
-                $hoverInfoTmp = HoverInfo::orderBy('display_order', 'asc')->orderBy('id', 'asc')->get();
-                
-                foreach($hoverInfoTmp as $value){
-                    if($value->loai_id == $loai->id){
-                        $hoverInfo[$value->loai_id][] = $value;
-                    }
-                }
-            }
-            //dd($hoverInfo);
-            /*
-            $tmp = SpThuocTinh::where('product_id', $detail->id)->select('thuoc_tinh')->first();
-            
-            if( $tmp ){
-                $spThuocTinhArr = json_decode( $tmp->thuoc_tinh, true);
-            }
-            if ( $spThuocTinhArr ){
-                $loaiThuocTinhArr = LoaiThuocTinh::where('loai_id', $loai->id)->orderBy('display_order')->get();            
-               
-                if( $loaiThuocTinhArr->count() > 0){
-                    foreach ($loaiThuocTinhArr as $value) {
-
-                        $thuocTinhArr[$value->id]['id'] = $value->id;
-                        $thuocTinhArr[$value->id]['name'] = $value->name;
-
-                        $thuocTinhArr[$value->id]['child'] = ThuocTinh::where('loai_thuoc_tinh_id', $value->id)->select('id', 'name')->orderBy('display_order')->get()->toArray();
-                    }
-                    
-                }        
-            } */ 
-        
-        }// foreach
-      //  dd($hoverInfo);
+        $productArr = [];
+       
         $settingArr = Settings::whereRaw('1')->lists('value', 'name');
         $seo = $settingArr;
         $seo['title'] = $settingArr['site_title'];
@@ -106,17 +47,13 @@ class HomeController extends Controller
 
 
         $articlesArr = Articles::where(['cate_id' => 1, 'is_hot' => 1])->orderBy('id', 'desc')->get();
-                
+        $menuList = Menu::orderBy('display_order')->get();         
         return view('frontend.home.index', compact(
-                                'productArr', 
-                                'bannerArr', 
-                                'articlesArr', 
-                                'socialImage', 
-                                'seo', 
-                                'thuocTinhArr', 
-                                'loaiThuocTinhArr', 
-                                'spThuocTinhArr',
-                                'hoverInfo'));
+                               
+                                
+                                'seo',
+                                'menuList'
+                                ));
     }
 
     public function getNoti(){

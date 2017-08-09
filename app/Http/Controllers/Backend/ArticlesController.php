@@ -40,7 +40,7 @@ class ArticlesController extends Controller
             $query->where('alias', 'LIKE', '%'.$title.'%');
         }
 
-        $items = $query->orderBy('id', 'desc')->paginate(20);
+        $items = $query->orderBy('id', 'asc')->paginate(20);
         
         $cateArr = ArticlesCate::all();
         
@@ -57,7 +57,7 @@ class ArticlesController extends Controller
 
         $cateArr = ArticlesCate::all();
         
-        $cate_id = $request->cate_id;
+        $cate_id = $request->cate_id ? $request->cate_id : null;
 
         $tagArr = Tag::where('type', 2)->orderBy('id', 'desc')->get();
 

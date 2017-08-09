@@ -25,6 +25,14 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'middleware' => '
         Route::post('/update', ['as' => 'pages.update', 'uses' => 'PagesController@update']);
         Route::get('{id}/destroy', ['as' => 'pages.destroy', 'uses' => 'PagesController@destroy']);
     });
+    Route::group(['prefix' => 'menu'], function () {
+        Route::get('/', ['as' => 'menu.index', 'uses' => 'MenuController@index']);
+        Route::get('/create', ['as' => 'menu.create', 'uses' => 'MenuController@create']);
+        Route::post('/store', ['as' => 'menu.store', 'uses' => 'MenuController@store']);
+        Route::get('{id}/edit',   ['as' => 'menu.edit', 'uses' => 'MenuController@edit']);
+        Route::post('/update', ['as' => 'menu.update', 'uses' => 'MenuController@update']);
+        Route::get('{id}/destroy', ['as' => 'menu.destroy', 'uses' => 'MenuController@destroy']);
+    });
     Route::group(['prefix' => 'food-type'], function () {
         Route::get('/', ['as' => 'food-type.index', 'uses' => 'FoodTypeController@index']);
         Route::get('/create', ['as' => 'food-type.create', 'uses' => 'FoodTypeController@create']);
@@ -187,6 +195,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'middleware' => '
     Route::post('/update-order', ['as' => 'update-order', 'uses' => 'GeneralController@updateOrder']);
     Route::post('/ck-upload', ['as' => 'ck-upload', 'uses' => 'UploadController@ckUpload']);
     Route::post('/get-slug', ['as' => 'get-slug', 'uses' => 'GeneralController@getSlug']);
+    Route::post('/cap-nhat-thu-tu', ['as' => 'cap-nhat-thu-tu', 'uses' => 'GeneralController@updateOrderList']);
 
     Route::group(['prefix' => 'order'], function () {
         Route::get('/', ['as' => 'orders.index', 'uses' => 'OrderController@index']);

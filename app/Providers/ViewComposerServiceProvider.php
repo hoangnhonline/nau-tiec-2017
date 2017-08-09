@@ -45,14 +45,15 @@ class ViewComposerServiceProvider extends ServiceProvider
 		$cateArrByLoai = [];		
 		view()->composer( '*' , function( $view ){
 			
-			
+			$articlesCateList = ArticlesCate::where('is_menu', 1)->orderBy('display_order')->get();
 	        $settingArr = Settings::whereRaw('1')->lists('value', 'name');
 	        $routeName = \Request::route()->getName();
 	       // var_dump("<pre>", $menuDoc);die;   
 	        //var_dump("<pre>", $loaiSpKey);die;
 			$view->with( [			
 					'settingArr' => $settingArr,					
-					'routeName' => $routeName
+					'routeName' => $routeName,
+					'articlesCateList' => $articlesCateList
 					] );
 		});
 	}
