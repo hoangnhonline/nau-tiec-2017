@@ -49,6 +49,14 @@
                      
                 <td>                  
                   <a href="{{ route( 'food-type.edit', [ 'id' => $item->id ]) }}">{{ $item->name }}</a>
+                  <br>
+                 
+                  @foreach($item->foodGroup as $foodGroup)
+              
+                    -------{!! $foodGroup->name !!}<br>
+                   
+                  @endforeach
+
                 </td>
                 <td style="white-space:nowrap">                  
                   <a href="{{ route( 'food-type.edit', [ 'id' => $item->id ]) }}" class="btn btn-warning">Chỉnh sửa</a>                 

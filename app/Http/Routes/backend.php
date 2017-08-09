@@ -28,6 +28,10 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'middleware' => '
     Route::group(['prefix' => 'food-type'], function () {
         Route::get('/', ['as' => 'food-type.index', 'uses' => 'FoodTypeController@index']);
         Route::get('/create', ['as' => 'food-type.create', 'uses' => 'FoodTypeController@create']);
+
+        Route::get('/test', ['as' => 'food-type.test', 'uses' => 'FoodTypeController@test']);
+
+
         Route::post('/store', ['as' => 'food-type.store', 'uses' => 'FoodTypeController@store']);
         Route::get('{id}/edit',   ['as' => 'food-type.edit', 'uses' => 'FoodTypeController@edit']);
         Route::post('/update', ['as' => 'food-type.update', 'uses' => 'FoodTypeController@update']);

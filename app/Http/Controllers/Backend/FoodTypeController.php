@@ -16,6 +16,9 @@ class FoodTypeController extends Controller
     *
     * @return Response
     */
+    public function test(){
+        
+    }
     public function index(Request $request)
     {
 

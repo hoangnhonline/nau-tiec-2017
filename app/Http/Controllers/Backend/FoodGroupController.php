@@ -17,6 +17,7 @@ class FoodGroupController extends Controller
     *
     * @return Response
     */
+    
     public function index(Request $request)
     {
 
