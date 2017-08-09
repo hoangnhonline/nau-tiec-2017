@@ -2,8 +2,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Models\LoaiSp;
-use App\Models\Cate;
+use App\Models\Menu;
+use App\Models\ArticlesCate;
+use App\Models\Articles;
 use App\Models\Settings;
 use Request;
 //use App\Models\Entity\SuperStar\Account\Traits\Behavior\SS_Shortcut_Icon;
@@ -44,24 +45,13 @@ class ViewComposerServiceProvider extends ServiceProvider
 		$cateArrByLoai = [];		
 		view()->composer( '*' , function( $view ){
 			
-			$loaiSpList = LoaiSp::where(['status' => 1])->orderBy('display_order')->get();
-
-	        if( $loaiSpList ){
-	            foreach ( $loaiSpList as $key => $value) {	            	          		
-	            	$cateArrByLoai[$value->id] = Cate::where(['status' => 1, 'loai_id' => $value->id])
-	                    ->orderBy('display_order')
-	                    ->select('name', 'slug', 'id')
-	                    ->get();
-	            }
-	        }    
+			
 	        $settingArr = Settings::whereRaw('1')->lists('value', 'name');
 	        $routeName = \Request::route()->getName();
 	       // var_dump("<pre>", $menuDoc);die;   
 	        //var_dump("<pre>", $loaiSpKey);die;
-			$view->with( [
-					'loaiSpList' => $loaiSpList, 
-					'settingArr' => $settingArr,
-					'cateArrByLoai' => $cateArrByLoai,
+			$view->with( [			
+					'settingArr' => $settingArr,					
 					'routeName' => $routeName
 					] );
 		});
