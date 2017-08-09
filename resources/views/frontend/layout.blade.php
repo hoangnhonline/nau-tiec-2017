@@ -129,31 +129,7 @@
       <script src="{{ URL::asset('assets/js/lucid.js') }}"></script>
    </head>
    <body>
-      <div id="header">
-         <style>
-            .header{
-            background:url({{ URL::asset('assets/upload/hinhanh/1-8460.jpg') }});background-size:cover;box-sizing: border-box;    padding:5px 0px;}
-         </style>
-         <div class="header"  >
-            <div class="wrapper">
-               <div class="logo">
-                  <a href="index.php">
-                  <img src="{{ URL::asset('assets/upload/hinhanh/nguyenhadasdamsau1095468130x113-9243_130x115.png') }}" alt="logo"  />
-                  </a>
-               </div>
-               <div class="banner">
-                  <img class="left" src="{{ URL::asset('assets/upload/hinhanh/nguyenhadasdamsau1062970420x160sssss-7997_420x160.png') }}" alt=" ">
-                  <div class="clear"></div>
-                  <div class="hotline_hd">Hotline : 0909 340 797 - 0969 156 575 (Anh Phong)</div>
-               </div>
-               <div class="address">
-                  <!-- <img class="left" src="{{ URL::asset('assets/upload/hinhanh/5-5325_505x180.png') }}"> -->
-               </div>
-               <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-         </div>
-      </div>
+      @include('frontend.partials.header')
       <div id="menu">
          <div class="wrapper">
             <div class="menu">
@@ -226,269 +202,16 @@
          </script>
          <div class="clear"></div>
       </div>
-      <div id="slider">
-         <script src="plugin4/amazingslider.js') }}"></script>
-         <link rel="stylesheet" type="text/css" href="plugin4/amazingslider-1.css') }}">
-         <script src="plugin4/initslider-1.js') }}"></script>
-         <div style="width: 1050px;float: left;">
-            <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:100%;margin:0 auto;">
-               <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
-                  <ul class="amazingslider-slides" style="display:none;">
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/851030260805617_1050x430.jpg') }}" alt="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"></a></li>
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/514788675288178_1050x430.jpg') }}" alt="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"></a></li>
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/178565249131446_1050x430.jpg') }}" alt="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"></a></li>
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/469799659221213_1050x430.jpg') }}" alt="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"></a></li>
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/096712954104955_1050x430.jpg') }}" alt="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"></a></li>
-                  </ul>
-                  <ul class="amazingslider-thumbnails" style="display:none;">
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/851030260805617_1050x430.jpg') }}"></a></li>
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/514788675288178_1050x430.jpg') }}"></a></li>
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/178565249131446_1050x430.jpg') }}"></a></li>
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/469799659221213_1050x430.jpg') }}"></a></li>
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/096712954104955_1050x430.jpg') }}"></a></li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-         <div style="width:250px;float: right; ">
-            <div class="autoplay">
-               <div class="box_hma">
-                  <img src="{{ URL::asset('assets/upload/hinhanh/051185044820462_245x140.jpg') }}" alt="sliderbn" class="doitac-img" />
-                  <div class="ten_ma">Món 2</div>
-               </div>
-               <div class="box_hma">
-                  <img src="{{ URL::asset('assets/upload/hinhanh/226400877209925_245x140.jpg') }}" alt="sliderbn" class="doitac-img" />
-                  <div class="ten_ma">Món 3</div>
-               </div>
-               <div class="box_hma">
-                  <img src="{{ URL::asset('assets/upload/hinhanh/204724704372010_245x140.jpg') }}" alt="sliderbn" class="doitac-img" />
-                  <div class="ten_ma">Món 4</div>
-               </div>
-               <div class="box_hma">
-                  <img src="{{ URL::asset('assets/upload/hinhanh/760471701623413_245x140.jpg') }}" alt="sliderbn" class="doitac-img" />
-                  <div class="ten_ma">Món 5</div>
-               </div>
-               <div class="box_hma">
-                  <img src="{{ URL::asset('assets/upload/hinhanh/590621763702625_245x140.jpg') }}" alt="sliderbn" class="doitac-img" />
-                  <div class="ten_ma"> </div>
-               </div>
-               <div class="box_hma">
-                  <img src="{{ URL::asset('assets/upload/hinhanh/889074175570069_245x140.jpg') }}" alt="sliderbn" class="doitac-img" />
-                  <div class="ten_ma"> </div>
-               </div>
-               <div class="box_hma">
-                  <img src="{{ URL::asset('assets/upload/hinhanh/948506278675926_245x140.jpg') }}" alt="sliderbn" class="doitac-img" />
-                  <div class="ten_ma"> </div>
-               </div>
-               <div class="box_hma">
-                  <img src="{{ URL::asset('assets/upload/hinhanh/611748870699656_245x140.jpg') }}" alt="sliderbn" class="doitac-img" />
-                  <div class="ten_ma"> </div>
-               </div>
-            </div>
-         </div>
-         <div class="clear"></div>
-         <script type="text/javascript">
-            $('.autoplay').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            vertical:true,
-            autoplaySpeed: 2000,
-            });
-         </script>
-      </div>
+      @yield('slider')
       <div id="content">
          <div class="wrapper">
-            <div id="content_left">
-               <div class="container-left">
-                  <div class="tt_gt">
-                     <h3 class="title">Danh mục sản phẩm</h3>
-                  </div>
-                  <div class="moudle-left danhmuc">
-                     <div class="navi-left">
-                        @foreach($articlesCateList as $cate)
-                        <div class="tieude_mn">
-                           <h3>{!! $cate->name !!}</h3>
-                        </div>
-                        <div class="item-list">
-                           <ul>
-                              @foreach($cate->articles as $value)
-                              <li><a href="san-pham/nau-tiec-dam-cuoi-136.html"><span>{!! $value->title !!}</span></a></li>                         
-                              @endforeach    
-                           </ul>
-                           <div class="clear"></div>
-                        </div>    
-                        @endforeach                    
-                     </div>
-                  </div>
-               </div>              
-               <div class="container-left">
-                  <div class="tt_gt">
-                     <h3 class="title">Hỗ trợ trực tuyến</h3>
-                  </div>
-                  <div class=" danhmuc">
-                     <div class="navi-left">
-                        <div class="item-list">
-                           <div class="box_img_ht">
-                              <img style="width: 100%;" src="{{ URL::asset('assets/upload/hinhanh/brht.png') }}">
-                              <div class="td">Hỗ trợ online</div>
-                           </div>
-                           <div class="box_hotro">
-                              <div class="mxh_ht">
-                                 <ul>
-                                    <li><a href="test" title="test"><img  src="{{ URL::asset('assets/upload/hinhanh/sky.png') }}"></a></li>
-                                    <li><a href="test" title="test"><img  src="{{ URL::asset('assets/upload/hinhanh/viber.png') }}"></a></li>
-                                    <li><a href="test" title="test"><img  src="{{ URL::asset('assets/upload/hinhanh/zalo.png') }}"></a></li>
-                                 </ul>
-                              </div>
-                              <div class="dt_ht">
-                                 <div class="sodt"><span>Mr. Phong</span></div>
-                                 <div class="emailtv"><span>0909 340 797 </span></div>
-                              </div>
-                              <div class="clear"></div>
-                           </div>
-                           <div class="box_hotro">
-                              <div class="mxh_ht">
-                                 <ul>
-                                    <li><a href="test" title="test"><img  src="{{ URL::asset('assets/upload/hinhanh/sky.png') }}"></a></li>
-                                    <li><a href="test" title="test"><img  src="{{ URL::asset('assets/upload/hinhanh/viber.png') }}"></a></li>
-                                    <li><a href="test" title="test"><img  src="{{ URL::asset('assets/upload/hinhanh/zalo.png') }}"></a></li>
-                                 </ul>
-                              </div>
-                              <div class="dt_ht">
-                                 <div class="sodt"><span>Mr. Phong</span></div>
-                                 <div class="emailtv"><span>0969 156 575 </span></div>
-                              </div>
-                              <div class="clear"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <script type="text/javascript">
-                  (function($) {
-                      $(function() {
-                          $(".scroller").simplyScroll({orientation:'vertical',customClass:'vert'});
-                      });
-                  })(jQuery);
-               </script>        
-            </div>
+            @include('frontend.partials.sidebar')
             <div id="content_right">              
                <!-- end -->
                <script src="{{ URL::asset('assets/js/parallax.js') }}"></script>
                <div class="content-right">
-                  <div class="spnoibat">
-                     <div class="tieude">
-                        <h3>Menu nhận đặt tiệc</h3>
-                     </div>
-                     <?php $c = 0; ?>
-                     @foreach($menuList as $menu)
-                     <?php $c++; ?>
-                     <div>
-                        <div class="item-wr3" @if($c%3 == 0) style="margin-right:0px" @endif>
-                           <div >
-                              <div class="item-gia">{!! $menu->name !!}: <span> {!! number_format($menu->price) !!} đồng/bàn</span></div>
-                              <div class="clear"></div>
-                              <div style="border: 1px solid #00B204;padding: 3px;">
-                                 <div class="hover3">
-                                    <div style="padding:5px">
-                                    <?php $cf = 0; ?>
-                                       @foreach($menu->foodMenu as $food)
-                                       <?php $cf++; ?>
-                                       <p><span style="color:red; font-size: 15px;
-    font-weight: bold;">{{ $cf }}. </span><span style="color:#0000FF;font-weight:bold;font-size:16px">{!! $food->name !!}</span></p>
-                                       @endforeach
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     @if($c%3 == 0)
-                     <div class="clearfix"></div>
-                     @endif
-                     @endforeach
-                     <div class='clear'></div>                  
-                  </div>
-                  <div class="clear"></div>
-                  <div class="spnoibat">
-                     <div class="tieude">
-                        <h3>Tin tức</h3>
-                     </div>
-                     <div class='owl-carousel'>
-                        <div>
-                           <div class="cottt ">
-                              <a href="tin-tuc/nhung-ai-khong-nen-an-rau-muong-128.html"><img src="{{ URL::asset('assets/upload/baiviet/14523128911711414149-1693_290x130.jpg') }}" alt="Những ai không nên ăn rau muống?"></a>
-                              <div class="dmtt">
-                                 <div class="tentt"><a href="nhung-ai-khong-nen-an-rau-muong">Những ai không nên ăn rau muống?</a></div>
-                                 <div class="motatt"></div>
-                                 <div class="xemthem"><a href="tin-tuc/nhung-ai-khong-nen-an-rau-muong-128.html" title="Những ai không nên ăn rau muống?">Xem thêm</a></div>
-                              </div>
-                              <div class="clear"></div>
-                           </div>
-                        </div>
-                        <div>
-                           <div class="cottt ">
-                              <a href="tin-tuc/cach-lam-mut-dau-ngu-thom-ngon-ngay-tet-129.html"><img src="{{ URL::asset('assets/upload/baiviet/cachlammutdaungudontetmutdaungu101482391199width500height375-7427_290x130.jpg') }}" alt="Cách làm mứt đậu ngự thơm ngon ngày Tết"></a>
-                              <div class="dmtt">
-                                 <div class="tentt"><a href="cach-lam-mut-dau-ngu-thom-ngon-ngay-tet">Cách làm mứt đậu ngự thơm ngon ngày Tết</a></div>
-                                 <div class="motatt"></div>
-                                 <div class="xemthem"><a href="tin-tuc/cach-lam-mut-dau-ngu-thom-ngon-ngay-tet-129.html" title="Cách làm mứt đậu ngự thơm ngon ngày Tết">Xem thêm</a></div>
-                              </div>
-                              <div class="clear"></div>
-                           </div>
-                        </div>
-                        <div>
-                           <div class="cottt ">
-                              <a href="tin-tuc/5-cach-thuong-thuc-chanh-leo-moi-la-moi-phu-nu-can-biet-167.html"><img src="{{ URL::asset('assets/upload/baiviet/5cachthuongthucchanhleomoilamoiphunucanbietpushchanhleo31481100861width473height315-7210_290x130.jpg') }}" alt="5 cách thưởng thức chanh leo mới lạ mọi phụ nữ cần biết."></a>
-                              <div class="dmtt">
-                                 <div class="tentt"><a href="5-cach-thuong-thuc-chanh-leo-moi-la-moi-phu-nu-can-biet">5 cách thưởng thức chanh leo mới lạ mọi phụ nữ cần biết.</a></div>
-                                 <div class="motatt"></div>
-                                 <div class="xemthem"><a href="tin-tuc/5-cach-thuong-thuc-chanh-leo-moi-la-moi-phu-nu-can-biet-167.html" title="5 cách thưởng thức chanh leo mới lạ mọi phụ nữ cần biết.">Xem thêm</a></div>
-                              </div>
-                              <div class="clear"></div>
-                           </div>
-                        </div>
-                        <div>
-                           <div class="cottt ">
-                              <a href="tin-tuc/tuyet-chieu-luoc-phan-nao-cua-heo-cung-trang-thom-ngon-gion-173.html"><img src="{{ URL::asset('assets/upload/baiviet/nhungtuyetchieuluocphannaocuaheocungtrangdep11482978201width600height400-9892_290x130.jpg') }}" alt="Tuyệt chiêu luộc phần nào của heo cũng trắng thơm, ngon giòn"></a>
-                              <div class="dmtt">
-                                 <div class="tentt"><a href="tuyet-chieu-luoc-phan-nao-cua-heo-cung-trang-thom-ngon-gion">Tuyệt chiêu luộc phần nào của heo cũng trắng thơm, ngon giòn</a></div>
-                                 <div class="motatt"></div>
-                                 <div class="xemthem"><a href="tin-tuc/tuyet-chieu-luoc-phan-nao-cua-heo-cung-trang-thom-ngon-gion-173.html" title="Tuyệt chiêu luộc phần nào của heo cũng trắng thơm, ngon giòn">Xem thêm</a></div>
-                              </div>
-                              <div class="clear"></div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="clear"></div>
-                  </div>
-               </div>
-               <script type="text/javascript">
-                  $(document).ready(function() {
-                    $('.owl-carousel').owlCarousel({
-                    autoplay : true,
-                    nav : true,
-                    navText : true,
-                    dots : true, 
-                    autoplaySpeed : 500, 
-                    loop:true  ,  
-                    margin:2,
-                    responsiveClass:true,
-                    responsive:{
-                        0:{
-                            items:3,
-                        },
-                        600:{
-                            items:3,
-                        },
-                        1000:{
-                            items:3,
-                        }
-                    }
-                  })
-                  });
-               </script>
+                  @yield('content')
+               </div>               
             </div>
             <div class="clear"></div>
          </div>
@@ -496,105 +219,7 @@
       <div class="clear"></div>
       <div class="bottom">
       </div>
-      <div id="footer">
-         <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/jquery.simplyscroll.css') }}">
-         <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.simplyscroll.js') }}"></script>
-         <div class="footer ">
-            <div class="fixed-ft">
-               <div class="box_footer">
-                  <div class="ft-ds">
-                     2016 Copyright © <span style="color:#ff0; font-weight: bold;"> </span> .All rights reserved.
-                  </div>
-               </div>
-            </div>
-            <div class="footer-address">
-               <div class="box_footer ">
-                  <div class="box_ft1">
-                     <div class="ft-1 wow fadeInLeft">
-                        <h3 class="fadeInLeft"> </h3>
-                        <p style="line-height: 20.8px;"><span style="font-size:20px;"><span style="color:#FFFF00;"><span style="font-family:arial,helvetica,sans-serif;"><strong>CÔNG TY TNHH DỊCH VỤ NẤU TIỆC GIA LONG</strong></span></span></span></p>
-                        <p style="line-height: 20.8px;"><span style="color:#FFFF00;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><strong>Địa chỉ:</strong> <span style="text-align: center;">77/4 Bờ Bao Tân Thắng, Phường Sơn Kỳ, Quận Tân Phú, Tp. Hồ Chí Minh</span></span></span></span></p>
-                        <p style="line-height: 20.8px;"><span style="color:#FFFF00;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><strong>Điện thoại:</strong></span></span></span><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> </span></span></span><span style="color:#FFFFFF;"><span style="font-size: 20px; text-align: center; line-height: 1.6;"><span new="" times=""><span style="font-family:times new roman,times,serif;"><span style="font-size: 22px;"><strong>0909 340 797</strong></span></span> </span></span><span style="text-align: center; font-size: 22px;"><span new="" times=""><span font-size:="" new="" text-align:="" times=""><strong> </strong></span></span></span><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="text-align: center;">(Anh Phong) </span></span></span></span></p>
-                        <p style="line-height: 20.8px;"><span style="color:#000000;"><span style="font-size:22px;"><span style="font-family:times new roman,times,serif;"><span style="text-align: center;">                 </span></span></span></span><span style="color:#FFFFFF;"><span style="font-size:22px;"><span style="font-family:times new roman,times,serif;"><span style="text-align: center;"> <strong>0969 156 575</strong> </span></span><span style="font-family: &quot;times new roman&quot;, times, serif;"><span style="text-align: center;">(</span></span><span style="font-family: &quot;times new roman&quot;, times, serif; text-align: center;">Anh Phong) </span></span></span></p>
-                        <p style="line-height: 20.8px;"><span style="color:#FFFF00;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><strong>Email: </strong></span></span></span><span style="color:#FFFFFF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="background-color: transparent;">thuynguyen162694@gmail.com </span></span></span></span></p>
-                        <p style="margin: 0px; padding: 0px; list-style: none; color: rgb(27, 25, 25); font-family: Arial, Helvetica, sans-serif; font-size: 14px;"><span style="color:#FFFF00;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent; line-height: 1.6;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><strong style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline;">Website: </strong></span></span></span></span></span></span><span style="color:#FFFFFF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent; line-height: 1.6;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">http://nautiecgialong.com/</span></span></span></span></span></span></span></p>
-                        <div class="ft-ds wow fadeInLeft">
-                           <div class="addthis_native_toolbox"></div>
-                        </div>
-                     </div>
-                     <div class="clear"></div>
-                     <div class="td_lk">LIÊN KẾT MẠNG XÃ HỘI</div>
-                     <div class="mxh_ft">
-                        <ul>
-                           <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/nguyenhamsau10103-3622.png') }}" alt=""></a></li>
-                           <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/nguyenhamsau10108-8463.png') }}" alt=""></a></li>
-                           <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/nguyenhamsau10110-6415.png') }}" alt=""></a></li>
-                           <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/nguyenhamsau10106-9454.png') }}" alt=""></a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="box_ft2">
-                     <div class="box_dangky"  style='background:
-                        url({{ URL::asset('assets/upload/hinhanh/timthumb-6466.png') }}) fixed;    padding: 35px 100px;     margin: 20px 0;' >
-                        <div class="tieude_lydo">
-                           <h3>ĐĂNG KÝ NHẬN MAIL KHUYẾN MÃI</h3>
-                        </div>
-                        <form action="" method="POST" class="frmdk" accept-charset="utf-8">
-                           <div class="frm_dk">
-                              <div class="dk">
-                                 <input type="email" id="txtemail" name="txtemail" class=" txtdk" required="required" placeholder="Nhập mail của bạn..."/> 
-                                 <input type="submit" name="btnemail" class="btn btnemail" value="Gửi"/>
-                              </div>
-                           </div>
-                        </form>
-                     </div>
-                     <div class="clear"></div>
-                     <div class="box_bot_ft">
-                        <div class="ft-2 wow fadeInDown">
-                           <h3>Về chúng tôi</h3>
-                           <div><a href="gioi-thieu.html" >Giới thiệu</a></div>
-                           <div><a href="lien-he.html" >Liên hệ</a></div>
-                           <div><a href="san-pham.html" >Menu sản phẩm</a></div>
-                           <div><a href="menu-tu-chon.html" >Menu tự chọn</a></div>
-                           <div class="clear"></div>
-                        </div>
-                        <div class="ft-5 wow fadeInDown">
-                           <h3>Tin tức</h3>
-                           <div><a href="tin-tuc/nhung-ai-khong-nen-an-rau-muong-128.html">Những ai không nên ăn rau muống?</a></div>
-                           <div><a href="tin-tuc/cach-lam-mut-dau-ngu-thom-ngon-ngay-tet-129.html">Cách làm mứt đậu ngự thơm ngon ngày Tết</a></div>
-                           <div><a href="tin-tuc/5-cach-thuong-thuc-chanh-leo-moi-la-moi-phu-nu-can-biet-167.html">5 cách thưởng thức chanh leo mới lạ mọi phụ nữ cần biết.</a></div>
-                           <div><a href="tin-tuc/tuyet-chieu-luoc-phan-nao-cua-heo-cung-trang-thom-ngon-gion-173.html">Tuyệt chiêu luộc phần nào của heo cũng trắng thơm, ngon giòn</a></div>
-                           <div class="clear"></div>
-                        </div>
-                        <div class="ft-3 wow fadeInRight">
-                           <div class="tketruycap">
-                              <h3>Thống kê truy cập</h3>
-                              <div  class="khungtt">
-                                 <div>Số người online:<span>2</span></div>
-                                 <div>Hôm nay:<span>42</span></div>
-                                 <div>Tuần này:<span>124</span></div>
-                                 <div>Tổng truy cập:<span>23221</span></div>
-                                 <div class="clear"></div>
-                              </div>
-                              <div class="clear"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="clear"></div>
-               </div>
-               <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-         </div>
-         <script type="text/javascript">
-            (function($) {
-                $(function() {
-                    $(".scroller").simplyScroll({orientation:'vertical',customClass:'vert'});
-                });
-            })(jQuery);
-         </script>    
-      </div>
+      @include('frontend.partials.footer')
       <style type="text/css">
         #menu{
           background: url({{ URL::asset('assets/upload/hinhanh/brmn.png') }}) repeat-x;
@@ -612,41 +237,49 @@
           }
           .moudle-left ul li a:after {
 
-    background: url({{ URL::asset('assets/upload/hinhanh/check1.png') }});
-  }
-  .tieude_mn h3:before {
-   
-    background: url({{ URL::asset('assets/upload/hinhanh/check.png') }}) no-repeat;
-  }
-  .tieude h3:after {
+          background: url({{ URL::asset('assets/upload/hinhanh/check1.png') }});
+        }
+        .tieude_mn h3:before {
+         
+          background: url({{ URL::asset('assets/upload/hinhanh/check.png') }}) no-repeat;
+        }
+        .tieude h3:after {
 
-    background: url({{ URL::asset('assets/upload/hinhanh/bdtd.png') }}) no-repeat;
-  }
+          background: url({{ URL::asset('assets/upload/hinhanh/bdtd.png') }}) no-repeat;
+        }
 
-  .tieude h3:before {
-    
-    background: url({{ URL::asset('assets/upload/hinhanh/bdtd1.png') }}) no-repeat;
-  }
-  .khungtt div:nth-child(4):before {
-    
-    background: url({{ URL::asset('assets/upload/hinhanh/ic4.png') }}) no-repeat;
-  }
+        .tieude h3:before {
+          
+          background: url({{ URL::asset('assets/upload/hinhanh/bdtd1.png') }}) no-repeat;
+        }
+        .khungtt div:nth-child(4):before {
+          
+          background: url({{ URL::asset('assets/upload/hinhanh/ic4.png') }}) no-repeat;
+        }
 
-  .khungtt div:nth-child(3):before {
-   
-    background: url({{ URL::asset('assets/upload/hinhanh/ic3.png') }}) no-repeat;
-  }
-   .khungtt div:nth-child(2):before {
-   
-    background: url({{ URL::asset('assets/upload/hinhanh/ic2.png') }}) no-repeat;
-  }
-  .khungtt div:nth-child(1):before {
-   
-    background: url({{ URL::asset('assets/upload/hinhanh/ic1.png') }}) no-repeat;
-  }
-  .item-wr3 .hover3{
-    min-height: 230px;
-  }
+        .khungtt div:nth-child(3):before {
+         
+          background: url({{ URL::asset('assets/upload/hinhanh/ic3.png') }}) no-repeat;
+        }
+         .khungtt div:nth-child(2):before {
+         
+          background: url({{ URL::asset('assets/upload/hinhanh/ic2.png') }}) no-repeat;
+        }
+        .khungtt div:nth-child(1):before {
+         
+          background: url({{ URL::asset('assets/upload/hinhanh/ic1.png') }}) no-repeat;
+        }
+        .item-wr3 .hover3{
+          min-height: 230px;
+        }
       </style>
+      @yield('js')
+      <script type="text/javascript">
+         (function($) {
+            $(function() {
+                $(".scroller").simplyScroll({orientation:'vertical',customClass:'vert'});
+            });
+        })(jQuery);
+      </script>
    </body>
 </html>
