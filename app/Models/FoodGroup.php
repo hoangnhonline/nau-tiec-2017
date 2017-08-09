@@ -26,7 +26,7 @@ class FoodGroup extends Model  {
     protected $fillable = [
                             'name', 
                             'slug', 
-                            'food_group_id',                     
+                            'food_type_id',                     
                             'display_order',                           
                             'created_user', 
                             'updated_user'
