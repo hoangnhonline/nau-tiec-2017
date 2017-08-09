@@ -44,11 +44,22 @@
               @endif                
                                            
                 
+                <div class="form-group">
+                    <label>Loại món ăn <span class="red-star">*</span></label>
+                    <select name="food_type_id" id="food_type_id" class="form-control">
+                        <option value="">--chọn--</option>
+                        @if( $foodTypeList->count() > 0)
+                          @foreach( $foodTypeList as $foodType )
+                              <option value="{{ $foodType->id }}" {{ old('food_type_id', $detail->food_type_id) == $foodType->id ? "selected" : "" }}>{{ $foodType->name }}</option>
+                          @endforeach
+                        @endif
+                    </select>
+                </div>
                 <div class="form-group" >
                   
-                  <label>Tên màu<span class="red-star">*</span></label>
-                  <input type="text" class="form-control" name="name" id="name" value="{{ $detail->name }}">
-                </div>                
+                  <label>Tên nhóm<span class="red-star">*</span></label>
+                  <input type="text" class="form-control" name="name" id="name" value="{{ old('name', $detail->name ) }}">
+                </div>                       
                   
             </div>                      
             <div class="box-footer">

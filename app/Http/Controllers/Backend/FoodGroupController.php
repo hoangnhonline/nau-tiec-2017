@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\FoodGroup;
+use App\Models\FoodType;
 use Helper, File, Session, Auth;
 
 class FoodGroupController extends Controller
@@ -19,10 +20,19 @@ class FoodGroupController extends Controller
     public function index(Request $request)
     {
 
-        $items = FoodGroup::orderBy('display_order')->paginate(20);
+        $foodTypeList = FoodType::orderBy('display_order')->get();
 
+        $food_type_id = $request->food_type_id ? $request->food_type_id : null;
+        
+        $query = FoodGroup::whereRaw('1');
+
+        if( $food_type_id > 0){
+            $query->where('food_type_id', $food_type_id);
+        }
+
+        $items = $query->orderBy('display_order')->paginate(20);
       
-        return view('backend.food-group.index', compact( 'items' ));
+        return view('backend.food-group.index', compact( 'items', 'foodTypeList', 'food_type_id'));
     }
 
     /**
@@ -32,8 +42,11 @@ class FoodGroupController extends Controller
     */
     public function create(Request $request)
     {          
+        $foodTypeList = FoodType::orderBy('display_order')->get();
+        
+        $food_type_id = $request->food_type_id ? $request->food_type_id : null;
 
-        return view('backend.food-group.create');
+        return view('backend.food-group.create', compact('foodTypeList', 'food_type_id'));
     }
 
     /**
@@ -47,17 +60,20 @@ class FoodGroupController extends Controller
         $dataArr = $request->all();
         
         $this->validate($request,[                                    
-            'name' => 'required'            
+            'name' => 'required',
+            'food_type_id' => 'required'          
         ],
         [                                    
-            'name.required' => 'Bạn chưa nhập tên màu'
+            'name.required' => 'Bạn chưa nhập tên nhóm món ăn',
+            'food_type_id.required' => 'Bạn chưa chọn loại món ăn'
         ]);       
-        $dataArr['display_order'] = Helper::getNextOrder('food_type');
+        $dataArr['display_order'] = Helper::getNextOrder('food_type', 
+                                                        ['food_type_id' => $dataArr['food_type_id']]);
       
 
         $rs = FoodGroup::create($dataArr);
         
-        Session::flash('message', 'Tạo mới màu thành công');
+        Session::flash('message', 'Tạo mới nhóm món ăn thành công');
 
         return redirect()->route('food-group.index');
     }
@@ -81,10 +97,11 @@ class FoodGroupController extends Controller
     */
     public function edit($id)
     {        
+        $foodTypeList = FoodType::orderBy('display_order')->get();
 
         $detail = FoodGroup::find($id);
 
-        return view('backend.food-group.edit', compact('detail'));
+        return view('backend.food-group.edit', compact('detail', 'foodTypeList'));
     }
 
     /**
@@ -98,21 +115,20 @@ class FoodGroupController extends Controller
     {
         $dataArr = $request->all();
         
-        $this->validate($request,[                                    
-            'name' => 'required'            
+         $this->validate($request,[                                    
+            'name' => 'required',
+            'food_type_id' => 'required'          
         ],
         [                                    
-            'title.required' => 'Bạn chưa nhập tên màu'
-        ]);       
-        
-        
-        $dataArr['food-group_code'] = Helper::stripUnicode($dataArr['name']);
+            'name.required' => 'Bạn chưa nhập tên nhóm món ăn',
+            'food_type_id.required' => 'Bạn chưa chọn loại món ăn'
+        ]);
 
         $model = FoodGroup::find($dataArr['id']);
 
         $model->update($dataArr);
        
-        Session::flash('message', 'Cập nhật màu thành công');        
+        Session::flash('message', 'Cập nhật nhóm món ăn thành công');        
 
         return redirect()->route('food-group.edit', $dataArr['id']);
     }
@@ -126,11 +142,14 @@ class FoodGroupController extends Controller
     public function destroy($id)
     {
         // delete
-        $model = FoodGroup::find($id);
-        $model->delete();
+        $detail = FoodGroup::find($id);
+        
+        $food_type_id = $detail->food_type_id;
+
+        $detail->delete();
 
         // redirect
-        Session::flash('message', 'Xóa màu thành công');
-        return redirect()->route('food-group.index');
+        Session::flash('message', 'Xóa nhóm món ăn thành công');
+        return redirect()->route('food-group.index', ['food_type_id' => $food_type_id]);
     }
 }

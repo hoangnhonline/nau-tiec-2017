@@ -4,11 +4,11 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Màu
+      Nhóm món ăn
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-      <li><a href="{{ route('food-group.index') }}">Màu</a></li>
+      <li><a href="{{ route('food-group.index') }}">Nhóm món ăn</a></li>
       <li class="active">Tạo mới</li>
     </ol>
   </section>
@@ -39,23 +39,22 @@
                       </ul>
                   </div>
               @endif                
+                <div class="form-group">
+                    <label>Loại món ăn <span class="red-star">*</span></label>
+                    <select name="food_type_id" id="food_type_id" class="form-control">
+                        <option value="">--chọn--</option>
+                        @if( $foodTypeList->count() > 0)
+                          @foreach( $foodTypeList as $foodType )
+                              <option value="{{ $foodType->id }}" {{ old('food_type_id', $food_type_id) == $foodType->id ? "selected" : "" }}>{{ $foodType->name }}</option>
+                          @endforeach
+                        @endif
+                    </select>
+                </div>
                 <div class="form-group" >
                   
-                  <label>Tên màu<span class="red-star">*</span></label>
+                  <label>Tên nhóm<span class="red-star">*</span></label>
                   <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}">
-                </div>               
-                <div class="col-md-6 none-padding pleft-5">
-                            <label>Màu sắc</label>
-                            <select name="food_type_id" id="food_type_id" class="form-control">
-                                <option value="">--chọn--</option>
-                                @if( $colorArr->count() > 0)
-                                  @foreach( $colorArr as $color )
-                                      <option value="{{ $color->id }}">{{ $color->name }}</option>
-                                  @endforeach
-                                @endif
-
-                            </select>
-                        </div>  
+                </div>                               
             </div>              
             <div class="box-footer">
               <button type="submit" class="btn btn-primary">Lưu</button>

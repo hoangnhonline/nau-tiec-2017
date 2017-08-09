@@ -20,8 +20,28 @@
       @if(Session::has('message'))
       <p class="alert alert-info" >{{ Session::get('message') }}</p>
       @endif
-      <a href="{{ route('food-group.create') }}" class="btn btn-info" style="margin-bottom:5px">Tạo mới</a>
-      
+      <a href="{{ route('food-group.create', ['food_type_id' => $food_type_id]) }}" class="btn btn-info" style="margin-bottom:5px">Tạo mới</a>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Bộ lọc</h3>
+        </div>
+        <div class="panel-body">
+          <form class="form-inline" role="form" method="GET" action="{{ route('food-group.index') }}">            
+            <div class="form-group">
+              <label for="email">Loại món ăn </label>
+              <select class="form-control" name="food_type_id" id="food_type_id">
+                <option value="">--Tất cả--</option>
+                @if( $foodTypeList->count() > 0)
+                  @foreach( $foodTypeList as $value )
+                  <option value="{{ $value->id }}" {{ $value->id == $food_type_id ? "selected" : "" }}>{{ $value->name }}</option>
+                  @endforeach
+                @endif
+              </select>
+            </div>                        
+            <button type="submit" class="btn btn-default btn-sm">Lọc</button>
+          </form>         
+        </div>
+      </div>
       <div class="box">
 
         <div class="box-header with-border">
