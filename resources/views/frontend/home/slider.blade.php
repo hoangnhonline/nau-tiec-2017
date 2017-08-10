@@ -1,7 +1,7 @@
 <div id="slider">
-	 <script src="{{ URL::asset('assets/plugin4/amazingslider.js') }}"></script>
-	 <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/plugin4/amazingslider-1.css') }}">
-	 <script src="{{ URL::asset('assets/plugin4/initslider-1.js') }}"></script>
+	 <script src="{{ URL::asset('assets/js/amazingslider.js') }}"></script>
+	 <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/amazingslider-1.css') }}">
+	 <script src="{{ URL::asset('assets/js/initslider-1.js') }}"></script>
 	 <div style="width: 1050px;float: left;">
 	    <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:100%;margin:0 auto;">
 	       <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">

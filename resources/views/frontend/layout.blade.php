@@ -42,10 +42,10 @@
       <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/slick-theme2.css') }}"/>
       <script type="text/javascript" src="{{ URL::asset('assets/js/slick.min.js') }}"></script>
       <!-- Add mousewheel plugin (this is optional) -->
-      <script type="text/javascript" src="{{ URL::asset('assets/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js') }}"></script>
+      <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.mousewheel-3.0.6.pack.js') }}"></script>
       <!-- Add fancyBox main JS and CSS files -->
-      <script type="text/javascript" src="{{ URL::asset('assets/js/fancybox/source/jquery.fancybox.js') }}?v=2.1.5"></script>
-      <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/js/fancybox/source/jquery.fancybox.css') }}?v=2.1.5" media="screen" />
+      <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.fancybox.js') }}?v=2.1.5"></script>
+      <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/jquery.fancybox.css') }}?v=2.1.5" media="screen" />
       <script type="text/javascript">
          jQuery(document).ready(function() {
              
@@ -111,16 +111,7 @@
          });
       </script>  
       <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAL928AIsIDYz9oUb-ILO5LTe_7MQnVgDA"></script>
-      <script>
-         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-         })(window,document,'script','https://www.google-analytics.com/analytics.js') }}','ga');
-         
-         ga('create', 'UA-89709083-1', 'auto');
-         ga('send', 'pageview');
-         
-      </script> 
+     
       <link  href="{{ URL::asset('assets/css/fotorama.css') }}" rel="stylesheet">
       <script src="{{ URL::asset('assets/js/fotorama.js') }}"></script>
       <link rel="stylesheet" href="{{ URL::asset('assets/css/animate.css') }}">
@@ -221,6 +212,9 @@
       </div>
       @include('frontend.partials.footer')
       <style type="text/css">
+        .header{
+            background:url({{ URL::asset('assets/upload/hinhanh/1-8460.jpg') }});background-size:cover;box-sizing: border-box;    padding:5px 0px;
+        }
         #menu{
           background: url({{ URL::asset('assets/upload/hinhanh/brmn.png') }}) repeat-x;
         }

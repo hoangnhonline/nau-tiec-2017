@@ -24,7 +24,7 @@
     color: transparent;
     border: none;
     outline: none;
-    background: url(../images/img/icon_prev.png) left no-repeat;
+    background: url(../images/icon_prev.png) left no-repeat;
 }
 .slick-next
 {    opacity: 0.8;
@@ -44,7 +44,7 @@
     color: transparent;
     border: none;
     outline: none;
-    background: url(../images/img/icon_next.png) left no-repeat;
+    background: url(../images/icon_next.png) left no-repeat;
 }
 .slick:hover .slick-prev,.slick:hover .slick-next
 {
