@@ -1,15 +1,15 @@
 <header class="main-header">
   <!-- Logo -->
-  <a href="{{ Auth::user()->email != "huongll@annammobile.com" ? route('product.index') : route('product.short') }}" class="logo">
+  <a href="{{ Auth::user()->email != "huongll@tiecngon.vn" ? route('product.index') : route('product.short') }}" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini"><b>annammobile.com</b></span>
+    <span class="logo-mini"><b>tiecngon.vn</b></span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><b>annammobile.com</b></span>
+    <span class="logo-lg"><b>tiecngon.vn</b></span>
   </a>
   <!-- Header Navbar: style can be found in header.less -->
   <nav class="navbar navbar-static-top">
     <!-- Sidebar toggle button-->
-    @if(Auth::user()->email != "huongll@annammobile.com")
+    @if(Auth::user()->email != "huongll@tiecngon.vn")
     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
       <span class="sr-only">Toggle navigation</span>
     </a>

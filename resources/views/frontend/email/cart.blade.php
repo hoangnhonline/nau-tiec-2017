@@ -22,14 +22,14 @@ $vangLaiArr = Session::get('vanglai');
                       @if($is_vanglai == 0)
                       <h1 style="font-size:17px;font-weight:bold;color:#444;padding:0 0 5px 0;margin:0"> Cảm ơn
                           quý khách {{$customer->full_name}}
-                          đã đặt hàng tại annammobile.com,</h1>
+                          đã đặt hàng tại tiecngon.vn,</h1>
                       @else
                       <h1 style="font-size:17px;font-weight:bold;color:#444;padding:0 0 5px 0;margin:0"> Cảm ơn
                           quý khách {{ $vangLaiArr['full_name'] }}
-                          đã đặt hàng tại annammobile.com,</h1>
+                          đã đặt hàng tại tiecngon.vn,</h1>
                       @endif
-                        <p style="margin:4px 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#444;line-height:18px;font-weight:normal"> annammobile.com rất vui thông báo đơn hàng #{{ $order_id }} của quý khách đã
-                          được tiếp nhận và đang trong quá trình xử lý. annammobile.com sẽ thông báo đến quý khách
+                        <p style="margin:4px 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#444;line-height:18px;font-weight:normal"> tiecngon.vn rất vui thông báo đơn hàng #{{ $order_id }} của quý khách đã
+                          được tiếp nhận và đang trong quá trình xử lý. tiecngon.vn sẽ thông báo đến quý khách
                           ngay khi hàng chuẩn bị được giao. </p>
                         <h3 style="font-size:13px;font-weight:bold;color:#ec1c24;text-transform:uppercase;margin:20px 0 0 0;border-bottom:1px solid #ddd"> Thông tin đơn hàng #{{ $order_id }} <span style="font-size:12px;color:#777;text-transform:none;font-weight:normal">(Ngày {{date('d')}} Tháng {{date('m')}} Năm {{date('Y')}} {{date('H:i:s')}})</span> </h3></td>
                     </tr>

@@ -17,7 +17,7 @@
                     <tr>
                       <td><h1 style="font-size:17px;font-weight:bold;color:#444;padding:0 0 5px 0;margin:0"> Cảm ơn
                           quý khách
-                          đã đặt hàng tại annammobile.com,</h1>
+                          đã đặt hàng tại tiecngon.vn,</h1>
                       </td>
                     </tr>
                   </tbody>
