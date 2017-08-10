@@ -1,4 +1,4 @@
-<div id="content_left" class="col-sm-3">
+<div id="content_left" class="col-sm-3 col-xs-12">
    <div class="container-left">
       <div class="tt_gt">
          <h3 class="title">Danh mục sản phẩm</h3>

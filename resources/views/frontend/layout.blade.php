@@ -3,6 +3,7 @@
    <head>
       <title>@yield('title')</title>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="robots" content="index,follow"/>
       <meta http-equiv="content-language" content="en"/>
       <meta name="description" content="@yield('site_description')"/>
@@ -28,7 +29,7 @@
       <link rel="stylesheet" href="{{ URL::asset('assets/css/reset.css') }}">
       <link href="{{ URL::asset('assets/js/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
       <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
-      <link href="{{ URL::asset('assets/css/media.css') }}" rel="stylesheet" type="text/css" />
+      <!-- <link href="{{ URL::asset('assets/css/media.css') }}" rel="stylesheet" type="text/css" /> -->
       <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,greek-ext,cyrillic-ext,vietnamese,greek' rel='stylesheet' type='text/css'>
       <script language="javascript" type="text/javascript" src="{{ URL::asset('assets/js/jquery-1.9.1.min.js') }}"></script>
       <script language="javascript" type="text/javascript" src="{{ URL::asset('assets/js/bootstrap/bootstrap.min.js') }}"></script>
@@ -126,7 +127,7 @@
       @include('frontend.partials.header')
       <div id="menu">
          <div class="wrapper container">
-            <div class="menu row">
+            <div class="menu">
            
                <ul>
                   <li  @if($routeName == 'home') class="active" @endif><a href="{{ route('home') }}">Trang chủ </a></li>
@@ -190,7 +191,7 @@
          <div class="container">
             <div class="row">
               @include('frontend.partials.sidebar')
-              <div id="content_right" class="col-sm-9">         
+              <div id="content_right" class="col-sm-9 col-xs-12">         
                  <!-- end -->
                  <script src="{{ URL::asset('assets/js/parallax.js') }}"></script>
                  <div class="content-right">
