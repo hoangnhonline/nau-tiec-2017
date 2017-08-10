@@ -25,6 +25,14 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'middleware' => '
         Route::post('/update', ['as' => 'pages.update', 'uses' => 'PagesController@update']);
         Route::get('{id}/destroy', ['as' => 'pages.destroy', 'uses' => 'PagesController@destroy']);
     });
+    Route::group(['prefix' => 'nhom-san-pham'], function () {
+        Route::get('/', ['as' => 'nhom-san-pham.index', 'uses' => 'NhomSanPhamController@index']);
+        Route::get('/create', ['as' => 'nhom-san-pham.create', 'uses' => 'NhomSanPhamController@create']);
+        Route::post('/store', ['as' => 'nhom-san-pham.store', 'uses' => 'NhomSanPhamController@store']);
+        Route::get('{id}/edit',   ['as' => 'nhom-san-pham.edit', 'uses' => 'NhomSanPhamController@edit']);
+        Route::post('/update', ['as' => 'nhom-san-pham.update', 'uses' => 'NhomSanPhamController@update']);
+        Route::get('{id}/destroy', ['as' => 'nhom-san-pham.destroy', 'uses' => 'NhomSanPhamController@destroy']);
+    });
     Route::group(['prefix' => 'food-type'], function () {
         Route::get('/', ['as' => 'food-type.index', 'uses' => 'FoodTypeController@index']);
         Route::get('/create', ['as' => 'food-type.create', 'uses' => 'FoodTypeController@create']);
@@ -44,6 +52,14 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'middleware' => '
         Route::get('{id}/edit',   ['as' => 'food-group.edit', 'uses' => 'FoodGroupController@edit']);
         Route::post('/update', ['as' => 'food-group.update', 'uses' => 'FoodGroupController@update']);
         Route::get('{id}/destroy', ['as' => 'food-group.destroy', 'uses' => 'FoodGroupController@destroy']);
+    });
+    Route::group(['prefix' => 'loai-san-pham'], function () {
+        Route::get('/', ['as' => 'loai-san-pham.index', 'uses' => 'LoaiSanPhamController@index']);
+        Route::get('/create', ['as' => 'loai-san-pham.create', 'uses' => 'LoaiSanPhamController@create']);
+        Route::post('/store', ['as' => 'loai-san-pham.store', 'uses' => 'LoaiSanPhamController@store']);
+        Route::get('{id}/edit',   ['as' => 'loai-san-pham.edit', 'uses' => 'LoaiSanPhamController@edit']);
+        Route::post('/update', ['as' => 'loai-san-pham.update', 'uses' => 'LoaiSanPhamController@update']);
+        Route::get('{id}/destroy', ['as' => 'loai-san-pham.destroy', 'uses' => 'LoaiSanPhamController@destroy']);
     });
     Route::group(['prefix' => 'color'], function () {
         Route::get('/', ['as' => 'color.index', 'uses' => 'ColorController@index']);
