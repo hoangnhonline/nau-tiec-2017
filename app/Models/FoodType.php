@@ -34,4 +34,7 @@ class FoodType extends Model  {
     public function foodGroup(){
         return $this->hasMany('App\Models\FoodGroup', 'food_type_id');
     }
+    public function food(){
+        return $this->hasMany('App\Models\Food', 'food_type_id');
+    }
 }

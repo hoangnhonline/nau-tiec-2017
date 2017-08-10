@@ -31,5 +31,7 @@ class FoodGroup extends Model  {
                             'created_user', 
                             'updated_user'
                         ];
-    
+    public function food(){
+        return $this->hasMany('App\Models\Food', 'food_group_id');
+    }
 }

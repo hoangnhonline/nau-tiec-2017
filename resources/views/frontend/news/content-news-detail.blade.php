@@ -1,51 +1,29 @@
 @include('frontend.partials.meta')
 @section('content')
-<div class="block block_breadcrumb">
-    <ol class="breadcrumb">
-        <li><a href="{!! route('home') !!}">Trang chủ</a></li>
-        <li><a href="{!! route('news-list') !!}">Tin tức</a></li>        
-        <li class="active">{!! $detail->title !!}</li>
-    </ol>
-</div><!-- /block_breadcrumb -->
-<div class="block_news row">
-    <div class="col-md-9 col-sm-9 col-xs-12 block_cate_left">
-        <div class="block_news_content">
-            <h1 class="article-title">{!! $detail->title !!}</h1>
-            <p class="content-date">Ngày tạo: {!! date('d/m/Y H:i', strtotime($detail->created_at)) !!}</p>
-            <div class="block">
-                <p class="block_intro">
-                    <img src="{!! Helper::showImage($detail->image_url ) !!}" alt="{!! $detail->title !!}">
-                </p>
-                {!! $detail->content !!}
-            </div><!-- /block -->
-            @if( $otherArr )
-                       
-            <div class="block_news_related" style="margin-top:40px">
-                <span class="block_title">CÁC TIN KHÁC</span>
-                <ul class="row">
-                 @foreach( $otherArr as $articles)
-                <li class="col-sm-3 col-sm-6">
-                    <div class="des" style="text-align:left">
-                        <img src="{!! Helper::showImage($articles->image_url ) !!}" alt="{!! $articles->title !!}">
-                        <a href="{{ route('news-detail', ['slug' => $articles->slug, 'id' => $articles->id]) }}" title="{!! $articles->title !!}" >{!! $articles->title !!}</a>
-                        <span>[{!! date('d/m/Y', strtotime($detail->created_at)) !!}]</span>
-                    </div>
-                </li>                
-                @endforeach
-                </ul>
-            </div>
-            @endif
+<div class="content-right banggia1">
+    <div class="tieude">
+        <h3>Tin tức</h3>
+    </div>
+        <div id="tieude">
+          <div><h2> {!! $detail->title !!}</h2></div>
         </div>
-    </div><!-- /block_cate_left -->
+        <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> {!! date('d/m/Y H:i', strtotime($detail->created_at)) !!} - <i class="fa fa-eye" aria-hidden="true"> </i> 89</div>
+        
+   
+            <div class="news-content">
+                {!! $detail->content !!}
 
-    @include('frontend.news.sidebar')
-</div><!-- /block_categories -->
-<style type="text/css">
-    .block_news_related ul li a{
-        font-size: 12px;
-        height: 30px;
-        display: block;
-        overflow-y: hidden;
-    }
-</style>
+            </div>
+
+
+                 <div class="tieude"><h3>Các tin khác</h3></div>
+          <div class="box-content">
+           @foreach( $otherArr as $articles)
+                                <div style="padding-left:10px; height:auto;">
+                                <a href="{{ route('news-detail', ['slug' => $articles->slug, 'id' => $articles->id]) }}" title="{!! $articles->title !!}" style="text-decoration:none;"><img src="{{ URL::asset('assets/images/sao.png') }}" border="0"  alt="{!! $articles->title !!}">&nbsp;&nbsp;<span style="font-size:14px; color:#666;">{!! $articles->title !!}</span></a></div>                
+                                @endforeach
+
+            </div>
+
+
 @endsection

@@ -124,40 +124,29 @@
       <div id="menu">
          <div class="wrapper">
             <div class="menu">
+           
                <ul>
-                  <li  class="active"><a href="index.php">Trang chủ </a></li>
-                  <li class=""><a href="gioi-thieu.html"> Giới thiệu </a></li>
-                  <li class="">
-                     <a href="san-pham.html">Menu sản phẩm</a>
-                     <ul>
+                  <li  @if($routeName == 'home') class="active" @endif><a href="{{ route('home') }}">Trang chủ </a></li>
+                  <li class="{{ (isset($pageDetail)  && $routeName == 'parent-cate' && $detailPage->slug == 'gioi-thieu') ? 'active' : '' }}"><a href="{{ route('parent-cate', 'gioi-thieu') }}"> Giới thiệu </a></li>
+                  <li class="{{ (!isset($pageDetail) && $routeName == 'parent-cate') || $routeName == 'dich-vu' ? 'active' : '' }}">
+                     <a href="javascript:;">Menu sản phẩm</a>
+                     <ul>                            
+                        @foreach($articlesCateList as $cate)
                         <li style="border-bottom:1px dashed #c4c4c4;">
-                           <a href="san-pham/nau-tiec-tai-nha">NẤU TIỆC TẠI NHÀ</a>
+                           <a href="{{ route('parent-cate', $cate->slug) }}">{!! $cate->name !!}</a>
                            <ul>
-                              <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-dam-cuoi-136.html">Nấu tiệc đám cưới</a></li>
-                              <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-dam-hoi-135.html">Nấu tiệc đám hỏi</a></li>
-                              <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-tai-tan-gia-138.html">Nấu tiệc tại tân gia</a></li>
-                              <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-sinh-nhat-134.html">Nấu tiệc sinh nhật</a></li>
-                              <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-dam-gio-150.html">Nấu tiệc đám giỗ</a></li>
-                              <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-lien-hoan-151.html">Nấu tiệc liên hoan</a></li>
-                              <li ><a href="san-pham/nau-tiec-tai-tp-hcm-152.html">Nầu tiệc tại Tp HCM</a></li>
+                              @foreach($cate->articles as $value)
+                              <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-dam-cuoi-136.html">{!! $value->title !!}</a></li>
+                              @endforeach
                            </ul>
                         </li>
-                        <li >
-                           <a href="san-pham/to-chuc-tiec">TỔ CHỨC TIỆC</a>
-                           <ul>
-                              <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/to-chuc-tiec-cuoi-nam-155.html">Tổ chức tiệc Cuối năm</a></li>
-                              <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/to-chuc-tiec-tai-cong-ty-154.html">Tổ chức tiệc tại Công ty</a></li>
-                              <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/to-chuc-tiec-cuoi-153.html">Tổ chức tiệc cưới</a></li>
-                              <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/to-chuc-tiec-dam-hoi-139.html">Tổ chức tiệc đám hỏi</a></li>
-                              <li ><a href="san-pham/to-chuc-tiec-sinh-nhat-140.html">Tổ chức tiệc sinh nhật</a></li>
-                           </ul>
-                        </li>
+                        @endforeach                         
                      </ul>
                   </li>
-                  <li class=""><a href="menu-tu-chon.html">Menu tự chọn</a></li>
+                  <li class="{{ $routeName == 'menu-custom' ? 'active' : '' }}"><a href="{{ route('menu-custom')}}">Menu tự chọn</a></li>
                   </li>
-                  <li class=""><a href="tin-tuc.html">Tin tức - Sự kiện</a></li>
-                  <li class=""><a href="lien-he.html">Liên hệ</a></li>
+                  <li class="{{ $routeName == 'news-list' || $routeName == 'news-detail' ? 'active' : '' }}"><a href="{{ route('news-list') }}">Tin tức - Sự kiện</a></li>
+                  <li class="{{ $routeName == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Liên hệ</a></li>
                   <div class="search">
                      <script type="text/javascript">
                         function doEnter(evt){
@@ -265,6 +254,9 @@
         }
         .item-wr3 .hover3{
           min-height: 230px;
+        }
+        .item-wr .hover2{
+          min-height: 140px
         }
       </style>
       @yield('js')

@@ -12,7 +12,7 @@
             <div class="item-list">
                <ul>
                   @foreach($cate->articles as $value)
-                  <li><a href="san-pham/nau-tiec-dam-cuoi-136.html"><span>{!! $value->title !!}</span></a></li>                         
+                  <li><a href="{{ route('dich-vu', [$value->slug, $value->id]) }}" title="{!! $value->title !!}"><span>{!! $value->title !!}</span></a></li>                         
                   @endforeach    
                </ul>
                <div class="clear"></div>

@@ -73,7 +73,8 @@ Route::group(['namespace' => 'Frontend'], function()
         Route::get('/reset-password/{key}', ['as' => 'reset-password', 'uses' => 'CustomerController@resetPassword']);
         Route::post('save-reset-password', ['as' => 'save-reset-password', 'uses' => 'CustomerController@saveResetPassword']);
     });
-    Route::get('{slugLoaiSp}/{slug}/', ['as' => 'child-cate', 'uses' => 'CateController@cate']);
+    
+    Route::get('{slug}-{id}.html', ['as' => 'dich-vu', 'uses' => 'CateController@cate']);
     Route::post('/dang-ki-newsletter', ['as' => 'register.newsletter', 'uses' => 'HomeController@registerNews']);
     Route::get('/cap-nhat-thong-tin', ['as' => 'cap-nhat-thong-tin', 'uses' => 'CartController@updateUserInformation']);        
     Route::get('/tin-tuc/{slug}-p{id}.html', ['as' => 'news-detail', 'uses' => 'NewsController@newsDetail']);
@@ -88,8 +89,10 @@ Route::group(['namespace' => 'Frontend'], function()
     Route::get('lien-he.html', ['as' => 'contact', 'uses' => 'HomeController@contact']);
     Route::get('may-cu-gia-re.html', ['as' => 'old-device', 'uses' => 'HomeController@oldDevice']);
     Route::get('tin-tuc.html', ['as' => 'news-list', 'uses' => 'NewsController@newsList']);
+    Route::get('menu-tu-chon.html', ['as' => 'menu-custom', 'uses' => 'CateController@menuCustom']);
 
     Route::get('{slug}.html', ['as' => 'parent-cate', 'uses' => 'CateController@index']);
+
 
 });
 
