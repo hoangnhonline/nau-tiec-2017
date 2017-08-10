@@ -4,11 +4,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Nhóm món ăn
+    Món ăn
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-    <li><a href="{{ route( 'food-group.index' ) }}">Nhóm món ăn</a></li>
+    <li><a href="{{ route( 'food.index' ) }}">Món ăn</a></li>
     <li class="active">Danh sách</li>
   </ol>
 </section>
@@ -20,13 +20,13 @@
       @if(Session::has('message'))
       <p class="alert alert-info" >{{ Session::get('message') }}</p>
       @endif
-      <a href="{{ route('food-group.create', ['food_type_id' => $food_type_id]) }}" class="btn btn-info" style="margin-bottom:5px">Tạo mới</a>
+      <a href="{{ route('food.create', ['food_type_id' => $food_type_id]) }}" class="btn btn-info" style="margin-bottom:5px">Tạo mới</a>
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">Bộ lọc</h3>
         </div>
         <div class="panel-body">
-          <form class="form-inline" role="form" method="GET" action="{{ route('food-group.index') }}">            
+          <form class="form-inline" role="form" method="GET" action="{{ route('food.index') }}">            
             <div class="form-group">
               <label for="email">Loại món ăn </label>
               <select class="form-control" name="food_type_id" id="food_type_id">
@@ -37,7 +37,18 @@
                   @endforeach
                 @endif
               </select>
-            </div>                        
+            </div> 
+            <div class="form-group">
+              <label>Nhóm món ăn</label>
+              <select name="food_group_id" id="food_group_id" class="form-control">
+                  <option value="">--chọn--</option>
+                  @if( $foodGroupList->count() > 0)
+                    @foreach( $foodGroupList as $group )
+                        <option value="{{ $group->id }}" {{ old('food_group_id', $food_group_id) == $group->id ? "selected" : "" }}>{{ $group->name }}</option>
+                    @endforeach
+                  @endif
+              </select>
+          </div>                    
             <button type="submit" class="btn btn-default btn-sm">Lọc</button>
           </form>         
         </div>
@@ -68,12 +79,12 @@
                 <td><span class="order">{{ $i }}</span></td>      
                      
                 <td>                  
-                  <a href="{{ route( 'food-group.edit', [ 'id' => $item->id ]) }}">{{ $item->name }}</a>
+                  <a href="{{ route( 'food.edit', [ 'id' => $item->id ]) }}">{{ $item->name }}</a>
                 </td>
                 <td style="white-space:nowrap">                  
-                  <a href="{{ route( 'food-group.edit', [ 'id' => $item->id ]) }}" class="btn btn-warning">Chỉnh sửa</a>                 
+                  <a href="{{ route( 'food.edit', [ 'id' => $item->id ]) }}" class="btn btn-warning">Chỉnh sửa</a>                 
                   
-                  <a onclick="return callDelete('{{ $item->title }}','{{ route( 'food-group.destroy', [ 'id' => $item->id ]) }}');" class="btn btn-danger">Xóa</a>                
+                  <a onclick="return callDelete('{{ $item->title }}','{{ route( 'food.destroy', [ 'id' => $item->id ]) }}');" class="btn btn-danger">Xóa</a>                
                   
                 </td>
               </tr> 
@@ -113,5 +124,10 @@ function callDelete(name, url){
   })
   return flag;
 }
+$(document).ready(function(){
+  $('#food_type_id, #food_group_id').change(function(){
+      $(this).parents('form').submit();
+    });
+});
 </script>
 @stop

@@ -23,18 +23,23 @@ class FoodController extends Controller
     {
 
         $foodTypeList = FoodType::orderBy('display_order')->get();
-
-        $food_type_id = $request->food_type_id ? $request->food_type_id : null;
+        $foodGroupList = FoodGroup::orderBy('display_order')->get();    
         
-        $query = FoodGroup::whereRaw('1');
+        $food_type_id = $request->food_type_id ? $request->food_type_id : null;
+        $food_group_id = $request->food_group_id ? $request->food_group_id : null;
+        
+        $query = Food::whereRaw('1');
 
         if( $food_type_id > 0){
             $query->where('food_type_id', $food_type_id);
+            $foodGroupList = FoodGroup::where('food_type_id', $food_type_id)->orderBy('display_order')->get(); 
         }
-
+        if( $food_type_id > 0){
+            $query->where('food_group_id', $food_group_id);
+        }
         $items = $query->orderBy('display_order')->paginate(20);
       
-        return view('backend.food.index', compact( 'items', 'foodTypeList', 'food_type_id'));
+        return view('backend.food.index', compact( 'items', 'foodTypeList', 'food_type_id', 'foodGroupList', 'food_group_id'));
     }
 
     /**
@@ -45,7 +50,8 @@ class FoodController extends Controller
     public function create(Request $request)
     {          
         $foodTypeList = FoodType::orderBy('display_order')->get();        
-        $foodGroupList = FoodGroup::orderBy('display_order')->get();        
+        $foodGroupList = FoodGroup::orderBy('display_order')->get();    
+
         $food_type_id = $request->food_type_id ? $request->food_type_id : null;
         if($food_type_id){
             $foodGroupList = FoodGroup::where('food_type_id', $food_type_id)->orderBy('display_order')->get();        
@@ -65,23 +71,33 @@ class FoodController extends Controller
     {
         $dataArr = $request->all();
         
-        $this->validate($request,[                                    
-            'name' => 'required',
+        $this->validate($request,[
             'food_type_id' => 'required'          
         ],
-        [                                    
-            'name.required' => 'Bạn chưa nhập tên nhóm món ăn',
+        [   
             'food_type_id.required' => 'Bạn chưa chọn loại món ăn'
-        ]);       
-        $dataArr['display_order'] = Helper::getNextOrder('food_type', 
-                                                        ['food_type_id' => $dataArr['food_type_id']]);
-      
-
-        $rs = FoodGroup::create($dataArr);
+        ]); 
+        if(!empty($dataArr['food'])){
+            foreach($dataArr['food'] as $k => $food){
+                if($food != ''){
+                    $where = $dataArr['food_group_id'] > 0 ? ['food_group_id' => $dataArr['food_group_id'], 'food_type_id' => $dataArr['food_type_id']] : ['food_type_id' => $dataArr['food_type_id']];
+                    Food::create(
+                        [
+                            'food_type_id' => $dataArr['food_type_id'],
+                            'food_group_id' => $dataArr['food_group_id'] > 0 ? $dataArr['food_group_id'] : null,
+                            'name' => $food,
+                            'price' => $dataArr['price'][$k],
+                            'display_order' => Helper::getNextOrder('food', $where),
+                            'created_user' => Auth::user()->id,
+                            'updated_user' => Auth::user()->id                        ]
+                        );
+                }
+            }
+        }       
         
-        Session::flash('message', 'Tạo mới nhóm món ăn thành công');
+        Session::flash('message', 'Tạo mới món ăn thành công');
 
-        return redirect()->route('food.index');
+        return redirect()->route('food.index', ['food_type_id' => $dataArr['food_type_id'], 'food_group_id' => $dataArr['food_group_id']]);
     }
 
     /**

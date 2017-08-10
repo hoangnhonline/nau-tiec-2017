@@ -4,11 +4,11 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Màu   
+      Nhóm món ăn   
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-      <li><a href="{{ route('food-group.index') }}">Màu</a></li>
+      <li><a href="{{ route('food-group.index') }}">Nhóm món ăn</a></li>
       <li class="active">Chỉnh sửa</li>
     </ol>
   </section>

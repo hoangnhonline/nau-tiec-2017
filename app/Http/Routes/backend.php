@@ -45,6 +45,14 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'middleware' => '
         Route::post('/update', ['as' => 'food-type.update', 'uses' => 'FoodTypeController@update']);
         Route::get('{id}/destroy', ['as' => 'food-type.destroy', 'uses' => 'FoodTypeController@destroy']);
     });
+     Route::group(['prefix' => 'food'], function () {
+        Route::get('/', ['as' => 'food.index', 'uses' => 'FoodController@index']);
+        Route::get('/create', ['as' => 'food.create', 'uses' => 'FoodController@create']);
+        Route::post('/store', ['as' => 'food.store', 'uses' => 'FoodController@store']);
+        Route::get('{id}/edit',   ['as' => 'food.edit', 'uses' => 'FoodController@edit']);
+        Route::post('/update', ['as' => 'food.update', 'uses' => 'FoodController@update']);
+        Route::get('{id}/destroy', ['as' => 'food.destroy', 'uses' => 'FoodController@destroy']);
+    });
     Route::group(['prefix' => 'food-group'], function () {
         Route::get('/', ['as' => 'food-group.index', 'uses' => 'FoodGroupController@index']);
         Route::get('/create', ['as' => 'food-group.create', 'uses' => 'FoodGroupController@create']);
