@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="ui-mobile">
    <head>
       <title>@yield('title')</title>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -46,6 +46,9 @@
       <!-- Add fancyBox main JS and CSS files -->
       <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.fancybox.js') }}?v=2.1.5"></script>
       <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/jquery.fancybox.css') }}?v=2.1.5" media="screen" />
+
+          <script src="http://nautiecgialong.com/m/js/jquery.mobile-1.4.5.js"></script>
+    <link href="http://nautiecgialong.com/m/css/mobile.css" type="text/css" rel="stylesheet">
       <script type="text/javascript">
          jQuery(document).ready(function() {
              
@@ -119,7 +122,7 @@
       <script> new WOW().init(); </script>
       <script src="{{ URL::asset('assets/js/lucid.js') }}"></script>
    </head>
-   <body>
+   <body class="ui-mobile-viewport ui-overlay-a">
       @include('frontend.partials.header')
       <div id="menu">
          <div class="wrapper">
