@@ -17,7 +17,7 @@
            <div >
               <div class="item-gia">{!! $menu->name !!}: <span> {!! number_format($menu->price) !!} đồng/bàn</span></div>
               <div class="clear"></div>
-              <div style="border: 1px solid #00B204;padding: 3px;">
+              <div style="border: 1px solid #4E7547;padding: 3px;">
                  <div class="hover3">
                     <div style="padding:5px">
                     <?php $cf = 0; ?>

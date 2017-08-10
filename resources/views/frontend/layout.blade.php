@@ -210,7 +210,7 @@
             background:url({{ URL::asset('assets/upload/hinhanh/1-8460.jpg') }});background-size:cover;box-sizing: border-box;    padding:5px 0px;
         }
         #menu{
-          background: url({{ URL::asset('assets/upload/hinhanh/brmn.png') }}) repeat-x;
+          background-color: #4e7547;
         }
         .tt_gt h3 {
           padding: 10px;
