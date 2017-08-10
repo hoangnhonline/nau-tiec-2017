@@ -872,12 +872,8 @@ line-height: 25px;
 .mxh_ht{width: 50%;float: left;}
 .mxh_ht ul li{display: inline-block;margin-right: 2px;}
 .dt_ht{width: 50%;float: right;}
-.item-gia{    font-family: arial;
-    background: #4E7547;
-    line-height: 38px;
-    border-radius: 5px;
-    text-indent: 10px;text-align: center;
-    color: #fff;}
+.item-gia {    
+font-family: arial;    background: #4e7547;    line-height: 38px;    border-top-left-radius: 0.5em;    border-top-right-radius: 0.5em;    text-indent: 10px;    text-align: center;    color: #fff; }
 .item-gia span{ color: #fff;
     font-family: arial;
     font-size: 15px;}
