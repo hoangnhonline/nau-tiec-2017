@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="ui-mobile">
+<html lang="vi">
    <head>
       <title>@yield('title')</title>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -26,12 +26,12 @@
       <meta name="robots" content="noindex,nofollow" />
       <link rel="stylesheet" href="{{ URL::asset('assets/plugin/font-awesome-4.3.0/css/font-awesome.min.css') }}">
       <link rel="stylesheet" href="{{ URL::asset('assets/css/reset.css') }}">
-      <!-- <link href="{{ URL::asset('assets/js/bootstrap/css/bootstrap.css') }}" rel="stylesheet"> -->
+      <link href="{{ URL::asset('assets/js/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
       <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
       <link href="{{ URL::asset('assets/css/media.css') }}" rel="stylesheet" type="text/css" />
       <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,greek-ext,cyrillic-ext,vietnamese,greek' rel='stylesheet' type='text/css'>
       <script language="javascript" type="text/javascript" src="{{ URL::asset('assets/js/jquery-1.9.1.min.js') }}"></script>
-      <!-- <script language="javascript" type="text/javascript" src="{{ URL::asset('assets/js/bootstrap/js/bootstrap.min.js') }}"></script> -->
+      <script language="javascript" type="text/javascript" src="{{ URL::asset('assets/js/bootstrap/bootstrap.min.js') }}"></script>
       <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/jqueryslidemenu.css') }}">
       <script src="{{ URL::asset('assets/js/jqueryslidemenu.js') }}" type="text/javascript"></script>
       <link rel="stylesheet" href="{{ URL::asset('assets/css/owl.carousel.min.css') }}" />
@@ -46,6 +46,9 @@
       <!-- Add fancyBox main JS and CSS files -->
       <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.fancybox.js') }}?v=2.1.5"></script>
       <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/jquery.fancybox.css') }}?v=2.1.5" media="screen" />
+      <!-- Add Flexslider main JS and CSS files -->
+      <script type="text/javascript" src="{{ URL::asset('assets/js/FlexSlider/jquery.flexslider-min.js') }}"></script>
+      <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/js/FlexSlider/flexslider.css') }}" media="screen" />
       <script type="text/javascript">
          jQuery(document).ready(function() {
              
@@ -119,11 +122,11 @@
       <script> new WOW().init(); </script>
       <script src="{{ URL::asset('assets/js/lucid.js') }}"></script>
    </head>
-   <body class="ui-mobile-viewport ui-overlay-a">
+   <body>
       @include('frontend.partials.header')
       <div id="menu">
-         <div class="wrapper">
-            <div class="menu">
+         <div class="wrapper container">
+            <div class="menu row">
            
                <ul>
                   <li  @if($routeName == 'home') class="active" @endif><a href="{{ route('home') }}">Trang chủ </a></li>
@@ -184,14 +187,16 @@
       </div>
       @yield('slider')
       <div id="content">
-         <div class="wrapper">
-            @include('frontend.partials.sidebar')
-            <div id="content_right">              
-               <!-- end -->
-               <script src="{{ URL::asset('assets/js/parallax.js') }}"></script>
-               <div class="content-right">
-                  @yield('content')
-               </div>               
+         <div class="container">
+            <div class="row">
+              @include('frontend.partials.sidebar')
+              <div id="content_right" class="col-sm-9">         
+                 <!-- end -->
+                 <script src="{{ URL::asset('assets/js/parallax.js') }}"></script>
+                 <div class="content-right">
+                    @yield('content')
+                 </div>               
+              </div>
             </div>
             <div class="clear"></div>
          </div>
