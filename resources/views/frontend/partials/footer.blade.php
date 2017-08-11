@@ -1,17 +1,10 @@
 <div id="footer">
    <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/jquery.simplyscroll.css') }}">
    <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.simplyscroll.js') }}"></script>
-   <div class="footer ">
-      <div class="fixed-ft">
-         <div class="box_footer">
-            <div class="ft-ds">
-               2016 Copyright © <span style="color:#ff0; font-weight: bold;"> </span> .All rights reserved.
-            </div>
-         </div>
-      </div>
-      <div class="footer-address">
-         <div class="box_footer ">
-            <div class="box_ft1">
+   <div class="footer">
+      <div class="container">
+         <div class="footer-address row">
+            <div class="box_ft1 col-sm-5 col-xs-12">
                <div class="ft-1 wow fadeInLeft">
                   <h3 class="fadeInLeft"> </h3>
                   <p style="line-height: 20.8px;"><span style="font-size:20px;"><span style="color:#FFFF00;"><span style="font-family:arial,helvetica,sans-serif;"><strong>CÔNG TY TNHH DỊCH VỤ NẤU TIỆC GIA LONG</strong></span></span></span></p>
@@ -35,7 +28,7 @@
                   </ul>
                </div>
             </div>
-            <div class="box_ft2">
+            <div class="box_ft2 col-sm-7 col-xs-12">
                <div class="box_dangky"  style='background:
                   url({{ URL::asset('assets/upload/hinhanh/timthumb-6466.png') }}) fixed;    padding: 35px 100px;     margin: 20px 0;' >
                   <div class="tieude_lydo">
@@ -51,8 +44,8 @@
                   </form>
                </div>
                <div class="clear"></div>
-               <div class="box_bot_ft">
-                  <div class="ft-2 wow fadeInDown">
+               <div class="box_bot_ft row">
+                  <div class="ft-2 col-sm-3 wow fadeInDown">
                      <h3>Về chúng tôi</h3>
                      <div><a href="gioi-thieu.html" >Giới thiệu</a></div>
                      <div><a href="lien-he.html" >Liên hệ</a></div>
@@ -60,7 +53,7 @@
                      <div><a href="menu-tu-chon.html" >Menu tự chọn</a></div>
                      <div class="clear"></div>
                   </div>
-                  <div class="ft-5 wow fadeInDown">
+                  <div class="ft-5 col-sm-5 wow fadeInDown">
                      <h3>Tin tức</h3>
                      <div><a href="tin-tuc/nhung-ai-khong-nen-an-rau-muong-128.html">Những ai không nên ăn rau muống?</a></div>
                      <div><a href="tin-tuc/cach-lam-mut-dau-ngu-thom-ngon-ngay-tet-129.html">Cách làm mứt đậu ngự thơm ngon ngày Tết</a></div>
@@ -68,7 +61,7 @@
                      <div><a href="tin-tuc/tuyet-chieu-luoc-phan-nao-cua-heo-cung-trang-thom-ngon-gion-173.html">Tuyệt chiêu luộc phần nào của heo cũng trắng thơm, ngon giòn</a></div>
                      <div class="clear"></div>
                   </div>
-                  <div class="ft-3 wow fadeInRight">
+                  <div class="ft-3 col-sm-4 wow fadeInRight">
                      <div class="tketruycap">
                         <h3>Thống kê truy cập</h3>
                         <div  class="khungtt">
@@ -83,13 +76,15 @@
                   </div>
                </div>
             </div>
-            <div class="clear"></div>
          </div>
-         <div class="clear"></div>
       </div>
-      <div class="clear"></div>
+      <div class="fixed-ft">
+         <div class="box_footer">
+            <div class="ft-ds">
+               2016 Copyright © <span style="color:#ff0; font-weight: bold;"> </span> .All rights reserved.
+            </div>
+         </div>
+      </div>
    </div>
-   <script type="text/javascript">
-     
-   </script>    
+   <script type="text/javascript"></script>    
 </div>

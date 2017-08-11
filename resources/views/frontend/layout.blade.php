@@ -4,11 +4,11 @@
       <title>@yield('title')</title>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
       <meta name="robots" content="index,follow"/>
       <meta http-equiv="content-language" content="en"/>
       <meta name="description" content="@yield('site_description')"/>
       <meta name="keywords" content="@yield('site_keywords')"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
       <link rel="shortcut icon" href="@yield('favicon')" type="image/x-icon"/>
       <link rel="canonical" href="{{ url()->current() }}"/>
       <meta property="og:locale" content="vi_VN" />
@@ -25,13 +25,13 @@
       <meta name="twitter:title" content="@yield('title')" />
       <meta name="twitter:image" content="{{ Helper::showImage($socialImage) }}" />
       <meta name="robots" content="noindex,nofollow" />
-      <link rel="stylesheet" href="{{ URL::asset('assets/plugin/font-awesome-4.3.0/css/font-awesome.min.css') }}">
-      <link rel="stylesheet" href="{{ URL::asset('assets/css/reset.css') }}">
       <link href="{{ URL::asset('assets/js/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+      <link rel="stylesheet" href="{{ URL::asset('assets/css/reset.css') }}">
       <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
+      <link rel="stylesheet" href="{{ URL::asset('assets/plugin/font-awesome-4.3.0/css/font-awesome.min.css') }}">
       <!-- <link href="{{ URL::asset('assets/css/media.css') }}" rel="stylesheet" type="text/css" /> -->
       <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,greek-ext,cyrillic-ext,vietnamese,greek' rel='stylesheet' type='text/css'>
-      <script language="javascript" type="text/javascript" src="{{ URL::asset('assets/js/jquery-1.9.1.min.js') }}"></script>
+      <script language="javascript" type="text/javascript" src="{{ URL::asset('assets/js/jquery.min.js') }}"></script>
       <script language="javascript" type="text/javascript" src="{{ URL::asset('assets/js/bootstrap/bootstrap.min.js') }}"></script>
       <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/jqueryslidemenu.css') }}">
       <script src="{{ URL::asset('assets/js/jqueryslidemenu.js') }}" type="text/javascript"></script>
@@ -51,26 +51,23 @@
       <script type="text/javascript" src="{{ URL::asset('assets/js/FlexSlider/jquery.flexslider-min.js') }}"></script>
       <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/js/FlexSlider/flexslider.css') }}" media="screen" />
       <script type="text/javascript">
-         jQuery(document).ready(function() {
-             
-             jQuery(".fancybox").fancybox();
-             jQuery(".various3").fancybox({
-                 'width'             : '70%',
-                 'height'            : '60%',
-                 'autoScale'         : false,
-                 'transitionIn'      : 'none',
-                 'transitionOut'     : 'none',
-                 'type'              : 'iframe'
-             });  
-             $('.content iframe').each(function(index, el) {
-                 $(this).wrap( "<div class='video-container'></div>" );
-         
-             });
-             $('.content table').each(function(index, el) {
-                 $(this).wrap( "<div class='table-responsive'></div>" );
-         
-             });           
-         });
+        jQuery(document).ready(function() {
+          jQuery(".fancybox").fancybox();
+          jQuery(".various3").fancybox({
+            'width'             : '70%',
+            'height'            : '60%',
+            'autoScale'         : false,
+            'transitionIn'      : 'none',
+            'transitionOut'     : 'none',
+            'type'              : 'iframe'
+          });  
+          $('.content iframe').each(function(index, el) {
+            $(this).wrap( "<div class='video-container'></div>" );
+          });
+            $('.content table').each(function(index, el) {
+            $(this).wrap( "<div class='table-responsive'></div>" );
+          });           
+        });
       </script>
       <script type="text/javascript">
          $(document).ready(function() {
@@ -151,31 +148,32 @@
                   </li>
                   <li class="{{ $routeName == 'news-list' || $routeName == 'news-detail' ? 'active' : '' }}"><a href="{{ route('news-list') }}">Tin tức - Sự kiện</a></li>
                   <li class="{{ $routeName == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Liên hệ</a></li>
-                  <div class="search">
-                     <script type="text/javascript">
-                        function doEnter(evt){
-                            var key;
-                            if(evt.keyCode == 13 || evt.which == 13){
-                                onSearch(evt);
-                            }
+                  <li class="search-mb"><i class="fa fa-search"></i></li>
+              </ul>
+              <div class="search">
+                 <script type="text/javascript">
+                    function doEnter(evt){
+                        var key;
+                        if(evt.keyCode == 13 || evt.which == 13){
+                            onSearch(evt);
                         }
-                        function onSearch(evt) {
-                            var keyword = document.getElementById("keyword").value;
-                            if(keyword=='' || keyword=='Nhập từ khoá...')
-                                alert('Bạn chưa nhập từ khóa tìm kiếm!');
-                            else{
-                                location.href = "tim-kiem.html&keywords="+keyword;
-                                loadPage(document.location);            
-                            }
+                    }
+                    function onSearch(evt) {
+                        var keyword = document.getElementById("keyword").value;
+                        if(keyword=='' || keyword=='Nhập từ khoá...')
+                            alert('Bạn chưa nhập từ khóa tìm kiếm!');
+                        else{
+                            location.href = "tim-kiem.html&keywords="+keyword;
+                            loadPage(document.location);            
                         }
-                     </script>
-                     <div id="search">
-                        <div class='txtsrch'><input type="text" class="txtsearch" name="keyword" id="keyword" value="" onkeypress="doEnter(event,'keyword');" placeholder="Tìm kiếm ..." /></div>
-                        <div class='btnsrch'><input type="button" class="button-s" Onclick='onSearch(event)' value="" /></div>
-                        <div class="clear"></div>
-                     </div>
-                  </div>
-               </ul>
+                    }
+                 </script>
+                 <div id="search">
+                    <div class='txtsrch'><input type="text" class="txtsearch" name="keyword" id="keyword" value="" onkeypress="doEnter(event,'keyword');" placeholder="Tìm kiếm ..." /></div>
+                    <div class='btnsrch'><input type="button" class="button-s" Onclick='onSearch(event)' value="" /></div>
+                    <div class="clear"></div>
+                 </div>
+              </div>
             </div>
          </div>
          <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.lockfixed.min.js') }}"></script>
