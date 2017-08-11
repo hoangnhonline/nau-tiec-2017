@@ -38,7 +38,7 @@
                      <div class="frm_dk">
                         <div class="dk">
                            <input type="email" id="txtemail" name="txtemail" class=" txtdk" required="required" placeholder="Nhập mail của bạn..."/> 
-                           <input type="submit" name="btnemail" class="btn btnemail" value="Gửi"/>
+                           <input type="submit" name="btnemail" class="btn btnemail btn-primary" value="Gửi"/>
                         </div>
                      </div>
                   </form>

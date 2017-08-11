@@ -6,7 +6,7 @@
   	
 	<div>
 		<div class="table-responsive">
-		  <table border="1" cellpadding="10" cellspacing="10" width="100%">
+		  <table border="1" cellpadding="10" cellspacing="10" width="100%" class="table-food">
 		    	@foreach($foodTypeList as $foodType)
 		    	<tr>
 		    		<td colspan="2"><p class="food-type">{!! $foodType->name !!}</p></td>
@@ -18,16 +18,16 @@
 				    	</tr>
 					    	@foreach($group->food as $food)
 					    	<tr>
-					    		<td><p>{!! $food->name !!}</p></td>			    	
-					    		<td><p>{!! number_format($food->price) !!}</p></td>
+					    		<td class="name_food"><p>{!! $food->name !!}</p></td>			    	
+					    		<td class="price_food"><p>{!! number_format($food->price) !!}</p></td>
 					    	</tr>
 					    	@endforeach
 				    	@endforeach
 			    	@else
 			    		@foreach($foodType->food as $food)
 				    	<tr>
-				    		<td><p>{!! $food->name !!}</p></td>			    	
-				    		<td><p>{!! number_format($food->price) !!}</p></td>
+				    		<td class="name_food"><p>{!! $food->name !!}</p></td>			    	
+				    		<td class="price_food"><p>{!! number_format($food->price) !!}</p></td>
 				    	</tr>
 				    	@endforeach
 			    	@endif

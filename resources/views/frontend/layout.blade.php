@@ -26,9 +26,9 @@
       <meta name="twitter:image" content="{{ Helper::showImage($socialImage) }}" />
       <meta name="robots" content="noindex,nofollow" />
       <link href="{{ URL::asset('assets/js/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
-      <link rel="stylesheet" href="{{ URL::asset('assets/css/reset.css') }}">
+      <!-- <link rel="stylesheet" href="{{ URL::asset('assets/css/reset.css') }}"> -->
       <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
-      <link rel="stylesheet" href="{{ URL::asset('assets/plugin/font-awesome-4.3.0/css/font-awesome.min.css') }}">
+      <link rel="stylesheet" href="{{ URL::asset('assets/plugin/font-awesome/font-awesome.min.css') }}">
       <!-- <link href="{{ URL::asset('assets/css/media.css') }}" rel="stylesheet" type="text/css" /> -->
       <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,greek-ext,cyrillic-ext,vietnamese,greek' rel='stylesheet' type='text/css'>
       <script language="javascript" type="text/javascript" src="{{ URL::asset('assets/js/jquery.min.js') }}"></script>
@@ -125,30 +125,32 @@
       <div id="menu">
          <div class="wrapper container">
             <div class="menu">
-           
-               <ul>
-                  <li  @if($routeName == 'home') class="active" @endif><a href="{{ route('home') }}">Trang chủ </a></li>
-                  <li class="{{ (isset($pageDetail)  && $routeName == 'parent-cate' && $detailPage->slug == 'gioi-thieu') ? 'active' : '' }}"><a href="{{ route('parent-cate', 'gioi-thieu') }}"> Giới thiệu </a></li>
-                  <li class="{{ (!isset($pageDetail) && $routeName == 'parent-cate') || $routeName == 'dich-vu' ? 'active' : '' }}">
-                     <a href="javascript:;">Menu sản phẩm</a>
-                     <ul>                            
-                        @foreach($articlesCateList as $cate)
-                        <li style="border-bottom:1px dashed #c4c4c4;">
-                           <a href="{{ route('parent-cate', $cate->slug) }}">{!! $cate->name !!}</a>
-                           <ul>
-                              @foreach($cate->articles as $value)
-                              <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-dam-cuoi-136.html">{!! $value->title !!}</a></li>
-                              @endforeach
-                           </ul>
-                        </li>
-                        @endforeach                         
-                     </ul>
-                  </li>
-                  <li class="{{ $routeName == 'menu-custom' ? 'active' : '' }}"><a href="{{ route('menu-custom')}}">Menu tự chọn</a></li>
-                  </li>
-                  <li class="{{ $routeName == 'news-list' || $routeName == 'news-detail' ? 'active' : '' }}"><a href="{{ route('news-list') }}">Tin tức - Sự kiện</a></li>
-                  <li class="{{ $routeName == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Liên hệ</a></li>
-                  <li class="search-mb"><i class="fa fa-search"></i></li>
+              <div class="nav-toogle">
+                <i class="fa fa-bars"></i>
+              </div>
+              <ul class="nav-menu">
+                <li  @if($routeName == 'home') class="active" @endif><a href="{{ route('home') }}">Trang chủ </a></li>
+                <li class="{{ (isset($pageDetail)  && $routeName == 'parent-cate' && $detailPage->slug == 'gioi-thieu') ? 'active' : '' }}"><a href="{{ route('parent-cate', 'gioi-thieu') }}"> Giới thiệu </a></li>
+                <li class="{{ (!isset($pageDetail) && $routeName == 'parent-cate') || $routeName == 'dich-vu' ? 'active' : 'parent' }}">
+                   <a href="javascript:;">Menu sản phẩm</a>
+                   <ul class="submenu">                            
+                      @foreach($articlesCateList as $cate)
+                      <li class="parent" style="border-bottom:1px dashed #c4c4c4;">
+                         <a href="{{ route('parent-cate', $cate->slug) }}">{!! $cate->name !!}</a>
+                         <ul class="submenu">
+                            @foreach($cate->articles as $value)
+                            <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-dam-cuoi-136.html">{!! $value->title !!}</a></li>
+                            @endforeach
+                         </ul>
+                      </li>
+                      @endforeach                         
+                   </ul>
+                </li>
+                <li class="{{ $routeName == 'menu-custom' ? 'active' : '' }}"><a href="{{ route('menu-custom')}}">Menu tự chọn</a></li>
+                </li>
+                <li class="{{ $routeName == 'news-list' || $routeName == 'news-detail' ? 'active' : '' }}"><a href="{{ route('news-list') }}">Tin tức - Sự kiện</a></li>
+                <li class="{{ $routeName == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Liên hệ</a></li>
+                <li class="search-mb"><i class="fa fa-search"></i></li>
               </ul>
               <div class="search">
                  <script type="text/javascript">
@@ -170,7 +172,7 @@
                  </script>
                  <div id="search">
                     <div class='txtsrch'><input type="text" class="txtsearch" name="keyword" id="keyword" value="" onkeypress="doEnter(event,'keyword');" placeholder="Tìm kiếm ..." /></div>
-                    <div class='btnsrch'><input type="button" class="button-s" Onclick='onSearch(event)' value="" /></div>
+                    <div class='btnsrch'><!-- <input type="button" class="button-s" Onclick='onSearch(event)' value="" /> --><i class="fa fa-search"></i></div>
                     <div class="clear"></div>
                  </div>
               </div>
@@ -204,6 +206,9 @@
       <div class="bottom">
       </div>
       @include('frontend.partials.footer')
+      <a id="return-to-top" class="td-scroll-up" href="javascript:void(0)">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+      </a><!-- Return To Top -->
       <style type="text/css">
         .header{
             background:url({{ URL::asset('assets/upload/hinhanh/1-8460.jpg') }});background-size:cover;box-sizing: border-box;    padding:5px 0px;
@@ -271,5 +276,6 @@
             });
         })(jQuery);
       </script>
+      <script src="{{ URL::asset('assets/js/common.js') }}"></script>
    </body>
 </html>
