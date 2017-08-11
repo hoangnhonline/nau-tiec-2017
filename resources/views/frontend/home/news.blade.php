@@ -3,7 +3,7 @@
         <h3>Tin tức</h3>
      </div>
      <div class='owl-carousel'>
-        @foreach($articlesList as $articles)
+        @foreach($articlesListFooter as $articles)
         <div>
            <div class="cottt ">
               <a href="{{ route('news-detail', [$articles->slug, $articles->id]) }}"><img src="{{ Helper::showImage($articles->image_url) }}" alt="{!! $articles->title !!}"></a>

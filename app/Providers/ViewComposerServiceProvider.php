@@ -51,11 +51,13 @@ class ViewComposerServiceProvider extends ServiceProvider
 	        $menuList = Menu::orderBy('display_order')->get();   
 	       // var_dump("<pre>", $menuDoc);die;   
 	        //var_dump("<pre>", $loaiSpKey);die;
+	        $articlesListFooter = Articles::where(['cate_id' => 1])->orderBy('id', 'desc')->limit(5)->get();
 			$view->with( [			
 					'menuList' => $menuList,
 					'settingArr' => $settingArr,					
 					'routeName' => $routeName,
-					'articlesCateList' => $articlesCateList
+					'articlesCateList' => $articlesCateList,
+					'articlesListFooter' => $articlesListFooter
 					] );
 		});
 	}

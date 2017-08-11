@@ -52,7 +52,7 @@
                   </div>
                   <div class="ft-5 col-sm-5 wow fadeInDown">
                      <h3>Tin tức</h3>
-                     @foreach($articlesList as $articles)
+                     @foreach($articlesListFooter as $articles)
                      <div><a href="{{ route('news-detail', [$articles->slug, $articles->id]) }}">{!! $articles->title !!}</a></div>                    
                     @endforeach
                   </div>

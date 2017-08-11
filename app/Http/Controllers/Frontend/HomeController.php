@@ -46,10 +46,9 @@ class HomeController extends Controller
 
 
 
-        $articlesList = Articles::where(['cate_id' => 1])->orderBy('id', 'desc')->limit(5)->get();
+        
         $menuList = Menu::orderBy('display_order')->get();         
-        return view('frontend.home.index', compact(                               
-                                'articlesList',
+        return view('frontend.home.index', compact(
                                 'seo',
                                 'menuList'
                                 ));
