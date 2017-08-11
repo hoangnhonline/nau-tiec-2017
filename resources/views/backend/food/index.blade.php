@@ -11,7 +11,7 @@
     <li><a href="{{ route( 'food.index' ) }}">Món ăn</a></li>
     <li class="active">Danh sách</li>
   </ol>
-</section> 
+</section>
 
 <!-- Main content -->
 <section class="content">
