@@ -139,7 +139,7 @@
                          <a href="{{ route('parent-cate', $cate->slug) }}">{!! $cate->name !!}</a>
                          <ul class="submenu">
                             @foreach($cate->articles as $value)
-                            <li style="border-bottom:1px dashed #c4c4c4;"><a href="san-pham/nau-tiec-dam-cuoi-136.html">{!! $value->title !!}</a></li>
+                            <li style="border-bottom:1px dashed #c4c4c4;"><a  href="{{ route('dich-vu', [$value->slug, $value->id]) }}" title="{!! $value->title !!}>{!! $value->title !!}</a></li>
                             @endforeach
                          </ul>
                       </li>
