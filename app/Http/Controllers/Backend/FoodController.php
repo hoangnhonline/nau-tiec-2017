@@ -120,8 +120,15 @@ class FoodController extends Controller
     public function edit($id)
     {   
         $detail = Food::find($id);
+         $foodTypeList = FoodType::orderBy('display_order')->get();        
+        $foodGroupList = FoodGroup::orderBy('display_order')->get();    
 
-        return view('backend.food.edit', compact('detail', 'foodTypeList'));
+        $food_type_id = $detail->food_type_id;
+        if($food_type_id){
+            $foodGroupList = FoodGroup::where('food_type_id', $food_type_id)->orderBy('display_order')->get();        
+        }
+    
+        return view('backend.food.edit', compact('detail', 'foodTypeList', 'foodGroupList'));
     }
 
     /**

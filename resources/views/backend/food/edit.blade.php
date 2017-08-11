@@ -42,7 +42,28 @@
                   </div>
               @endif                
                                            
-                
+                <div class="form-group">
+                    <label>Loại món ăn <span class="red-star">*</span></label>
+                    <select name="food_type_id" id="food_type_id" class="form-control">
+                        <option value="">--chọn--</option>
+                        @if( $foodTypeList->count() > 0)
+                          @foreach( $foodTypeList as $foodType )
+                              <option value="{{ $foodType->id }}" {{ old('food_type_id', $detail->food_type_id) == $foodType->id ? "selected" : "" }}>{{ $foodType->name }}</option>
+                          @endforeach
+                        @endif
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Nhóm món ăn</label>
+                    <select name="food_group_id" id="food_group_id" class="form-control">
+                        <option value="">--chọn--</option>
+                        @if( $foodGroupList->count() > 0)
+                          @foreach( $foodGroupList as $group )
+                              <option value="{{ $group->id }}" {{ old('food_group_id', $detail->food_group_id) == $group->id ? "selected" : "" }}>{{ $group->name }}</option>
+                          @endforeach
+                        @endif
+                    </select>
+                </div>
                 <div class="form-group" >
                   
                   <label>Tên món ăn<span class="red-star">*</span></label>
