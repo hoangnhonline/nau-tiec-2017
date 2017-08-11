@@ -41,8 +41,8 @@
                      </ul>
                   </div>
                   <div class="dt_ht">
-                     <div class="sodt"><span>Mr. Phong</span></div>
-                     <div class="emailtv"><span>0909 340 797 </span></div>
+                     <div class="sodt"><span>A. Duy</span></div>
+                     <div class="emailtv"><span>090 2425 068 </span></div>
                   </div>
                   <div class="clear"></div>
                </div>
@@ -55,8 +55,8 @@
                      </ul>
                   </div>
                   <div class="dt_ht">
-                     <div class="sodt"><span>Mr. Phong</span></div>
-                     <div class="emailtv"><span>0969 156 575 </span></div>
+                     <div class="sodt"><span>A.Dũng</span></div>
+                     <div class="emailtv"><span>0981 498 043 </span></div>
                   </div>
                   <div class="clear"></div>
                </div>
