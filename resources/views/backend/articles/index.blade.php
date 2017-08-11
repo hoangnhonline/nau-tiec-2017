@@ -78,7 +78,7 @@
                   <a style="font-size:18px;color:" href="{{ route( 'articles.edit', [ 'id' => $item->id ]) }}">{{ $item->title }}</a><br>
                   
                   @if( $item->is_hot == 1 )
-                  <img class="img-thumbnail" src="{{ URL::asset('backend/dist/img/star.png')}}" alt="Nổi bật" title="Nổi bật" />
+                  <img class="img-thumbnail" src="{{ URL::asset('admin/dist/img/star.png')}}" alt="Nổi bật" title="Nổi bật" />
                   @endif
 
                   <p>{{ $item->description }}</p>
@@ -146,7 +146,9 @@ $(document).ready(function(){
     });
   });
   $('.select2').select2();
-
+$('#cate_id').change(function(){
+  $(this).parents('form').submit();
+});
   $('#table-list-data tbody').sortable({
         placeholder: 'placeholder',
         handle: ".move",

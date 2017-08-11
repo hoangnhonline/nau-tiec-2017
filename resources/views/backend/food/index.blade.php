@@ -67,7 +67,8 @@
           <table class="table table-bordered" id="table-list-data">
             <tr>
               <th style="width: 1%">#</th>                            
-              <th>Tên màu</th>
+              <th>Tên món ăn</th>
+              <th class="text-right">Giá</th>
               <th width="1%;white-space:nowrap">Thao tác</th>
             </tr>
             <tbody>
@@ -81,10 +82,13 @@
                 <td>                  
                   <a href="{{ route( 'food.edit', [ 'id' => $item->id ]) }}">{{ $item->name }}</a>
                 </td>
+                <td width="150" class="text-right" style="font-weight:bold">
+                  {{ $item->price > 0 ? number_format($item->price) : "Theo thời giá"}}
+                </td>
                 <td style="white-space:nowrap">                  
-                  <a href="{{ route( 'food.edit', [ 'id' => $item->id ]) }}" class="btn btn-warning">Chỉnh sửa</a>                 
+                  <a href="{{ route( 'food.edit', [ 'id' => $item->id ]) }}" class="btn btn-warning btn-sm">Chỉnh sửa</a>                 
                   
-                  <a onclick="return callDelete('{{ $item->title }}','{{ route( 'food.destroy', [ 'id' => $item->id ]) }}');" class="btn btn-danger">Xóa</a>                
+                  <a onclick="return callDelete('{{ $item->title }}','{{ route( 'food.destroy', [ 'id' => $item->id ]) }}');" class="btn btn-danger  btn-sm">Xóa</a>                
                   
                 </td>
               </tr> 

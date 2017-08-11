@@ -15,7 +15,58 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
-      
+      <li class="treeview {{ in_array(\Request::route()->getName(), ['menu.index', 'menu.create', 'menu.edit']) ? 'active' : '' }}">
+        <a href="#">
+          <i class="fa fa-twitch"></i> 
+          <span>Menu</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li {{ in_array(\Request::route()->getName(), ['menu.index', 'menu.edit']) ? "class=active" : "" }}><a href="{{ route('menu.index') }}"><i class="fa fa-circle-o"></i> Menu</a></li>
+          <li {{ in_array(\Request::route()->getName(), ['menu.create']) ? "class=active" : "" }}><a href="{{ route('menu.create') }}"><i class="fa fa-circle-o"></i> Thêm Menu</a></li>          
+        </ul>
+      </li>
+      <li class="treeview {{ in_array(\Request::route()->getName(), ['food.index', 'food.create', 'food.edit']) ? 'active' : '' }}">
+        <a href="#">
+          <i class="fa fa-twitch"></i> 
+          <span>Món ăn</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li {{ in_array(\Request::route()->getName(), ['food.index', 'food.edit']) ? "class=active" : "" }}><a href="{{ route('food.index') }}"><i class="fa fa-circle-o"></i> Món ăn</a></li>
+          <li {{ in_array(\Request::route()->getName(), ['food.create']) ? "class=active" : "" }}><a href="{{ route('food.create') }}"><i class="fa fa-circle-o"></i> Thêm món ăn</a></li>          
+        </ul>
+      </li>
+      <li class="treeview {{ in_array(\Request::route()->getName(), ['food-type.index', 'food-type.create', 'food-type.edit']) ? 'active' : '' }}">
+        <a href="#">
+          <i class="fa fa-twitch"></i> 
+          <span>Loại món ăn</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li {{ in_array(\Request::route()->getName(), ['food-type.index', 'food-type.edit']) ? "class=active" : "" }}><a href="{{ route('food-type.index') }}"><i class="fa fa-circle-o"></i>Loại món ăn</a></li>
+          <li {{ in_array(\Request::route()->getName(), ['food-type.create']) ? "class=active" : "" }}><a href="{{ route('food-type.create') }}"><i class="fa fa-circle-o"></i> Thêm loại món ăn</a></li>          
+        </ul>
+      </li>
+      <li class="treeview {{ in_array(\Request::route()->getName(), ['food-group.index', 'food-group.create', 'food-group.edit']) ? 'active' : '' }}">
+        <a href="#">
+          <i class="fa fa-twitch"></i> 
+          <span>Nhóm món ăn</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li {{ in_array(\Request::route()->getName(), ['food-group.index', 'food-group.edit']) ? "class=active" : "" }}><a href="{{ route('food-group.index') }}"><i class="fa fa-circle-o"></i>Nhóm món ăn</a></li>
+          <li {{ in_array(\Request::route()->getName(), ['food-group.create']) ? "class=active" : "" }}><a href="{{ route('food-group.create') }}"><i class="fa fa-circle-o"></i> Thêm nhóm món ăn</a></li>          
+        </ul>
+      </li>
       <li class="treeview {{ in_array(\Request::route()->getName(), ['pages.index', 'pages.create']) ? 'active' : '' }}">
         <a href="#">
           <i class="fa fa-twitch"></i> 
