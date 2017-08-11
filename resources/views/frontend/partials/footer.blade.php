@@ -6,16 +6,12 @@
          <div class="footer-address row">
             <div class="box_ft1 col-sm-5 col-xs-12">
                <div class="ft-1 wow fadeInLeft">
-                  <h3 class="fadeInLeft"> </h3>
-                  <p style="line-height: 20.8px;"><span style="font-size:20px;"><span style="color:#FFFF00;"><span style="font-family:arial,helvetica,sans-serif;"><strong>CÔNG TY TNHH DỊCH VỤ NẤU TIỆC GIA LONG</strong></span></span></span></p>
-                  <p style="line-height: 20.8px;"><span style="color:#FFFF00;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><strong>Địa chỉ:</strong> <span style="text-align: center;">77/4 Bờ Bao Tân Thắng, Phường Sơn Kỳ, Quận Tân Phú, Tp. Hồ Chí Minh</span></span></span></span></p>
-                  <p style="line-height: 20.8px;"><span style="color:#FFFF00;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><strong>Điện thoại:</strong></span></span></span><span style="color:#FF0000;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"> </span></span></span><span style="color:#FFFFFF;"><span style="font-size: 20px; text-align: center; line-height: 1.6;"><span new="" times=""><span style="font-family:times new roman,times,serif;"><span style="font-size: 22px;"><strong>0909 340 797</strong></span></span> </span></span><span style="text-align: center; font-size: 22px;"><span new="" times=""><span font-size:="" new="" text-align:="" times=""><strong> </strong></span></span></span><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="text-align: center;">(Anh Phong) </span></span></span></span></p>
-                  <p style="line-height: 20.8px;"><span style="color:#000000;"><span style="font-size:22px;"><span style="font-family:times new roman,times,serif;"><span style="text-align: center;">                 </span></span></span></span><span style="color:#FFFFFF;"><span style="font-size:22px;"><span style="font-family:times new roman,times,serif;"><span style="text-align: center;"> <strong>0969 156 575</strong> </span></span><span style="font-family: &quot;times new roman&quot;, times, serif;"><span style="text-align: center;">(</span></span><span style="font-family: &quot;times new roman&quot;, times, serif; text-align: center;">Anh Phong) </span></span></span></p>
-                  <p style="line-height: 20.8px;"><span style="color:#FFFF00;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><strong>Email: </strong></span></span></span><span style="color:#FFFFFF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="background-color: transparent;">thuynguyen162694@gmail.com </span></span></span></span></p>
-                  <p style="margin: 0px; padding: 0px; list-style: none; color: rgb(27, 25, 25); font-family: Arial, Helvetica, sans-serif; font-size: 14px;"><span style="color:#FFFF00;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent; line-height: 1.6;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><strong style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline;">Website: </strong></span></span></span></span></span></span><span style="color:#FFFFFF;"><span style="font-size:20px;"><span style="font-family:times new roman,times,serif;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent; line-height: 1.6;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;"><span style="margin: 0px; padding: 0px; list-style: none; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;">http://nautiecgialong.com/</span></span></span></span></span></span></span></p>
-                  <div class="ft-ds wow fadeInLeft">
-                     <div class="addthis_native_toolbox"></div>
-                  </div>
+                  <h3 class="fadeInLeft" style="font-size:20px">EKIP TIỆC NGON</h3>
+                  <p><i class="fa fa-map-marker"></i> 146 Kênh Tân Hóa - P Phú Trung- Q.Tân Phú </p>
+                  <p><i class="fa fa-map-marker"></i> 2/13/22 đường Thạnh Lộc 13 KP 1. P.Thạnh Lộc. Q12. TP HCM </p>
+                  <p><i class="fa fa-mobile"></i> 090 2425 068 ( A.Duy ) </p>
+                  <p><i class="fa fa-mobile"></i> 0981 498 043 ( A.Dũng ) </p>
+                  <p>Website: <a href="http://tiecngon.vn" style="color:#FFF">http://tiecngon.vn/</a></p>
                </div>
                <div class="clear"></div>
                <div class="td_lk">LIÊN KẾT MẠNG XÃ HỘI</div>
@@ -47,19 +43,18 @@
                <div class="box_bot_ft row">
                   <div class="ft-2 col-sm-3 wow fadeInDown">
                      <h3>Về chúng tôi</h3>
-                     <div><a href="gioi-thieu.html" >Giới thiệu</a></div>
-                     <div><a href="lien-he.html" >Liên hệ</a></div>
-                     <div><a href="san-pham.html" >Menu sản phẩm</a></div>
-                     <div><a href="menu-tu-chon.html" >Menu tự chọn</a></div>
+
+                     <div><a href="{{ route('parent-cate', 'gioi-thieu') }}" >Giới thiệu</a></div>
+                     <div><a href="{{ route('menu-custom')}}" >Menu tự chọn</a></div>
+                     <div><a href="{{ route('contact')}}" >Liên hệ</a></div>
+                     <div><a href="{{ route('news-list') }}" >Tin tức - Sự kiện</a></div>                     
                      <div class="clear"></div>
                   </div>
                   <div class="ft-5 col-sm-5 wow fadeInDown">
                      <h3>Tin tức</h3>
-                     <div><a href="tin-tuc/nhung-ai-khong-nen-an-rau-muong-128.html">Những ai không nên ăn rau muống?</a></div>
-                     <div><a href="tin-tuc/cach-lam-mut-dau-ngu-thom-ngon-ngay-tet-129.html">Cách làm mứt đậu ngự thơm ngon ngày Tết</a></div>
-                     <div><a href="tin-tuc/5-cach-thuong-thuc-chanh-leo-moi-la-moi-phu-nu-can-biet-167.html">5 cách thưởng thức chanh leo mới lạ mọi phụ nữ cần biết.</a></div>
-                     <div><a href="tin-tuc/tuyet-chieu-luoc-phan-nao-cua-heo-cung-trang-thom-ngon-gion-173.html">Tuyệt chiêu luộc phần nào của heo cũng trắng thơm, ngon giòn</a></div>
-                     <div class="clear"></div>
+                     @foreach($articlesList as $articles)
+                     <div><a href="{{ route('news-detail', [$articles->slug, $articles->id]) }}">{!! $articles->title !!}</a></div>                    
+                    @endforeach
                   </div>
                   <div class="ft-3 col-sm-4 wow fadeInRight">
                      <div class="tketruycap">
