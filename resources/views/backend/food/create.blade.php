@@ -100,6 +100,46 @@
                 <div class="form-group col-md-6">                  
                   <label>Giá</label>
                   <input type="text" class="form-control" name="price[]" value="">
+                </div>
+                <div class="form-group col-md-6">                  
+                  <label>Tên món</label>
+                  <input type="text" class="form-control" name="food[]" value="">
+                </div>
+                <div class="form-group col-md-6">                  
+                  <label>Giá</label>
+                  <input type="text" class="form-control" name="price[]" value="">
+                </div>
+                <div class="form-group col-md-6">                  
+                  <label>Tên món</label>
+                  <input type="text" class="form-control" name="food[]" value="">
+                </div>
+                <div class="form-group col-md-6">                  
+                  <label>Giá</label>
+                  <input type="text" class="form-control" name="price[]" value="">
+                </div>
+                <div class="form-group col-md-6">                  
+                  <label>Tên món</label>
+                  <input type="text" class="form-control" name="food[]" value="">
+                </div>
+                <div class="form-group col-md-6">                  
+                  <label>Giá</label>
+                  <input type="text" class="form-control" name="price[]" value="">
+                </div>
+                <div class="form-group col-md-6">                  
+                  <label>Tên món</label>
+                  <input type="text" class="form-control" name="food[]" value="">
+                </div>
+                <div class="form-group col-md-6">                  
+                  <label>Giá</label>
+                  <input type="text" class="form-control" name="price[]" value="">
+                </div>
+                <div class="form-group col-md-6">                  
+                  <label>Tên món</label>
+                  <input type="text" class="form-control" name="food[]" value="">
+                </div>
+                <div class="form-group col-md-6">                  
+                  <label>Giá</label>
+                  <input type="text" class="form-control" name="price[]" value="">
                 </div>               
 
             </div>              
