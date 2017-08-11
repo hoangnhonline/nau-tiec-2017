@@ -131,7 +131,7 @@
               <ul class="nav-menu">
                 <li  @if($routeName == 'home') class="active" @endif><a href="{{ route('home') }}">Trang chủ </a></li>
                 <li class="{{ (isset($pageDetail)  && $routeName == 'parent-cate' && $detailPage->slug == 'gioi-thieu') ? 'active' : '' }}"><a href="{{ route('parent-cate', 'gioi-thieu') }}"> Giới thiệu </a></li>
-                <li class="{{ (!isset($pageDetail) && $routeName == 'parent-cate') || $routeName == 'dich-vu' ? 'active' : 'parent' }}">
+                <li class="{{ (!isset($pageDetail) && $routeName == 'parent-cate') || $routeName == 'dich-vu' ? 'active' : '' }} parent">
                    <a href="javascript:;">Menu sản phẩm</a>
                    <ul class="submenu">                            
                       @foreach($articlesCateList as $cate)
