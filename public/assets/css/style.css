@@ -53,13 +53,13 @@ img {
 /* /////////////////////////////////////////////////////////// */
 /* Font face*/
 
-@font-face {
-    font-family: 'RR';
+/*@font-face {
+    font-family: 'Roboto';
     src: url('../fonts/RobotoRegular.eot');
     src: url('../fonts/RobotoRegular.eot') format('embedded-opentype'), url('../fonts/RobotoRegular.woff2') format('woff2'), url('../fonts/RobotoRegular.woff') format('woff'), url('../fonts/RobotoRegular.ttf') format('truetype'), url('../fonts/RobotoRegular.svg#RobotoRegular') format('svg');
 }
 @font-face {
-    font-family: 'RB';
+    font-family: 'Roboto';
     src: url('../fonts/RobotoBold.eot');
     src: url('../fonts/RobotoBold.eot') format('embedded-opentype'), url('../fonts/RobotoBold.woff2') format('woff2'), url('../fonts/RobotoBold.woff') format('woff'), url('../fonts/RobotoBold.ttf') format('truetype'), url('../fonts/RobotoBold.svg#RobotoBold') format('svg');
 }
@@ -74,7 +74,7 @@ img {
     src: url('../fonts/SFUEurostileCondensed.eot') format('embedded-opentype'), url('../fonts/SFUEurostileCondensed.woff2') format('woff2'), url('../fonts/SFUEurostileCondensed.woff') format('woff'), url('../fonts/SFUEurostileCondensed.ttf') format('truetype'), url('../fonts/SFUEurostileCondensed.svg#UTMAlterGothic') format('svg');
 }
 @font-face {
-    font-family: RCB;
+    font-family: 'Roboto';
     src: url('../fonts/RobotoCondensedBold.eot');
     src: url('../fonts/RobotoCondensedBold.eot') format('embedded-opentype'), url('../fonts/RobotoCondensedBold.woff2') format('woff2'), url('../fonts/RobotoCondensedBold.woff') format('woff'), url('../fonts/RobotoCondensedBold.ttf') format('truetype'), url('../fonts/RobotoCondensedBold.svg#UTMAlterGothic') format('svg');
 }
@@ -84,20 +84,20 @@ img {
     src: url('../fonts/UTMHelvetIns.eot') format('embedded-opentype'), url('../fonts/UTMHelvetIns.woff2') format('woff2'), url('../fonts/UTMHelvetIns.woff') format('woff'), url('../fonts/UTMHelvetIns.ttf') format('truetype'), url('../fonts/UTMHelvetIns.svg#UTMAlterGothic') format('svg');
 }
 @font-face {
-    font-family: AR;
-    src: url('../fonts/143868arialr.eot');
-    src: url('../fonts/143868arialr.eot') format('embedded-opentype'), url('../fonts/143868arialr.woff2') format('woff2'), url('../fonts/143868arialr.woff') format('woff'), url('../fonts/143868arialr.ttf') format('truetype'), url('../fonts/143868arialr.svg#UTMAlterGothic') format('svg');
+    font-family: 'Roboto';
+    src: url('../fonts/143868'Roboto'r.eot');
+    src: url('../fonts/143868'Roboto'r.eot') format('embedded-opentype'), url('../fonts/143868'Roboto'r.woff2') format('woff2'), url('../fonts/143868'Roboto'r.woff') format('woff'), url('../fonts/143868'Roboto'r.ttf') format('truetype'), url('../fonts/143868'Roboto'r.svg#UTMAlterGothic') format('svg');
 }
 @font-face {
     font-family: ZK;
     src: url('../fonts/1811712UVNDzungDakao.eot');
     src: url('../fonts/1811712UVNDzungDakao.eot') format('embedded-opentype'), url('../fonts/1811712UVNDzungDakao.woff2') format('woff2'), url('../fonts/1811712UVNDzungDakao.woff') format('woff'), url('../fonts/1811712UVNDzungDakao.ttf') format('truetype'), url('../fonts/1811712UVNDzungDakao.svg#UTMAlterGothic') format('svg');
-}
+}*/
 /*----------basic----------------*/
 
 html,
 body {
-    font-family: 'Roboto Condensed', Helvetica, sans-serif;
+    font-family: 'Roboto', Helvetica, sans-serif;
     font-size: 14px;
     line-height: 22px;
     text-rendering: optimizeLegibility;
@@ -272,7 +272,7 @@ h3 {
     clear: both;
 }
 .title-left h2 span {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #1666A3;
     display: inline-block;
     height: 35px;
@@ -289,7 +289,7 @@ h3 {
     border-bottom: dashed 1px #ccc;
 }
 .form_lh label {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
 }
 .form_lh .tflienhe {
@@ -346,7 +346,7 @@ h3 {
     background-size: 100% 100%;
     text-align: center;
     color: #fff;
-    font-family: Arial;
+    font-family: 'Roboto';
     box-sizing: border-box;
     font-size: 16px;
     z-index: 999;
@@ -572,7 +572,7 @@ h3 {
     top: 25px;
     color: #fff;
     font-size: 34px;
-    font-family: AR;
+    font-family: 'Roboto';
     text-shadow: 1px 1px #004f7a, -2px -2px #004f7a;
     font-weight: bold;
     padding-left: 50px;
@@ -660,7 +660,7 @@ h3 {
     position: relative;
     text-decoration: none;
     color: #fff;
-    font-family: 'RR';
+    font-family: 'Roboto';
     background-size: 100% 100% !important;
 }
 .menu ul li:hover>a {
@@ -759,12 +759,12 @@ h3 {
 
 .menu > ul > li.active > a {
     color: #fff !important;
-    font-family: 'RR';
+    font-family: 'Roboto';
     background: #4d9351 !important;
 }
 .active >ul >li >a {
     color: #fff !important;
-    font-family: 'RR';
+    font-family: 'Roboto';
 }
 .amazingslider-box-1 {
     margin: 0px !important;
@@ -828,7 +828,7 @@ h3 {
     list-style-type: none;
 }
 #sliders .flexslider {
-    margin-bottom: 0;
+    margin-bottom: 5px;
     border: none;
 }
 .banggia .banggiatho {
@@ -953,7 +953,7 @@ h3 {
     background: url("../images/img/h2.png") no-repeat;
     text-align: center;
     color: #fff;
-    font-family: 'RR';
+    font-family: 'Roboto';
     font-size: 18px;
     font-weight: bold;
     line-height: 50px;
@@ -993,7 +993,7 @@ h3 {
     float: left;
     margin-right: 20px;
     text-align: justify;
-    font-family: 'Arial';
+    font-family: ''Roboto'';
     font-size: 15px;
     color: #575757;
 }
@@ -1002,7 +1002,7 @@ h3 {
     height: 265px;
     float: left;
     text-align: justify;
-    font-family: 'Arial';
+    font-family: ''Roboto'';
     font-size: 15px;
     color: #575757;
 }
@@ -1022,7 +1022,7 @@ h3 {
 .item .item-title {
     height: 40px;
     background-image: url("../images/img/bannerleft.png");
-    font-family: 'RR';
+    font-family: 'Roboto';
     color: #fff;
     text-transform: uppercase;
     text-indent: 15px;
@@ -1067,7 +1067,7 @@ h3 {
     position: relative;
     padding-left: 15px;
     font-size: 12px;
-    font-family: Arial;
+    font-family: 'Roboto';
 }
 .con a:after {
     content: '';
@@ -1091,7 +1091,7 @@ h3 {
     text-decoration: none;
     line-height: 30px !important;
     font-size: 13px;
-    font-family: "Arial";
+    font-family: "'Roboto'";
     position: relative;
 }
 .item-list ul li>ul {
@@ -1193,7 +1193,7 @@ h3 {
     text-align: center;
     line-height: 30px;
     color: #F04F54;
-    font-family: 'RR';
+    font-family: 'Roboto';
     font-size: 13pt;
 }
 .item-wr .hover1 {
@@ -1305,7 +1305,7 @@ h3 {
 }
 .tentt a {
     line-height: 25px;
-    font-family: "Arial";
+    font-family: "'Roboto'";
     font-size: 14px;
     font-weight: bold;
     color: #fff !important;
@@ -1313,7 +1313,7 @@ h3 {
 .loaitt {
     font-size: 12px;
     color: #8a8a8a;
-    font-family: Arial;
+    font-family: 'Roboto';
     line-height: 15px !important;
 }
 .chk {
@@ -1325,7 +1325,7 @@ h3 {
 }
 .chudett {
     font-size: 13px;
-    font-family: Arial;
+    font-family: 'Roboto';
     color: #7e7e7e;
 }
 .motatt {
@@ -1340,7 +1340,7 @@ h3 {
 .xemthem a {
     color: #fff;
     text-decoration: underline !important;
-    font-family: Arial;
+    font-family: 'Roboto';
     font-size: 14px;
     line-height: 25px;
 }
@@ -1396,7 +1396,7 @@ h3 {
     font-size: 20px;
     padding-right: 15px;
     text-transform: uppercase;
-    font-family: Arial;
+    font-family: 'Roboto';
     position: relative;
     line-height: 44px;
     z-index: 9991;
@@ -1437,7 +1437,7 @@ h3 {
     font-size: 20px;
     padding-right: 15px;
     text-transform: uppercase;
-    font-family: Arial;
+    font-family: 'Roboto';
     position: relative;
     line-height: 44px;
     z-index: 9991;
@@ -1517,7 +1517,7 @@ h3 {
 }
 .ft-1 h3 {
     color: #ff0;
-    font-family: 'Arial';
+    font-family: ''Roboto'';
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -1528,7 +1528,7 @@ h3 {
     line-height: 25px;
     margin-top: 10px;
     font-size: 16px;
-    font-family: 'Arial';
+    font-family: ''Roboto'';
 }
 .ft-2 {
     /*width: 200px;
@@ -1550,7 +1550,7 @@ h3 {
 }
 .ft-5 h3 {
     color: #fff;
-    font-family: 'Arial';
+    font-family: ''Roboto'';
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -1558,7 +1558,7 @@ h3 {
 }
 .ft-2 h3 {
     color: #fff;
-    font-family: 'Arial';
+    font-family: ''Roboto'';
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -1568,7 +1568,7 @@ h3 {
     position: relative;
     line-height: 30px;
     padding-left: 15px;
-    font-family: "Arial";
+    font-family: "'Roboto'";
     font-size: 13px;
 }
 .cmdv p:after {
@@ -1594,7 +1594,7 @@ h3 {
 }
 .ft-3 h3 {
     color: #fff;
-    font-family: 'Arial';
+    font-family: ''Roboto'';
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -1609,7 +1609,7 @@ h3 {
 .ft-3-title {
     color: #fff;
     font-size: 11pt;
-    font-family: 'RR';
+    font-family: 'Roboto';
     text-transform: uppercase;
 }
 .tketruycap {
@@ -1631,7 +1631,7 @@ h3 {
     width: 100%;
     float: left;
     color: #fff;
-    font-family: Arial;
+    font-family: 'Roboto';
     font-size: 12px;
 }
 .khungtt div:nth-child(1),
@@ -1685,7 +1685,7 @@ h3 {
 .truycap {
     float: right;
     width: 300px;
-    font-family: 'RR';
+    font-family: 'Roboto';
 }
 .truycap p:nth-child(1) {
     width: 130px;
@@ -1706,7 +1706,7 @@ h3 {
 }
 .ft-ds {
     color: #fff;
-    font-family: 'Arial';
+    font-family: ''Roboto'';
     font-size: 12px;
     line-height: 35px;
 }
@@ -1750,14 +1750,14 @@ h3 {
 }
 .form-gioithieu h1 {
     text-indent: 20px;
-    font-family: 'RR';
+    font-family: 'Roboto';
     line-height: 60px;
     margin-top: 20px;
     text-transform: uppercase;
 }
 .form-gioithieu p {
     padding: 20px;
-    font-family: 'RR';
+    font-family: 'Roboto';
     text-align: justify;
     line-height: 25px;
 }
@@ -1851,7 +1851,7 @@ h3 {
     padding: 0 10px;
     display: inline-block;
     text-transform: uppercase;
-    font-family: Arial;
+    font-family: 'Roboto';
     line-height: 39px;
     z-index: 9;
     position: relative;
@@ -1879,13 +1879,13 @@ h3 {
 }
 .item-ten1 a {
     font-size: 14px;
-    font-family: Arial;
+    font-family: 'Roboto';
     font-weight: bold;
     color: #0088cc;
 }
 .mota1 {
     font-size: 12px;
-    font-family: Arial;
+    font-family: 'Roboto';
     color: #787878;
 }
 /* end css chung */
@@ -1903,7 +1903,7 @@ h3 {
 .price h2 {
     color: #9f5124;
     text-transform: uppercase;
-    font-family: 'RR';
+    font-family: 'Roboto';
     border-bottom: 1px solid rgba(196, 196, 196, 0.24);
 }
 .sp-price {
@@ -1913,7 +1913,7 @@ h3 {
     margin-left: 50px;
 }
 .price .ct-price {
-    font-family: 'RR';
+    font-family: 'Roboto';
     margin-top: 5px;
     color: #E83D34;
     font-weight: bold;
@@ -1921,7 +1921,7 @@ h3 {
     border-bottom: 1px solid rgba(196, 196, 196, 0.24);
 }
 .price .mota {
-    font-family: 'RR';
+    font-family: 'Roboto';
     margin-top: 5px;
     color: #000;
     font-size: 11pt;
@@ -1966,7 +1966,7 @@ h3 {
     text-transform: uppercase;
     /* text-decoration: none; */
     
-    font-family: Arial;
+    font-family: 'Roboto';
 }
 .ct .dvnd {
     padding: 0px 20px;
@@ -2155,7 +2155,7 @@ h3 {
 }
 .item_ten a {
     font-size: 15.5px;
-    font-family: Arial;
+    font-family: 'Roboto';
     font-weight: bold;
     color: #974b00;
 }
@@ -2239,7 +2239,7 @@ h3 {
 }
 .khung_thongtin {
     /*padding-left: 20px;*/
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     /*width: 465px;
     float: left;*/
 }
@@ -2421,8 +2421,8 @@ h3 {
 .bortt{  padding-bottom: 15px;border-bottom: 1px solid #c4c4c4;}
 .dmtt{width: 47%;float: left;padding-left: 10px;}
 .tentt{    line-height: 25px;font-family: RR;color: #232323 !important;font-size: 13px;font-weight: bold;text-align: justify;}
-.loaitt{font-size: 12px;color: #8a8a8a;font-family: Arial;line-height: 15px !important; font-style:italic;}
-.motatt{    font-size: 11.5px;color: #7f7f7f;font-family: Arial; text-align: justify;}
+.loaitt{font-size: 12px;color: #8a8a8a;font-family: 'Roboto';line-height: 15px !important; font-style:italic;}
+.motatt{    font-size: 11.5px;color: #7f7f7f;font-family: 'Roboto'; text-align: justify;}
 .chk{width: 10px;height: 20px;background: blue;float: left;margin-top: 10px;}
 .ten_st{width: 100%;line-height: 40px;font-family:HHHb;}
 .ten_st #ic{width: 10px;height: 20px;background: #0f52a2;float: left; margin-top: 10px;}
@@ -2887,7 +2887,7 @@ h3 {
 }
 .header .menu_hd ul li a {
     font-size: 13px;
-    font-family: Arial;
+    font-family: 'Roboto';
     color: #000;
     font-weight: bold;
 }
@@ -2899,7 +2899,7 @@ h3 {
 .sosp {
     font-size: 14px;
     color: #fff;
-    font-family: AR;
+    font-family: 'Roboto';
 }
 .sosp a {
     color: #fff;
@@ -2945,7 +2945,7 @@ h3 {
 .navi-left {} .tieude_mn {
     background: url(../images/img1/brlist.png) repeat-x;
     color: #333;
-    font-family: Arial;
+    font-family: 'Roboto';
     font-size: 14px;
     font-weight: bold;
     padding: 5px 0 5px 20px;
@@ -2991,7 +2991,7 @@ h3 {
     float: right;
 }
 .item-gia {
-    font-family: arial;
+    font-family: 'Roboto';
     background: #4e7547;
     line-height: 38px;
     border-top-left-radius: 0.5em;
@@ -3002,18 +3002,18 @@ h3 {
 }
 .item-gia span {
     color: #fff;
-    font-family: arial;
+    font-family: 'Roboto';
     font-size: 15px;
 }
 .item-kt1 {
     font-style: italic;
-    font-family: arial;
+    font-family: 'Roboto';
     font-size: 13px;
     font-weight: bold;
     color: #2b2b2b;
 }
 .diachi_ct span {
-    font-family: Arial;
+    font-family: 'Roboto';
     font-weight: bold;
     padding-left: 25px;
 }
@@ -3129,7 +3129,7 @@ h3 {
     color: #f00;
     font-size: 20px;
     font-weight: bold;
-    font-family: Arial;
+    font-family: 'Roboto';
     text-shadow: 3px 3px 5px #fff, 3px 3px 5px #fff, 3px -3px 5px #fff, -3px 3px 5px #fff;
 }
 .item-wr3 .content {
@@ -3308,7 +3308,7 @@ h3 {
     }
     .menu > ul > li.active > a {
       color: #fff !important;
-      font-family: 'RR';
+      font-family: 'Roboto';
       background: #4d9351 !important;
       display: block;
       padding: 0 25px;
