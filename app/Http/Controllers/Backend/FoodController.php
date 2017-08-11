@@ -118,10 +118,8 @@ class FoodController extends Controller
     * @return Response
     */
     public function edit($id)
-    {        
-        $foodTypeList = FoodType::orderBy('display_order')->get();
-
-        $detail = FoodGroup::find($id);
+    {   
+        $detail = Food::find($id);
 
         return view('backend.food.edit', compact('detail', 'foodTypeList'));
     }
@@ -138,19 +136,18 @@ class FoodController extends Controller
         $dataArr = $request->all();
         
          $this->validate($request,[                                    
-            'name' => 'required',
-            'food_type_id' => 'required'          
+            'name' => 'required'        
         ],
         [                                    
-            'name.required' => 'Bạn chưa nhập tên nhóm món ăn',
-            'food_type_id.required' => 'Bạn chưa chọn loại món ăn'
+            'name.required' => 'Bạn chưa nhập tên nhóm món ăn'
+     
         ]);
 
-        $model = FoodGroup::find($dataArr['id']);
+        $model = Food::find($dataArr['id']);
 
         $model->update($dataArr);
        
-        Session::flash('message', 'Cập nhật nhóm món ăn thành công');        
+        Session::flash('message', 'Cập nhật món ăn thành công');        
 
         return redirect()->route('food.edit', $dataArr['id']);
     }
@@ -167,11 +164,12 @@ class FoodController extends Controller
         $detail = FoodGroup::find($id);
         
         $food_type_id = $detail->food_type_id;
+        $food_group_id = $detail->food_group_id;
 
         $detail->delete();
 
         // redirect
-        Session::flash('message', 'Xóa nhóm món ăn thành công');
-        return redirect()->route('food.index', ['food_type_id' => $food_type_id]);
+        Session::flash('message', 'Xóa  món ăn thành công');
+        return redirect()->route('food.index', ['food_type_id' => $food_type_id, 'food_group_id' => $food_group_id]);
     }
 }
