@@ -69,23 +69,14 @@ class HomeController extends Controller
     public function search(Request $request)
     {
         $tu_khoa = $request->keyword;       
+        $tu_khoa_search = Helper::stripUnicode($tu_khoa);
         $loaiDetail = (object) [];
-        $productList = Product::where('product.alias', 'LIKE', '%'.$tu_khoa.'%')->where('so_luong_ton', '>', 0)->where('price', '>', 0)->where('loai_sp.status', 1)                        
-                        ->leftJoin('product_img', 'product_img.id', '=','product.thumbnail_id')
-                        ->leftJoin('sp_thuoctinh', 'sp_thuoctinh.product_id', '=','product.id')
-                        ->join('loai_sp', 'loai_sp.id', '=', 'product.loai_id')
-                        ->select('product_img.image_url', 'product.*', 'thuoc_tinh')
+
+        $articlesList = Articles::where('alias', 'LIKE', '%'.$tu_khoa_search.'%')->where('cate_id', '<>', 1)
                         ->orderBy('id', 'desc')->paginate(20);
         $loaiDetail->name = $seo['title'] = $seo['description'] =$seo['keywords'] = "Tìm kiếm sản phẩm theo từ khóa '".$tu_khoa."'";
-        $hoverInfo = [];
-        if($productList->count() > 0){
-            $hoverInfoTmp = HoverInfo::orderBy('display_order', 'asc')->orderBy('id', 'asc')->get();
-            foreach($hoverInfoTmp as $value){
-                $hoverInfo[$value->loai_id][] = $value;
-            }
-        }
-        //var_dump("<pre>", $hoverInfo);die;
-        return view('frontend.search.index', compact('productList', 'tu_khoa', 'seo', 'hoverInfo', 'loaiDetail'));
+
+        return view('frontend.search.index', compact('articlesList', 'tu_khoa', 'seo', 'loaiDetail'));
     }
     public function ajaxTab(Request $request){
         $table = $request->type ? $request->type : 'category';

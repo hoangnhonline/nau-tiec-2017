@@ -342,7 +342,7 @@ h3 {
 
 .tt_gt h3 {
     padding: 10px;
-    background: url(../images/img1/brleft.png) no-repeat;
+
     background-size: 100% 100%;
     text-align: center;
     color: #fff;
@@ -383,7 +383,7 @@ h3 {
     position: absolute;
     width: 7px;
     height: 8px;
-    background: url(../images/img1/check1.png);
+
     left: 10px;
     top: calc(50% - 3px);
 }
@@ -614,7 +614,7 @@ h3 {
 /* menu*/
 
 #menu {
-    background: url(../images/img1/brmn.png) repeat-x;
+
 }
 .menu {
     height: 48px;
@@ -647,7 +647,6 @@ h3 {
     position: absolute;
     width: 3px;
     height: 41px;
-    background: url('../images/img/bdmn.png');
     top: calc(50% - 21px);
     right: 0px;
 }
@@ -1646,7 +1645,7 @@ h3 {
     content: '';
     height: 22px;
     width: 23px;
-    background: url('../images/img/ic1.png') no-repeat;
+
     left: 0px;
     top: calc(50% - 11px);
     position: absolute;
@@ -1655,7 +1654,7 @@ h3 {
     content: '';
     height: 22px;
     width: 23px;
-    background: url('../images/img/ic2.png') no-repeat;
+    
     left: 0px;
     top: calc(50% - 11px);
     position: absolute;
@@ -1664,7 +1663,7 @@ h3 {
     content: '';
     height: 22px;
     width: 23px;
-    background: url('../images/img/ic3.png') no-repeat;
+    
     left: 0px;
     top: calc(50% - 11px);
     position: absolute;
@@ -1673,7 +1672,7 @@ h3 {
     content: '';
     height: 22px;
     width: 23px;
-    background: url('../images/img/ic4.png') no-repeat;
+    
     left: 0px;
     top: calc(50% - 11px);
     position: absolute;
@@ -1864,7 +1863,7 @@ h3 {
     position: absolute;
     width: 50px;
     height: 32px;
-    background: url('../images/img1/bdtd.png') no-repeat;
+
     left: -50px;
     top: calc(50% - 16px);
 }
@@ -1873,7 +1872,7 @@ h3 {
     position: absolute;
     width: 50px;
     height: 32px;
-    background: url('../images/img1/bdtd1.png') no-repeat;
+    
     right: -50px;
     top: calc(50% - 16px);
 }
@@ -2370,7 +2369,7 @@ h3 {
     background-size: 100% 100%;
 }
 #content {
-    background: url(../images/img/brcontent.png);
+
     padding-bottom: 25px;
 }
 .box_hotro {
@@ -2943,7 +2942,7 @@ h3 {
     line-height: 15px;
 }
 .navi-left {} .tieude_mn {
-    background: url(../images/img1/brlist.png) repeat-x;
+
     color: #333;
     font-family: 'Roboto';
     font-size: 14px;
@@ -2963,7 +2962,7 @@ h3 {
     content: "";
     width: 9px;
     height: 9px;
-    background: url(../images/img1/check.png) no-repeat;
+    
     left: -10px;
     top: 12px;
 }
@@ -3075,7 +3074,7 @@ h3 {
 .frm_dk .dk {
     max-width: 100%;
     display: inline-block;
-    background: url(../images/img1/brdk.png);
+
 }
 .tieude_lydo h3 {
     padding: 7px;

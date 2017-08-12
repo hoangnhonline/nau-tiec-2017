@@ -112,9 +112,6 @@
          });
       </script>  
       <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAL928AIsIDYz9oUb-ILO5LTe_7MQnVgDA"></script>
-     
-      <link  href="{{ URL::asset('assets/css/fotorama.css') }}" rel="stylesheet">
-      <script src="{{ URL::asset('assets/js/fotorama.js') }}"></script>
       <link rel="stylesheet" href="{{ URL::asset('assets/css/animate.css') }}">
       <script src="{{ URL::asset('assets/js/wow.min.js') }}"></script>
       <script> new WOW().init(); </script>
@@ -152,27 +149,14 @@
                 <li class="{{ $routeName == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Liên hệ</a></li>
                 <li class="search-mb"><i class="fa fa-search"></i></li>
               </ul>
-              <div class="search">
-                 <script type="text/javascript">
-                    function doEnter(evt){
-                        var key;
-                        if(evt.keyCode == 13 || evt.which == 13){
-                            onSearch(evt);
-                        }
-                    }
-                    function onSearch(evt) {
-                        var keyword = document.getElementById("keyword").value;
-                        if(keyword=='' || keyword=='Nhập từ khoá...')
-                            alert('Bạn chưa nhập từ khóa tìm kiếm!');
-                        else{
-                            location.href = "tim-kiem.html&keywords="+keyword;
-                            loadPage(document.location);            
-                        }
-                    }
-                 </script>
+              <div class="search">                 
                  <div id="search">
-                    <div class='txtsrch'><input type="text" class="txtsearch" name="keyword" id="keyword" value="" onkeypress="doEnter(event,'keyword');" placeholder="Tìm kiếm ..." /></div>
-                    <div class='btnsrch'><!-- <input type="button" class="button-s" Onclick='onSearch(event)' value="" /> --><i class="fa fa-search"></i></div>
+                    <div class='txtsrch'>
+                        <form action="{{ route('search') }}" method="GET" >
+                          <input type="text" class="txtsearch" id="txtSearch" name="keyword" value="{!! isset($tu_khoa) ? $tu_khoa : "" !!}" placeholder="Tìm kiếm ..." />    
+                        </form>                      
+                      </div>
+                    <div class='btnsrch'><i class="fa fa-search"></i></div>
                     <div class="clear"></div>
                  </div>
               </div>
@@ -277,5 +261,6 @@
         })(jQuery);
       </script>
       <script src="{{ URL::asset('assets/js/common.js') }}"></script>
+      <script src="{{ URL::asset('assets/js/general.js') }}"></script>
    </body>
 </html>
