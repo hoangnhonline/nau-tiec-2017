@@ -30,14 +30,14 @@
                   <div class="tieude_lydo">
                      <h3>ĐĂNG KÝ NHẬN MAIL KHUYẾN MÃI</h3>
                   </div>
-                  <form action="" method="POST" class="frmdk" accept-charset="utf-8">
-                     <div class="frm_dk">
-                        <div class="dk">
-                           <input type="email" id="txtemail" name="txtemail" class=" txtdk" required="required" placeholder="Nhập mail của bạn..."/> 
-                           <input type="submit" name="btnemail" class="btn btnemail btn-primary" value="Gửi"/>
-                        </div>
+                  
+                  <div class="frm_dk">
+                     <div class="dk">
+                        <input type="email" id="txtNewsletter" name="txtNewsletter" class="txtdk" required="required" placeholder="Nhập mail của bạn..."/> 
+                        <input type="submit" id="btnNewsletter" name="btnNewsletter" class="btn btnemail btn-primary" value="Gửi"/>
                      </div>
-                  </form>
+                  </div>
+                  
                </div>
                <div class="clear"></div>
                <div class="box_bot_ft row">

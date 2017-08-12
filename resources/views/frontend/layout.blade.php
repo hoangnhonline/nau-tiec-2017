@@ -41,6 +41,7 @@
       <!-- slick -->
       <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/slick.css') }}"/>
       <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/slick-theme2.css') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/sweetalert2.min.css') }}"/>
       <script type="text/javascript" src="{{ URL::asset('assets/js/slick.min.js') }}"></script>
       <!-- Add mousewheel plugin (this is optional) -->
       <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.mousewheel-3.0.6.pack.js') }}"></script>
@@ -116,6 +117,8 @@
       <script src="{{ URL::asset('assets/js/wow.min.js') }}"></script>
       <script> new WOW().init(); </script>
       <script src="{{ URL::asset('assets/js/lucid.js') }}"></script>
+      <script src="{{ URL::asset('assets/js/sweetalert2.min.js') }}"></script>
+      <input type="hidden" id="route-newsletter" value="{{ route('register.newsletter') }}">
    </head>
    <body>
       @include('frontend.partials.header')
@@ -252,6 +255,15 @@
           min-height: 140px
         }
       </style>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $.ajaxSetup({
+              headers: {
+                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+          });
+        });
+      </script>
       @yield('js')
       <script type="text/javascript">
          (function($) {
