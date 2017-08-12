@@ -50,7 +50,7 @@
             <tr>
               <th style="width: 1%">#</th>                            
               <th>Tên</th>
-              <th width="10%">Đăng ký lúc</th>
+              <th width="10%" style="white-space:nowrap">Đăng ký lúc</th>
               <th width="1%;white-space:nowrap">Thao tác</th>
             </tr>
             <tbody>
