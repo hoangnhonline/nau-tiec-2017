@@ -12,7 +12,7 @@ use App\Models\Banner;
 use App\Models\Articles;
 use App\Models\ArticlesCate;
 use App\Models\Menu;
-
+use App\Models\Customer;
 use App\Models\Newsletter;
 
 use App\Models\Settings;
