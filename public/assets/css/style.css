@@ -369,11 +369,11 @@ h3 {
     padding: 10px 10px 10px 30px;
     position: relative;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 16px;
     /*background: url(../images/img1/brlist.png) repeat-x;
     background-size: contain;*/
     display: block;
-    color: #333333 !important;
+    color: #000000 !important;
     font-family: RR;
     font-weight: bold;
     border-bottom: 1px dashed #bbb4b4;
@@ -511,9 +511,9 @@ h3 {
 
 .logo {
     margin: 0px;
-    padding: 0px;
+    padding-top: 30px;
     float: left;
-    margin-right: 60px;
+    margin-right: 10px;
 }
 .logo img {
     max-width: 100%;
@@ -2964,7 +2964,7 @@ h3 {
     height: 9px;
     
     left: -10px;
-    top: 12px;
+    top: 8px;
 }
 .box_img_ht {
     position: relative;
