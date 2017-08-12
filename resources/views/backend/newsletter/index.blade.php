@@ -63,7 +63,7 @@
                 <td>                  
                   <a href="{{ route( 'newsletter.edit', [ 'id' => $item->id ]) }}">{{ $item->email }}</a>           
                 </td>
-                <td>{{ date('d-m-Y H:i', strtotime($item->created_at)) }}</td>
+                <td style="white-space:nowrap">{{ date('d-m-Y H:i', strtotime($item->created_at)) }}</td>
                 <td style="white-space:nowrap">                  
                   <a href="{{ route( 'newsletter.edit', [ 'id' => $item->id ]) }}" class="btn btn-warning">Chỉnh sửa</a>                 
                   
