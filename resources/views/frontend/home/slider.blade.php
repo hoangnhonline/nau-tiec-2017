@@ -46,18 +46,28 @@
 	<div id="carousel" class="flexslider">
 	  <ul class="slides">
 	    @foreach($menuList as $menu)      
+	    		<?php $i = $totalPrice = 0; ?>
+                  @foreach($menu->foodMenu as $food)
+                  <?php $i++;
+                  $detailFood = DB::table('food')->where('id', $food->food_id)->first();
+                  $totalPrice+= $detailFood->price;
+                  ?>                  
+                  @endforeach
 	    <li>  
 	      <div class="item-wr3">
 	        <div>
-	          <div class="item-gia">{!! $menu->name !!}: <span> {!! number_format($menu->price) !!} đồng/bàn</span></div>
+	          <div class="item-gia">{!! $menu->name !!}: <span> {!! number_format($totalPrice) !!} đồng/bàn</span></div>
 	          <div class="clear"></div>
 	          <div class="content">
 	             <div class="hover3">
 	                <div style="padding:5px">
 	                <?php $cf = 0; ?>
 	                   @foreach($menu->foodMenu as $food)
+	                   <?php 
+	                   $detailFood = DB::table('food')->where('id', $food->food_id)->first();
+	                   ?>
 	                   <?php $cf++; ?>
-	                   <p><span style="color:red; font-size: 15px;font-weight: bold;">{{ $cf }}. </span><span style="color:#000010;font-weight:bold;font-size:15px">{!! $food->name !!}</span></p>
+	                   <p><span style="color:red; font-size: 15px;font-weight: bold;">{{ $cf }}. </span><span style="color:#000010;font-weight:bold;font-size:15px">{!! $detailFood->name !!}</span></p>
 	                   @endforeach
 	                </div>
 	             </div>
