@@ -196,6 +196,8 @@
       <a id="return-to-top" class="td-scroll-up" href="javascript:void(0)">
         <i class="fa fa-angle-up" aria-hidden="true"></i>
       </a><!-- Return To Top -->
+        <input type="hidden" id="route-ajax-login-fb" value="{{route('ajax-login-by-fb')}}">
+  <input type="hidden" id="fb-app-id" value="{{ env('FACEBOOK_APP_ID') }}">
       <style type="text/css">
         .header{
             background:url({{ URL::asset('assets/upload/hinhanh/1-8460.jpg') }});background-size:cover;box-sizing: border-box;    padding:5px 0px;

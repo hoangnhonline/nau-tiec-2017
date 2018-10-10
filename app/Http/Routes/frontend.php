@@ -29,7 +29,7 @@ Route::group(['prefix' => 'social-auth'], function () {
 Route::group(['prefix' => 'authentication'], function () {
     Route::post('check_login', ['as' => 'auth-login', 'uses' => 'AuthenticationController@checkLogin']);
     Route::post('login_ajax', ['as' =>  'auth-login-ajax', 'uses' => 'AuthenticationController@checkLoginAjax']);
-    Route::get('/user-logout', ['as' => 'user-logout', 'uses' => 'AuthenticationController@logout']);
+    Route::get('/user-logout', ['as' => 'logout', 'uses' => 'AuthenticationController@logout']);
 });
 Route::group(['namespace' => 'Frontend'], function()
 {
