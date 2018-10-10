@@ -24,7 +24,7 @@
       <meta name="twitter:description" content="@yield('site_description')" />
       <meta name="twitter:title" content="@yield('title')" />
       <meta name="twitter:image" content="{{ Helper::showImage($socialImage) }}" />
-      <meta name="robots" content="noindex,nofollow" />
+      <meta name="robots" content="index,follow" />
       <link href="{{ URL::asset('assets/js/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
       <!-- <link rel="stylesheet" href="{{ URL::asset('assets/css/reset.css') }}"> -->
       <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">

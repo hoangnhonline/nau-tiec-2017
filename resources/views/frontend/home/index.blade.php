@@ -23,7 +23,7 @@
                 <?php $cf = 0; ?>
                    @foreach($menu->foodMenu as $food)
                    <?php $cf++; ?>
-                   <p><span style="color:red; font-size: 15px;font-weight: bold;">{{ $cf }}. </span><span style="color:#0000FF;font-weight:bold;font-size:16px">{!! $food->name !!}</span></p>
+                   <p><span style="color:red; font-size: 15px;font-weight: bold;">{{ $cf }}. </span><span style="color:#000010;font-weight:bold;font-size:15px">{!! $food->name !!}</span></p>
                    @endforeach
                 </div>
              </div>
