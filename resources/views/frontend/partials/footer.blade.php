@@ -1,85 +1,119 @@
-<div id="footer">
-   <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/jquery.simplyscroll.css') }}">
-   <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.simplyscroll.js') }}"></script>
-   <div class="footer">
+<footer class="footer">
+   <div class="site-footer">
+     
+   <div class="mid-footer">
       <div class="container">
-         <div class="footer-address row">
-            <div class="box_ft1 col-sm-5 col-xs-12">
-               <div class="ft-1 wow fadeInLeft">
-                  <h3 class="fadeInLeft" style="font-size:20px">EKIP TIỆC NGON</h3>
-                  <p><i class="fa fa-map-marker"></i> 146 Kênh Tân Hóa - P Phú Trung- Q.Tân Phú </p>
-                  <p><i class="fa fa-map-marker"></i> 2/13/22 đường Thạnh Lộc 13 KP 1. P.Thạnh Lộc. Q12. TP HCM </p>
-                  <p><i class="fa fa-mobile"></i> 090 2425 068 ( A.Duy ) </p>
-                  <p><i class="fa fa-mobile"></i> 0981 498 043 ( A.Dũng ) </p>
-                  <p>Website: <a href="http://tiecngon.vn" style="color:#FFF">http://tiecngon.vn/</a></p>
-               </div>
-               <div class="clear"></div>
-               <div class="td_lk">LIÊN KẾT MẠNG XÃ HỘI</div>
-               <div class="mxh_ft">
-                  <ul>
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/nguyenhamsau10103-3622.png') }}" alt=""></a></li>
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/nguyenhamsau10108-8463.png') }}" alt=""></a></li>
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/nguyenhamsau10110-6415.png') }}" alt=""></a></li>
-                     <li><a href=""><img src="{{ URL::asset('assets/upload/hinhanh/nguyenhamsau10106-9454.png') }}" alt=""></a></li>
-                  </ul>
+         <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="widget-ft first">
+                  <h4 class="title-menu">
+                     <a role="button" class="collapsed" data-toggle="collapse" aria-expanded="false" data-target="#collapseListMenu01" aria-controls="collapseListMenu01">
+                        Về chúng tôi</i>
+                     </a>
+                  </h4>
+                  <div class="collapse" id="collapseListMenu01">
+                     <ul class="list-menu">
+                        
+                        <li class="li_menu"><a href="{{ route('home')}}">Trang chủ</a></li>                       
+                        <li><a class="li_menu" href="{{ route('parent-cate', 'gioi-thieu') }}" >Giới thiệu</a></li>
+                     <li><a class="li_menu" href="{{ route('menu-custom')}}" >Menu tự chọn</a></li>
+                     <li><a class="li_menu" href="{{ route('contact')}}" >Liên hệ</a></li>
+                     <li><a class="li_menu" href="{{ route('news-list') }}" >Tin tức - Sự kiện</a></li> 
+                        
+                     </ul>
+                  </div>
                </div>
             </div>
-            <div class="box_ft2 col-sm-7 col-xs-12">
-               <div class="box_dangky"  style='background:
-                  url({{ URL::asset('assets/upload/hinhanh/timthumb-6466.png') }}) fixed;    padding: 35px 100px;     margin: 20px 0;' >
-                  <div class="tieude_lydo">
-                     <h3>ĐĂNG KÝ NHẬN MAIL KHUYẾN MÃI</h3>
+            
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="widget-ft">
+                  <h4 class="title-menu title-db">
+                     <a role="button" class="collapsed" data-toggle="collapse" aria-expanded="false" data-target="#collapseListMenu03" aria-controls="collapseListMenu03">
+                        EKIP TIỆC NGON</i>
+                     </a>
+                  </h4>
+                  <div class="collapse" id="collapseListMenu03">
+                     <ul class="list-menu">
+                        
+                        <li class="li_menu"><i class="fa fa-map-marker"></i> 146 Kênh Tân Hóa - P Phú Trung- Q.Tân Phú </li>
+                        
+                        <li class="li_menu"><i class="fa fa-map-marker"></i> 2/13/22 đường Thạnh Lộc 13 KP 1. P.Thạnh Lộc. Q12. TP HCM </li>
+                        
+                        <li class="li_menu"><i class="fa fa-mobile"></i> 090 2425 068 ( A.Duy )</li>
+                        
+                        <li class="li_menu"><i class="fa fa-mobile"></i> 0981 498 043 ( A.Dũng )</li>
+                        
+                        <li class="li_menu">Website: <a href="http://tiecngon.vn" style="color:#FFF">http://tiecngon.vn/</a></li>
+                        <p> </p>
+                  <p> </p>
+                  <p></p>
+                        
+                     </ul>
                   </div>
-                  
-                  <div class="frm_dk">
-                     <div class="dk">
-                        <input type="email" id="txtNewsletter" name="txtNewsletter" class="txtdk" required="required" placeholder="Nhập mail của bạn..."/> 
-                        <input type="submit" id="btnNewsletter" name="btnNewsletter" class="btn btnemail btn-primary" value="Gửi"/>
-                     </div>
-                  </div>
-                  
                </div>
-               <div class="clear"></div>
-               <div class="box_bot_ft row">
-                  <div class="ft-2 col-sm-3 wow fadeInDown">
-                     <h3>Về chúng tôi</h3>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="widget-ft last social_footer">
 
-                     <div><a href="{{ route('parent-cate', 'gioi-thieu') }}" >Giới thiệu</a></div>
-                     <div><a href="{{ route('menu-custom')}}" >Menu tự chọn</a></div>
-                     <div><a href="{{ route('contact')}}" >Liên hệ</a></div>
-                     <div><a href="{{ route('news-list') }}" >Tin tức - Sự kiện</a></div>                     
-                     <div class="clear"></div>
+                  <div class="social_footer">
+                     <h4 class="title-menu icon_none_first icon_title_last">
+                        <a>Kết nối với chúng tôi</a>
+                     </h4>
+                     <ul class="follow_option"> 
+                        
+                        <li>
+                           <a href="#" title="Theo dõi Facebook MetaSport"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        
+                        
+                        <li>
+                           <a href="#" title="Theo dõi Twitter MetaSport"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        
+                        
+                        <li>
+                           <a href="#" title="Theo dõi Google Plus MetaSport"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                        
+                        
+                        <li>
+                           <a href="#" title="Theo dõi Instagam MetaSport"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        
+                        
+                        <li>
+                           <a href="#" title="Theo dõi Youtube MetaSport"><i class="fa fa-youtube-play"></i></a>
+                        </li>
+                        
+                     </ul>
                   </div>
-                  <div class="ft-5 col-sm-5 wow fadeInDown">
-                     <h3>Tin tức</h3>
-                     @foreach($articlesListFooter as $articles)
-                     <div><a href="{{ route('news-detail', [$articles->slug, $articles->id]) }}">{!! $articles->title !!}</a></div>                    
-                    @endforeach
+                  <div class="mail_footer">
+                     <h4 class="title-menu icon_none_first">
+                        <a>Nhận tin khuyến mãi</a>
+                     </h4>
+                     <ul class="contact contact_mail">
+                        <li>                           
+                           <form class="margin-bottom-0" action="//dkt.us13.list-manage.com/subscribe/post?u=0bafe4be7e17843051883e746&amp;id=3bdd6e9e3b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                              <input type="email" value="" placeholder="Nhập email của bạn" name="EMAIL" id="mail">
+                              <button class="btn btn-primary subscribe" name="subscribe" id="subscribe">Đăng ký</button>
+                           </form>
+                        </li>
+                     </ul>
                   </div>
-                  <div class="ft-3 col-sm-4 wow fadeInRight">
-                     <div class="tketruycap">
-                        <h3>Thống kê truy cập</h3>
-                        <div  class="khungtt">
-                           <div>Số người online:<span>2</span></div>
-                           <div>Hôm nay:<span>42</span></div>
-                           <div>Tuần này:<span>124</span></div>
-                           <div>Tổng truy cập:<span>23221</span></div>
-                           <div class="clear"></div>
-                        </div>
-                        <div class="clear"></div>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12">
+               <div class="fixed-ft">
+                  <div class="box_footer">
+                     <div class="ft-ds">
+                        2018 Copyright © <span style="color:#ff0; font-weight: bold;"> </span> .All rights reserved.
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
-      <div class="fixed-ft">
-         <div class="box_footer">
-            <div class="ft-ds">
-               2016 Copyright © <span style="color:#ff0; font-weight: bold;"> </span> .All rights reserved.
-            </div>
-         </div>
-      </div>
+   </div>   
    </div>
-   <script type="text/javascript"></script>    
-</div>
+</footer>

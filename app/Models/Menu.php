@@ -25,15 +25,15 @@ class Menu extends Model  {
      */
     protected $fillable = [
                             'name', 
-                            'slug',
-                            'price',
+                            'slug',                            
                             'image_url',
                             'display_order',
                             'status',                                                       
+                            'customer_id',                                                       
                             'created_user', 
                             'updated_user'
                         ];
     public function foodMenu(){
         return $this->hasMany('App\Models\FoodMenu', 'menu_id');
-    }
+    }    
 }

@@ -317,7 +317,7 @@ class ArticlesController extends Controller
         $model = Articles::find($dataArr['id']);
 
         $model->update($dataArr);
-        dd($dataArr);
+
         $this->storeMeta( $dataArr['id'], $dataArr['meta_id'], $dataArr);
 
         TagObjects::where(['object_id' => $dataArr['id'], 'type' => 2])->delete();

@@ -20,7 +20,7 @@
     <div class="row">
       <!-- left column -->
       <input name="id" value="{{ $detail->id }}" type="hidden">
-      <div class="col-md-7">
+      <div class="col-md-12">
         <!-- general form elements -->
         <div class="box box-primary">
           <div class="box-header with-border">
@@ -51,22 +51,58 @@
                 </div>
                 <div class="form-group" >                  
                   <label>Giá<span class="red-star">*</span></label>
-                  <input type="text" class="form-control" name="price" id="price" value="{{ old('price', $detail->price) }}">
+                  <input type="text" class="form-control" readonly="readonly" name="price" id="price" value="{{ $totalPrice }}">
                 </div>     
-                <?php $i = 0; ?>
-                @foreach($detail->foodMenu as $food)
-                <?php $i++; ?>
-                <div class="form-group" >                  
-                  <label>Món {{ $i }}<span class="red-star">*</span></label>
-                  <input type="text" class="form-control" name="food_menu[]" value="{{ $food->name }}">
-                </div>  
-                @endforeach         
-                @for($j = $i; $j<8; $j++)
-                <div class="form-group" >                  
-                  <label>Món {{ $j+1 }}<span class="red-star">*</span></label>
-                  <input type="text" class="form-control" name="food_menu[]" value="">
-                </div> 
-                @endfor                  
+                <div>
+                  <div class="table-responsive">                    
+                        @foreach($foodTypeList as $foodType)
+                        <div class="col-md-12">
+                          <p class="food-type">{!! $foodType->name !!}</p>
+                         
+                            @if($foodType->foodGroup->count() > 0)
+                              @foreach($foodType->foodGroup as $group)
+                              <div class="col-md-3 mon_chinh">
+                                <p class="food-group">{!! $group->name !!}</p>           
+                                <table class="table-food table table-bordered">
+                                  @foreach($group->food as $food)
+                                  <tr>
+                                    <td class="name_food"><p>{!! $food->name !!}</p></td>           
+                                    <td class="price_food"><p>{!! number_format($food->price) !!}</p></td>
+                                    <td  class="choose"><input type="checkbox" name="food_id[]" class="food_checkbox" value="{{ $food->id}}" {{ in_array($food->id, $foodIdArr) ? "checked=checked" : ""}}>
+                                      @if(!in_array($food->id, $foodIdArr))
+                                    <button type="button" class="btn btn-info noselect" data-value="{{ $food->price }}">Chọn</button>          
+                                    @else
+                                    <button type="button" class="btn btn-danger selected" data-value="{{ $food->price }}">Bỏ chọn</button>          
+                                    @endif                                     
+                                    </td>
+                                  </tr>
+                                  @endforeach
+                                </table>
+                              </div>                                
+                              @endforeach
+                            @else
+                              <table class="table-food table table-bordered">
+                              @foreach($foodType->food as $food)
+                              <tr>
+                                <td class="name_food"><p>{!! $food->name !!}</p></td>           
+                                <td class="price_food"><p>{!! number_format($food->price) !!}</p></td>
+                                <td class="choose"><input type="checkbox" class="food_checkbox" name="food_id[]" value="{{ $food->id}}" {{ in_array($food->id, $foodIdArr) ? "checked=checked" : ""}} >
+                                  @if(!in_array($food->id, $foodIdArr))
+                                    <button type="button" class="btn btn-info noselect" data-value="{{ $food->price }}">Chọn</button>          
+                                    @else
+                                    <button type="button" class="btn btn-danger selected" data-value="{{ $food->price }}">Bỏ chọn</button>          
+                                    @endif                          
+                                  </td>
+                              </tr>
+                              @endforeach
+                              </table>
+                              @endif
+                      
+                        </div>
+                        @endforeach                       
+                    
+                  </div>
+                </div>          
             </div>                      
             <div class="box-footer">
               <button type="submit" class="btn btn-primary">Lưu</button>
@@ -82,5 +118,59 @@
     <!-- /.row -->
   </section>
   <!-- /.content -->
-</div>
+</div><style type="text/css">
+  .food-type{
+        
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        margin-top: 20px;
+         background-color: red;
+    color:#FFF;
+  }
+  .food-group{
+        color: blue;
+        font-size: 15px;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+  }
+  tr:hover{
+    background-color: #f5f5f5;
+  }
+  .mon_chinh {
+    height: 600px;
+    overflow-y: scroll;
+    margin-bottom: 15px;
+
+  }
+  .food_checkbox{
+    display: none;
+  }
+  td.choose{
+    width: 1%;
+  }
+</style>
+@stop
+@section('javascript_page')
+<script type="text/javascript">
+ 
+  $(document).on('click', '.noselect', function(){
+      $(this).parents('td').find('.food_checkbox').prop('checked', 'checked');
+      $(this).removeClass('btn-info noselect').addClass('btn-danger selected').html('Bỏ chọn');
+      
+      var price = $('#price').val() == '' ? 0 :parseInt($('#price').val()); 
+      price = price + parseInt($(this).data('value'));
+      $('#price').val(price);
+    });
+  $(document).on('click', '.selected', function(){
+      $(this).parents('td').find('.food_checkbox').removeAttr('checked');
+      $(this).removeClass('btn-danger selected').addClass('btn-info noselect').html('Chọn');
+
+      var price = $('#price').val() == '' ? 0 :parseInt($('#price').val()); 
+      price = price - parseInt($(this).data('value'));
+      $('#price').val(price);      
+    });
+</script>
 @stop

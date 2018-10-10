@@ -8,6 +8,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Menu;
 use App\Models\FoodMenu;
+use App\Models\FoodType;
+use App\Models\Food;
+
 use Helper, File, Session, Auth;
 
 class MenuController extends Controller
@@ -35,8 +38,8 @@ class MenuController extends Controller
     */
     public function create(Request $request)
     {          
-
-        return view('backend.menu.create');
+        $foodTypeList = FoodType::orderBy('display_order')->get();
+        return view('backend.menu.create', compact('foodTypeList'));
     }
 
     /**
@@ -53,33 +56,38 @@ class MenuController extends Controller
             'name' => 'required'            
         ],
         [                                    
-            'title.required' => 'Bạn chưa nhập tên màu'
+            'name.required' => 'Bạn chưa nhập tên menu'
         ]);       
         
         
         $rs = Menu::create($dataArr);
         
-        if(!empty($dataArr['food_menu'])){
+        if(!empty($dataArr['food_id'])){
             $i = 0;
-            foreach($dataArr['food_menu'] as $food){
-                if($food!= ''){
+            foreach($dataArr['food_id'] as $food_id){
+                if($food_id > 0){
                     $i++;
-
                     FoodMenu::create([
                             'menu_id' => $rs->id,
-                            'name' => $food,
-                            'display_order' => $i,
-                            'slug' => str_slug($food),
-                            'created_user' => Auth::user()->id,
-                            'updated_user' => Auth::user()->id
+                            'food_id' => $food_id,
+                            'display_order' => $i                            
                         ]);
                 }
             }
         }
 
-        Session::flash('message', 'Tạo mới màu thành công');
+        Session::flash('message', 'Tạo mới menu thành công');
 
         return redirect()->route('menu.index');
+    }
+
+    public function menuCustom(Request $request)
+    {
+        $foodTypeList = FoodType::orderBy('display_order')->get();
+        
+        
+
+        return view('backend.menu.', compact('foodTypeList', 'socialImage', 'seo'));
     }
 
     /**
@@ -103,8 +111,15 @@ class MenuController extends Controller
     {        
 
         $detail = Menu::find($id);
-
-        return view('backend.menu.edit', compact('detail'));
+        $foodList = $detail->foodMenu;
+        $foodIdArr = [];
+        $totalPrice = 0;
+        foreach($foodList as $food){
+            $foodIdArr[] = $food->food_id;
+            $totalPrice+= Food::find($food->food_id)->price;
+        }
+        $foodTypeList = FoodType::orderBy('display_order')->get();
+        return view('backend.menu.edit', compact('detail', 'foodIdArr', 'foodTypeList', 'totalPrice'));
     }
 
     /**
@@ -122,31 +137,28 @@ class MenuController extends Controller
             'name' => 'required'            
         ],
         [                                    
-            'title.required' => 'Bạn chưa nhập tên màu'
+            'name.required' => 'Bạn chưa nhập tên menu'
         ]);    
         
         $model = Menu::find($dataArr['id']);
 
         $model->update($dataArr);
         FoodMenu::where('menu_id', $dataArr['id'])->delete();
-        if(!empty($dataArr['food_menu'])){
+        if(!empty($dataArr['food_id'])){
             $i = 0;
-            foreach($dataArr['food_menu'] as $food){
-                if($food!= ''){
+            foreach($dataArr['food_id'] as $food_id){
+              
                 $i++;
-                FoodMenu::create([
+                    FoodMenu::create([
                         'menu_id' => $dataArr['id'],
-                        'name' => $food,
-                        'display_order' => $i,
-                        'slug' => str_slug($food),
-                        'created_user' => Auth::user()->id,
-                        'updated_user' => Auth::user()->id
+                        'food_id' => $food_id,
+                        'display_order' => $i                            
                     ]);
-                }
+                
             }
         }
        
-        Session::flash('message', 'Cập nhật màu thành công');        
+        Session::flash('message', 'Cập nhật menu thành công');        
 
         return redirect()->route('menu.edit', $dataArr['id']);
     }

@@ -132,7 +132,7 @@
                 <li  @if($routeName == 'home') class="active" @endif><a href="{{ route('home') }}">Trang chủ </a></li>
                 <li class="{{ (isset($pageDetail)  && $routeName == 'parent-cate' && $detailPage->slug == 'gioi-thieu') ? 'active' : '' }}"><a href="{{ route('parent-cate', 'gioi-thieu') }}"> Giới thiệu </a></li>
                 <li class="{{ (!isset($pageDetail) && $routeName == 'parent-cate') || $routeName == 'dich-vu' ? 'active' : '' }} parent">
-                   <a href="javascript:;">Menu sản phẩm</a>
+                   <a href="javascript:;">Menu</a>
                    <ul class="submenu">                            
                       @foreach($articlesCateList as $cate)
                       <li class="parent" style="border-bottom:1px dashed #c4c4c4;">
@@ -146,9 +146,10 @@
                       @endforeach                         
                    </ul>
                 </li>
-                <li class="{{ $routeName == 'menu-custom' ? 'active' : '' }}"><a href="{{ route('menu-custom')}}">Menu tự chọn</a></li>
+                <li class="{{ $routeName == 'menu-custom' ? 'active' : '' }}"><a href="{{ route('menu-custom')}}">Món</a></li>
                 </li>
-                <li class="{{ $routeName == 'news-list' || $routeName == 'news-detail' ? 'active' : '' }}"><a href="{{ route('news-list') }}">Tin tức - Sự kiện</a></li>
+                <li class="{{ $routeName == 'news-list' || $routeName == 'news-detail' ? 'active' : '' }}"><a href="{{ route('news-list') }}">Sức khỏe</a></li>
+                <li class="{{ $routeName == 'news-list' || $routeName == 'news-detail' ? 'active' : '' }}"><a href="{{ route('news-list') }}">Tin tức</a></li>
                 <li class="{{ $routeName == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Liên hệ</a></li>
                 <li class="search-mb"><i class="fa fa-search"></i></li>
               </ul>
@@ -177,8 +178,7 @@
       <div id="content">
          <div class="container">
             <div class="row">
-              @include('frontend.partials.sidebar')
-              <div id="content_right" class="col-sm-9 col-xs-12">         
+              <div id="content_right" class="col-sm-12 col-xs-12">         
                  <!-- end -->
                  <script src="{{ URL::asset('assets/js/parallax.js') }}"></script>
                  <div class="content-right">
@@ -201,7 +201,7 @@
             background:url({{ URL::asset('assets/upload/hinhanh/1-8460.jpg') }});background-size:cover;box-sizing: border-box;    padding:5px 0px;
         }
         #menu{
-          background-color: #4e7547;
+          background-color: #82bf00;
         }
         .tt_gt h3 {
           padding: 10px;
@@ -264,14 +264,7 @@
           });
         });
       </script>
-      @yield('js')
-      <script type="text/javascript">
-         (function($) {
-            $(function() {
-                $(".scroller").simplyScroll({orientation:'vertical',customClass:'vert'});
-            });
-        })(jQuery);
-      </script>
+      @yield('js')      
       <script src="{{ URL::asset('assets/js/common.js') }}"></script>
       <script src="{{ URL::asset('assets/js/general.js') }}"></script>
    </body>

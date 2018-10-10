@@ -43,17 +43,55 @@
                   
                   <label>Tên menu<span class="red-star">*</span></label>
                   <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}">
-                </div> 
+                </div>
                 <div class="form-group" >                  
                   <label>Giá<span class="red-star">*</span></label>
-                  <input type="text" class="form-control" name="price" id="price" value="{{ old('price') }}">
-                </div>  
-                @for($i = 0; $i<8; $i++)
-                <div class="form-group" >                  
-                  <label>Món {{ $i+1 }}<span class="red-star">*</span></label>
-                  <input type="text" class="form-control" name="food_menu[]" value="">
-                </div>                
-                @endfor
+                  <input type="text" class="form-control number" readonly="readonly" name="price" id="price" value="0">
+                </div>
+                <div>
+                  <div class="table-responsive">                    
+                        @foreach($foodTypeList as $foodType)
+                        <div class="col-md-12">
+                          <p class="food-type">{!! $foodType->name !!}</p>
+                         
+                            @if($foodType->foodGroup->count() > 0)
+                              @foreach($foodType->foodGroup as $group)
+                              <div class="col-md-3 mon_chinh">
+                                <p class="food-group">{!! $group->name !!}</p>           
+                                <table class="table-food table table-bordered">
+                                  @foreach($group->food as $food)
+                                  <tr>
+                                    <td class="name_food"><p>{!! $food->name !!}</p></td>           
+                                    <td class="price_food"><p>{!! number_format($food->price) !!}</p></td>
+                                    <td  class="choose"><input type="checkbox" name="food_id[]" class="food_checkbox" value="{{ $food->id}}">
+                                      <button type="button" data-value="{{ $food->price }}" class="btn btn-info noselect">Chọn</button>
+                                      <button type="button" data-value="{{ $food->price }}" class="btn btn-danger selected" style="display: none;">Bỏ chọn</button>
+                                    </td>
+                                  </tr>
+                                  @endforeach
+                                </table>
+                              </div>                                
+                              @endforeach
+                            @else
+                              <table class="table-food table table-bordered">
+                              @foreach($foodType->food as $food)
+                              <tr>
+                                <td class="name_food"><p>{!! $food->name !!}</p></td>           
+                                <td class="price_food"><p>{!! number_format($food->price) !!}</p></td>
+                                <td class="choose"><input type="checkbox" class="food_checkbox" name="food_id[]" value="{{ $food->id}}">
+                                    <button type="button" class="btn btn-info noselect" data-value="{{ $food->price }}">Chọn</button>
+                                    <button type="button" class="btn btn-danger selected" style="display: none;" data-value="{{ $food->price }}">Bỏ chọn</button>
+                                  </td>
+                              </tr>
+                              @endforeach
+                              </table>
+                              @endif
+                      
+                        </div>
+                        @endforeach                       
+                    
+                  </div>
+                </div>              
                   
             </div>              
             <div class="box-footer">
@@ -73,4 +111,59 @@
   </section>
   <!-- /.content -->
 </div>
+<style type="text/css">
+  .food-type{
+        
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        margin-top: 20px;
+         background-color: red;
+    color:#FFF;
+  }
+  .food-group{
+        color: blue;
+        font-size: 15px;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+  }
+  tr:hover{
+    background-color: #f5f5f5;
+  }
+  .mon_chinh {
+    height: 600px;
+    overflow-y: scroll;
+    margin-bottom: 15px;
+
+  }
+  .food_checkbox{
+    display: none;
+  }
+  td.choose{
+    width: 1%;
+  }
+</style>
+@stop
+@section('javascript_page')
+<script type="text/javascript">
+ 
+  $(document).on('click', '.noselect', function(){
+      $(this).parents('td').find('.food_checkbox').prop('checked', 'checked');
+      $(this).removeClass('btn-info noselect').addClass('btn-danger selected').html('Bỏ chọn');
+      
+      var price = $('#price').val() == '' ? 0 :parseInt($('#price').val()); 
+      price = price + parseInt($(this).data('value'));
+      $('#price').val(price);
+    });
+  $(document).on('click', '.selected', function(){
+      $(this).parents('td').find('.food_checkbox').removeAttr('checked');
+      $(this).removeClass('btn-danger selected').addClass('btn-info noselect').html('Chọn');
+
+      var price = $('#price').val() == '' ? 0 :parseInt($('#price').val()); 
+      price = price - parseInt($(this).data('value'));
+      $('#price').val(price);      
+    });
+</script>
 @stop

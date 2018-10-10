@@ -17,21 +17,16 @@ class FoodMenu extends Model  {
      *
      * @var bool
      */
-    public $timestamps = true;
+    public $timestamps = false;
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
-                            'name', 
-                            'slug',
-                            'menu_id',
-                            'price',
-                            'image_url',
-                            'display_order',                                                                            
-                            'created_user', 
-                            'updated_user'
+    protected $fillable = [                            
+                            'food_id',
+                            'menu_id',                            
+                            'display_order'
                         ];
     
 }

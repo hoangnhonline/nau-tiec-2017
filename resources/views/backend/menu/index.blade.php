@@ -35,8 +35,9 @@
             <tr>
               <th style="width: 1%">#</th>                            
               <th width="150">Tên menu</th>
-              <th width="200" style="text-align:right">Giá</th>
+              
               <th>Các món ăn</th>
+              <th width="200" style="text-align:right">Giá</th>
               <th width="1%;white-space:nowrap">Thao tác</th>
             </tr>
             <tbody>
@@ -44,22 +45,26 @@
               <?php $k = 0; ?>
               @foreach( $items as $item )
                 <?php $k ++; ?>
+                
               <tr id="row-{{ $item->id }}">
                 <td><span class="order">{{ $k }}</span></td>      
                      
                 <td>                  
                   <a href="{{ route( 'menu.edit', [ 'id' => $item->id ]) }}">{{ $item->name }}</a>
                 </td>
-                <td style="text-align:right">                  
-                  {{ number_format($item->price) }}
-                </td>
+               
                 <td>
-                  <?php $i = 0; ?>
+                  <?php $i = $totalPrice = 0; ?>
                   @foreach($item->foodMenu as $food)
-                  <?php $i++; ?>
-                  {{ $i }}. {{ $food->name }}<br>
+                  <?php $i++; 
+                  $detailFood = DB::table('food')->where('id', $food->food_id)->first();
+                  $totalPrice+= $detailFood->price;
+                  ?>
+                  {{ $i }}. {{ $detailFood->name }}<br>
                   @endforeach
-
+                </td>
+                 <td style="text-align:right">                  
+                  {{ number_format($totalPrice) }}
                 </td>
                 <td style="white-space:nowrap">                  
                   <a href="{{ route( 'menu.edit', [ 'id' => $item->id ]) }}" class="btn btn-warning  btn-sm">Chỉnh sửa</a>                 
