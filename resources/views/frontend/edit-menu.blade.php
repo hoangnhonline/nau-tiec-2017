@@ -18,18 +18,21 @@
 			$detailFood = DB::table('food')->where('id', $food->food_id)->first();
             $totalPrice+= $detailFood->price;
 			?>
-			<tr>
-				<td style="text-align: center">{{ $i }}</td>
+			<tr data-value="{{ $food->food_id }}" class="food">
+				<td style="text-align: center"><span class="order">{{ $i }}</span></td>
 				<td style="vertical-align: center">{!! $detailFood->name !!}</td>
-				<td style="white-space: nowrap;">{!! number_format($detailFood->price) !!}</td>
+				<td style="white-space: nowrap;">{!! number_format($detailFood->price) !!}
+					<input type="hidden" class="fprice" value="{{ $detailFood->price}}">
+					<input type="hidden" class="fprice" name="food_id[]" value="{{ $food->food_id }}">
+				</td>
 				<td>
-					<button class="btn btn-sm btn-danger">Xóa</button>
+					<button data-value="{{ $food->food_id }}" class="remove btn btn-sm btn-danger">Xóa</button>
 				</td>
 			</tr>	
 			@endforeach
 			<tr>
-				<td colspan="2">Tổng tiền</td>
-				<td colspan="2">{!! number_format($totalPrice) !!}</td>
+				<td colspan="2" style="text-align: right;font-size: 17px"><strong>Tổng tiền</strong></td>
+				<td colspan="2" style="text-align: right"><strong id="total-price">{!! number_format($totalPrice) !!}</strong></td>
 			</tr>
 		</table>
 		<div style="text-align: center;margin-top: 20px;margin-bottom: 15px;">
@@ -106,5 +109,50 @@
 	.price_food button{
 		width: 95px;
 	}
+	#total-price{
+		font-size: 17px;	
+	}
 </style>
+@stop
+@section('js')
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(document).on('click', 'button.remove', function(){
+			var obj = $(this);
+			if(confirm('Quý khách chắc chắn xóa món này?')){
+				obj.parents('tr.food').remove();
+				setOrder();
+				calTotalPrice();
+			}
+		});
+	});
+	function setOrder(){
+		var i = 0;
+		$('tr.food').each(function(){
+			i++;
+			$(this).find('.order').html(i);
+		});
+	}
+	function calTotalPrice(){		
+		var total = 0;
+		$('tr.food').each(function(){
+			
+			total += parseInt($(this).find('.fprice').val());
+
+		});
+		$('#total-price').html(addCommas(total));
+
+	}
+	function addCommas(nStr) {
+	  nStr += '';
+	  x = nStr.split('.');
+	  x1 = x[0];
+	  x2 = x.length > 1 ? '.' + x[1] : '';
+	  var rgx = /(\d+)(\d{3})/;
+	  while (rgx.test(x1)) {
+	  x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	  }
+	  return x1 + x2;
+	  }
+</script>
 @stop
