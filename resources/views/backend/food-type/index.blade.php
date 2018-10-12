@@ -4,11 +4,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Màu
+    Loại món ăn
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-    <li><a href="{{ route( 'food-type.index' ) }}">Màu</a></li>
+    <li><a href="{{ route( 'food-type.index' ) }}">Loại món ăn</a></li>
     <li class="active">Danh sách</li>
   </ol>
 </section>
@@ -25,7 +25,7 @@
       <div class="box">
 
         <div class="box-header with-border">
-          <h3 class="box-title">Danh sách ( <span class="value">{{ $items->total() }} màu )</span></h3>
+          <h3 class="box-title">Danh sách ( <span class="value">{{ $items->total() }} loại )</span></h3>
         </div>
         
         <!-- /.box-header -->
@@ -36,7 +36,7 @@
           <table class="table table-bordered" id="table-list-data">
             <tr>
               <th style="width: 1%">#</th>                            
-              <th>Tên màu</th>
+              <th>Tên loại</th>
               <th width="1%;white-space:nowrap">Thao tác</th>
             </tr>
             <tbody>
@@ -60,8 +60,9 @@
                 </td>
                 <td style="white-space:nowrap">                  
                   <a href="{{ route( 'food-type.edit', [ 'id' => $item->id ]) }}" class="btn btn-warning">Chỉnh sửa</a>                 
-                  
-                  <a onclick="return callDelete('{{ $item->title }}','{{ route( 'food-type.destroy', [ 'id' => $item->id ]) }}');" class="btn btn-danger">Xóa</a>                
+                  @if($item->foodGroup->count() == 0 && $item->food->count() == 0)
+                  <a onclick="return callDelete('{{ $item->name }}','{{ route( 'food-type.destroy', [ 'id' => $item->id ]) }}');" class="btn btn-danger">Xóa</a>                
+                  @endif
                   
                 </td>
               </tr> 

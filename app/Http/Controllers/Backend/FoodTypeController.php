@@ -53,14 +53,14 @@ class FoodTypeController extends Controller
             'name' => 'required'            
         ],
         [                                    
-            'name.required' => 'Bạn chưa nhập tên màu'
+            'name.required' => 'Bạn chưa nhập tên'
         ]);       
         $dataArr['display_order'] = Helper::getNextOrder('food_type');
       
 
         $rs = FoodType::create($dataArr);
         
-        Session::flash('message', 'Tạo mới màu thành công');
+        Session::flash('message', 'Tạo mới thành công');
 
         return redirect()->route('food-type.index');
     }
@@ -105,7 +105,7 @@ class FoodTypeController extends Controller
             'name' => 'required'            
         ],
         [                                    
-            'title.required' => 'Bạn chưa nhập tên màu'
+            'title.required' => 'Bạn chưa nhập màu'
         ]);       
         
         
@@ -115,9 +115,9 @@ class FoodTypeController extends Controller
 
         $model->update($dataArr);
        
-        Session::flash('message', 'Cập nhật màu thành công');        
+        Session::flash('message', 'Cập nhật thành công');        
 
-        return redirect()->route('food-type.edit', $dataArr['id']);
+        return redirect()->route('food-type.index');
     }
 
     /**
@@ -133,7 +133,7 @@ class FoodTypeController extends Controller
         $model->delete();
 
         // redirect
-        Session::flash('message', 'Xóa màu thành công');
+        Session::flash('message', 'Xóa thành công');
         return redirect()->route('food-type.index');
     }
 }

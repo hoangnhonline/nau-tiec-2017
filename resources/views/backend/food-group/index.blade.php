@@ -45,7 +45,7 @@
       <div class="box">
 
         <div class="box-header with-border">
-          <h3 class="box-title">Danh sách ( <span class="value">{{ $items->total() }} màu )</span></h3>
+          <h3 class="box-title">Danh sách ( <span class="value">{{ $items->total() }} nhóm)</span></h3>
         </div>
         
         <!-- /.box-header -->
@@ -56,7 +56,7 @@
           <table class="table table-bordered" id="table-list-data">
             <tr>
               <th style="width: 1%">#</th>                            
-              <th>Tên màu</th>
+              <th>Tên nhóm</th>
               <th width="1%;white-space:nowrap">Thao tác</th>
             </tr>
             <tbody>
@@ -72,8 +72,9 @@
                 </td>
                 <td style="white-space:nowrap">                  
                   <a href="{{ route( 'food-group.edit', [ 'id' => $item->id ]) }}" class="btn btn-warning">Chỉnh sửa</a>                 
-                  
-                  <a onclick="return callDelete('{{ $item->title }}','{{ route( 'food-group.destroy', [ 'id' => $item->id ]) }}');" class="btn btn-danger">Xóa</a>                
+                  @if($item->food->count() == 0)
+                  <a onclick="return callDelete('{{ $item->name }}','{{ route( 'food-group.destroy', [ 'id' => $item->id ]) }}');" class="btn btn-danger">Xóa</a>                
+                  @endif
                   
                 </td>
               </tr> 
@@ -113,5 +114,10 @@ function callDelete(name, url){
   })
   return flag;
 }
+$(document).ready(function(){
+  $('#food_type_id').change(function(){
+    $(this).parents('form').submit();
+  });
+});
 </script>
 @stop

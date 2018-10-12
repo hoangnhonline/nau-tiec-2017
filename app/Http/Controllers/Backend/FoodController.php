@@ -30,11 +30,11 @@ class FoodController extends Controller
         
         $query = Food::whereRaw('1');
 
-        if( $food_type_id > 0){
+        if( $food_type_id){
             $query->where('food_type_id', $food_type_id);
             $foodGroupList = FoodGroup::where('food_type_id', $food_type_id)->orderBy('display_order')->get(); 
         }
-        if( $food_type_id > 0){
+        if( $food_group_id){
             $query->where('food_group_id', $food_group_id);
         }
         $items = $query->orderBy('display_order')->paginate(20);
@@ -168,7 +168,7 @@ class FoodController extends Controller
     public function destroy($id)
     {
         // delete
-        $detail = FoodGroup::find($id);
+        $detail = Food::find($id);
         
         $food_type_id = $detail->food_type_id;
         $food_group_id = $detail->food_group_id;
@@ -176,7 +176,7 @@ class FoodController extends Controller
         $detail->delete();
 
         // redirect
-        Session::flash('message', 'Xóa  món ăn thành công');
+        Session::flash('message', 'Xóa  thành công');
         return redirect()->route('food.index', ['food_type_id' => $food_type_id, 'food_group_id' => $food_group_id]);
     }
 }

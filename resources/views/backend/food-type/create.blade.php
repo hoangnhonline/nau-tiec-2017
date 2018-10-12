@@ -4,11 +4,11 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Màu
+      Loại món ăn
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-      <li><a href="{{ route('food-type.index') }}">Màu</a></li>
+      <li><a href="{{ route('food-type.index') }}">Loại món ăn</a></li>
       <li class="active">Tạo mới</li>
     </ol>
   </section>
@@ -41,7 +41,7 @@
               @endif                
                 <div class="form-group" >
                   
-                  <label>Tên màu<span class="red-star">*</span></label>
+                  <label>Tên loại món ăn<span class="red-star">*</span></label>
                   <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}">
                 </div>               
                   

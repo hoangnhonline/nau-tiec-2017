@@ -56,13 +56,13 @@
       <div class="box">
 
         <div class="box-header with-border">
-          <h3 class="box-title">Danh sách ( <span class="value">{{ $items->total() }} màu )</span></h3>
+          <h3 class="box-title">Danh sách ( <span class="value">{{ $items->total() }} món )</span></h3>
         </div>
         
         <!-- /.box-header -->
         <div class="box-body">
           <div style="text-align:center">
-           {{ $items->links() }}
+           {{ $items->appends(['food_type_id' => $food_type_id, 'food_group_id' => $food_group_id])->links() }}
           </div>   
           <table class="table table-bordered" id="table-list-data">
             <tr>
@@ -86,9 +86,10 @@
                   {{ $item->price > 0 ? number_format($item->price) : "Theo thời giá"}}
                 </td>
                 <td style="white-space:nowrap">                  
-                  <a href="{{ route( 'food.edit', [ 'id' => $item->id ]) }}" class="btn btn-warning btn-sm">Chỉnh sửa</a>                 
-                  
-                  <a onclick="return callDelete('{{ $item->title }}','{{ route( 'food.destroy', [ 'id' => $item->id ]) }}');" class="btn btn-danger  btn-sm">Xóa</a>                
+                  <a href="{{ route( 'food.edit', [ 'id' => $item->id ]) }}" class="btn btn-warning btn-sm">Chỉnh sửa</a>                                   
+                  @if($item->foodMenu->count() == 0)
+                  <a onclick="return callDelete('{{ $item->name }}','{{ route( 'food.destroy', [ 'id' => $item->id ]) }}');" class="btn btn-danger  btn-sm">Xóa</a>                
+                  @endif
                   
                 </td>
               </tr> 
@@ -101,6 +102,9 @@
 
           </tbody>
           </table>
+          <div style="text-align: center">
+            {{ $items->appends(['food_type_id' => $food_type_id, 'food_group_id' => $food_group_id])->links() }}
+          </div>
            
         </div>        
       </div>

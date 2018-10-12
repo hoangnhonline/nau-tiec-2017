@@ -68,15 +68,15 @@ class FoodGroupController extends Controller
             'name.required' => 'Bạn chưa nhập tên nhóm món ăn',
             'food_type_id.required' => 'Bạn chưa chọn loại món ăn'
         ]);       
-        $dataArr['display_order'] = Helper::getNextOrder('food_type', 
+        $dataArr['display_order'] = Helper::getNextOrder('food_group', 
                                                         ['food_type_id' => $dataArr['food_type_id']]);
       
 
         $rs = FoodGroup::create($dataArr);
         
-        Session::flash('message', 'Tạo mới nhóm món ăn thành công');
+        Session::flash('message', 'Tạo mới thành công');
 
-        return redirect()->route('food-group.index');
+        return redirect()->route('food-group.index', ['food_type_id' => $dataArr['food_type_id']]);
     }
 
     /**
@@ -129,9 +129,9 @@ class FoodGroupController extends Controller
 
         $model->update($dataArr);
        
-        Session::flash('message', 'Cập nhật nhóm món ăn thành công');        
+        Session::flash('message', 'Cập nhật thành công');        
 
-        return redirect()->route('food-group.edit', $dataArr['id']);
+        return redirect()->route('food-group.index', ['food_type_id' => $dataArr['food_type_id']]);
     }
 
     /**
@@ -150,7 +150,7 @@ class FoodGroupController extends Controller
         $detail->delete();
 
         // redirect
-        Session::flash('message', 'Xóa nhóm món ăn thành công');
+        Session::flash('message', 'Xóa ăn thành công');
         return redirect()->route('food-group.index', ['food_type_id' => $food_type_id]);
     }
 }
