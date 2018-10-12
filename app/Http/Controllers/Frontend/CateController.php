@@ -129,6 +129,7 @@ class CateController extends Controller
         
         $id = $request->id;
         $menuDetail = Menu::find($id);
+        
         if(!$menuDetail){
             return redirect()->route('home');
         }

@@ -71,6 +71,11 @@
 	                   @endforeach
 	                </div>
 	             </div>
+	              @if(!Session::get('username'))
+	             <button class="btn btn-sm btn-info login-by-facebook-popup edit-menu">Sửa menu</button>
+	             @else
+	             <a href="{{ route('sua-menu', $menu->id)}}" class="btn btn-info btn-sm edit-menu">Sửa menu</a>
+	             @endif
 	          </div>
 	        </div>
 	      </div>    
@@ -129,6 +134,12 @@
 </section>
 
 <style type="text/css">
+.edit-menu{
+	position: absolute;
+    right: 5px;
+    bottom: 5px;
+
+}
 img {
     border: 0 none;
     max-width: 100%;
