@@ -69,7 +69,7 @@
                                     <td class="name_food"><p>{!! $food->name !!}</p></td>           
                                     <td class="price_food"><p>{!! number_format($food->price) !!}</p></td>
                                     <td  class="choose"><input type="checkbox" name="food_id[]" class="food_checkbox" value="{{ $food->id}}" {{ in_array($food->id, $foodIdArr) ? "checked=checked" : ""}}>
-                                      @if(!in_array($food->id, $foodIdArr))
+                                    @if(!in_array($food->id, $foodIdArr))
                                     <button type="button" class="btn btn-info noselect" data-value="{{ $food->price }}">Chọn</button>          
                                     @else
                                     <button type="button" class="btn btn-danger selected" data-value="{{ $food->price }}">Bỏ chọn</button>          

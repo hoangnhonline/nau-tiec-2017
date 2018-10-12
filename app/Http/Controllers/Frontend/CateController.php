@@ -12,6 +12,9 @@ use App\Models\Banner;
 use App\Models\Location;
 use App\Models\Pages;
 use App\Models\FoodType;
+use App\Models\FoodMenu;
+use App\Models\Menu;
+use App\Models\Food;
 
 use App\Models\MetaData;
 use Helper, File, Session, Auth, DB;
@@ -117,7 +120,27 @@ class CateController extends Controller
         
 
         return view('frontend.cate.menu-custom', compact('foodTypeList', 'socialImage', 'seo'));
-    }  
+    } 
+
+    public function suaMenu(Request $request)
+    {
+        $foodTypeList = FoodType::orderBy('display_order')->get();
+        $seo['title'] = $seo['description'] = $seo['keywords'] = 'Sửa menu';
+        
+        $id = $request->id;
+        $menuDetail = Menu::find($id);
+        if(!$menuDetail){
+            return redirect()->route('home');
+        }
+        $foodList = $menuDetail->foodMenu;
+        $foodIdArr = [];
+        $totalPrice = 0;
+        foreach($foodList as $food){
+            $foodIdArr[] = $food->food_id;
+            $totalPrice+= Food::find($food->food_id)->price;
+        }
+        return view('frontend.edit-menu', compact('foodTypeList', 'socialImage', 'seo', 'menuDetail', 'foodIdArr', 'totalPrice'));
+    } 
 
     public function newsList(Request $request)
     {

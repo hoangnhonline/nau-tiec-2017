@@ -73,8 +73,9 @@ Route::group(['namespace' => 'Frontend'], function()
         Route::get('/reset-password/{key}', ['as' => 'reset-password', 'uses' => 'CustomerController@resetPassword']);
         Route::post('save-reset-password', ['as' => 'save-reset-password', 'uses' => 'CustomerController@saveResetPassword']);
     });
-    
+    Route::get('sua-menu-{id}.html', ['as' => 'sua-menu', 'uses' => 'CateController@suaMenu']);
     Route::get('{slug}-{id}.html', ['as' => 'dich-vu', 'uses' => 'CateController@cate']);
+    
     Route::post('/dang-ki-newsletter', ['as' => 'register.newsletter', 'uses' => 'HomeController@registerNews']);
     Route::get('/cap-nhat-thong-tin', ['as' => 'cap-nhat-thong-tin', 'uses' => 'CartController@updateUserInformation']);        
     Route::get('/tin-tuc/{slug}-p{id}.html', ['as' => 'news-detail', 'uses' => 'NewsController@newsDetail']);
