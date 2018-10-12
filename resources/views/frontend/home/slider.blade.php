@@ -80,6 +80,15 @@
 	  </ul>
 	</div>
 </div>
+<div class="spnoibat" style="margin-bottom: 30px"> 
+       <div  class="row">
+       	<div class="container">
+       	<img class="img-responsive" src="{{ URL::asset('assets/images/quytrinh.jpg') }}" alt="alt" style="width: 100%">
+       </div>
+        </div>
+     
+   <div class="clear"></div>
+</div>
 <section class="awe-section-2">	
 	<div class="section section-banner">
 	<div class="container">
@@ -118,6 +127,7 @@
 	</div>
 </div>
 </section>
+
 <style type="text/css">
 img {
     border: 0 none;
