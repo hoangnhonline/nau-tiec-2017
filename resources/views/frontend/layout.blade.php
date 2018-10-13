@@ -150,7 +150,7 @@
                 </li>
                 <li class="{{ $routeName == 'menu-custom' ? 'active' : '' }}"><a href="{{ route('menu-custom')}}">Dịch vụ</a></li>
                 </li>
-                <li class="{{ $routeName == 'tao-menu' ? 'active' : '' }}"><a href="{{ route('tao-menu')}}">Tạo menu</a></li>
+                <li class="{{ $routeName == 'tao-menu' ? 'active' : '' }} @if(!Session::get('userId')) login-by-facebook-popup @endif"><a @if(Session::get('userId')) href="{{ route('tao-menu')}}" @else href="javascript:void(0);" @endif>Tạo menu</a></li>
                 </li>
                 <li class="{{ $routeName == 'news-list' || $routeName == 'news-detail' ? 'active' : '' }}"><a href="{{ route('news-list', 'khuyen-mai') }}">Khuyến mãi</a></li>
                 <li class="{{ $routeName == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Liên hệ</a></li>
