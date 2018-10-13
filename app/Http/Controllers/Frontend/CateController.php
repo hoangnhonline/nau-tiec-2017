@@ -124,6 +124,9 @@ class CateController extends Controller
 
     public function suaMenu(Request $request)
     {
+        if(!Session::get('username')){
+            return redirect()->route('home');
+        }
         $foodTypeList = FoodType::orderBy('display_order')->get();
         $seo['title'] = $seo['description'] = $seo['keywords'] = 'Sửa menu';
         
@@ -159,7 +162,45 @@ class CateController extends Controller
         $hotArr = Articles::where( ['cate_id' => 1, 'is_hot' => 1] )->orderBy('id', 'desc')->limit(5)->get();
         return view('frontend.news-list', compact('title','settingArr', 'hotArr', 'layout_name', 'page_name', 'articlesArr'));
     }
+    public function luuMenu(Request $request){
+        if(!empty($request->food_id)){
+            if(!$request->menu_id){
+                $rs = Menu::create([
+                    'name' => $request->name,
+                    'customer_id' => Session::get('userId')
+                ]);
+                $i = 0;
+                foreach($request->food_id as $food_id){
 
+                    FoodMenu::create([
+                        'menu_id' => $rs->id,
+                        'food_id' => $food_id,
+                        'display_order' => $i                            
+                    ]);
+                }
+            }else{
+                FoodMenu::where('menu_id', $request->menu_id)->delete();
+                $i = 0;
+                foreach($request->food_id as $food_id){
+                    FoodMenu::create([
+                        'menu_id' => $rs->id,
+                        'food_id' => $food_id,
+                        'display_order' => $i                            
+                    ]);
+                }
+            }
+            
+        }
+    }
+    public function dsMenu(){
+        if(!Session::get('userId')){
+            return redirect()->route('home');
+        }
+    
+        $menuLuuList = Menu::where('customer_id', Session::get('userId'))->get();        
+        $seo['title'] = $seo['description'] = $seo['keywords'] = 'Menu đã lưu';
+        return view('frontend.list-menu', compact('menuLuuList', 'seo'));
+    }
     public function newsDetail(Request $request)
     {
         $settingArr = Settings::whereRaw('1')->lists('value', 'name');

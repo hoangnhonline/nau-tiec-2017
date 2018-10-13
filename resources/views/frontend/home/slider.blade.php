@@ -26,7 +26,7 @@
 		<div class="container">			
 			<ul class="row product-list">
 				@foreach($tiecList as $articles)							
-				<li class="col-md-2 col-sm-4 col-xs-12">
+				<li class="col-md-2 col-sm-4 col-xs-6">
 					<div class="icon">
 						<a href="{{ route('news-detail', ['slug' => $articles->slug, 'id' => $articles->id]) }}" title="{!! $articles->title !!}">
 							<img src="{!! Helper::showImage($articles->image_url) !!}" alt="{!! $articles->title !!}">

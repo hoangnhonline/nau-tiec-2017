@@ -7,11 +7,11 @@
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                <div class="widget-ft first">
                   <h4 class="title-menu">
-                     <a role="button" class="collapsed" data-toggle="collapse" aria-expanded="false" data-target="#collapseListMenu01" aria-controls="collapseListMenu01">
+                     <a role="button">
                         Về chúng tôi</i>
                      </a>
                   </h4>
-                  <div class="collapse" id="collapseListMenu01">
+                  <div  id="collapseListMenu01">
                      <ul class="list-menu">
                         
                         <li class="li_menu"><a href="{{ route('home')}}">Trang chủ</a></li>                       
@@ -28,11 +28,11 @@
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                <div class="widget-ft">
                   <h4 class="title-menu title-db">
-                     <a role="button" class="collapsed" data-toggle="collapse" aria-expanded="false" data-target="#collapseListMenu03" aria-controls="collapseListMenu03">
+                     <a role="button">
                         EKIP TIỆC NGON</i>
                      </a>
                   </h4>
-                  <div class="collapse" id="collapseListMenu03">
+                  <div id="collapseListMenu03">
                      <ul class="list-menu">
                         
                         <li class="li_menu"><i class="fa fa-map-marker"></i> 146 Kênh Tân Hóa - P Phú Trung- Q.Tân Phú </li>

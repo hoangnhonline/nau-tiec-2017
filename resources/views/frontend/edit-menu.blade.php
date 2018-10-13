@@ -8,6 +8,12 @@
 		<div id="sticker" style="margin-bottom: 10px;">
 	      <a id="xem-menu" href="javascript:void(0)">Xem menu</a>
 	    </div>
+	<form action="{{  route('luu-menu') }}" method="POST">
+		{{ csrf_field() }}
+		@if(Session::get('userId') == $menuDetail->id)
+		<input type="hidden" name="menu_id" value="{{ $menuDetail-id }}">
+		@endif
+		<input type="hidden" name="name" value="{{ $menuDetail->name }}">
 		<table class="table table-bordered"  id="div-content-edit">
 			<tr>
 				<th width="1%" style="white-space: nowrap;">STT</th>
@@ -38,6 +44,11 @@
 				<td colspan="2" style="text-align: right"><strong id="total-price">{!! number_format($totalPrice) !!}</strong></td>
 			</tr>
 		</table>
+		<div style="text-align: right">
+			<button class="btn btn-info" type="submit">LƯU MENU</button>
+			<button class="btn btn-default" type="button" onclick="return window.location.reload();">HỦY</button>
+		</div>
+	</form>
 		
 		<div style="text-align: center;margin-top: 20px;margin-bottom: 15px;">
 			<h3>DANH SÁCH MÓN</h3>

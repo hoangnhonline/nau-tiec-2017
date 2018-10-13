@@ -37,6 +37,8 @@ Route::group(['namespace' => 'Frontend'], function()
 
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
     Route::get('/load-slider', ['as' => 'load-slider', 'uses' => 'HomeController@loadSlider']);
+    Route::post('/luu-menu', ['as' => 'luu-menu', 'uses' => 'CateController@luuMenu']);
+    Route::get('/menu-da-luu', ['as' => 'danh-sach-menu', 'uses' => 'CateController@dsMenu']);
     Route::get('/count-message', ['as' => 'count-message', 'uses' => 'HomeController@getNoti']);
     Route::get('/chuong-trinh-khuyen-mai', ['as' => 'chuong-trinh-khuyen-mai', 'uses' => 'EventController@index']);
     Route::get('event/{slug}', ['as' => 'detail-event', 'uses' => 'EventController@detail']);
