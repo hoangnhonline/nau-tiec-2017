@@ -5,6 +5,9 @@
   	<div class="tieude"><h3 class="title">Menu đã lưu</h3></div>
   		
 	<div>
+		@if(Session::has('message'))
+	      <p class="alert alert-info" >{{ Session::get('message') }}</p>
+	      @endif
 		<ul>
 		@foreach($menuLuuList as $menu)
 		<?php $i = $totalPrice = 0; ?>

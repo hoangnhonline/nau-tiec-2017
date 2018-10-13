@@ -37,13 +37,15 @@ Route::group(['namespace' => 'Frontend'], function()
 
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
     Route::get('/load-slider', ['as' => 'load-slider', 'uses' => 'HomeController@loadSlider']);
+    Route::get('/tao-menu', ['as' => 'tao-menu', 'uses' => 'CateController@taoMenu']);
     Route::post('/luu-menu', ['as' => 'luu-menu', 'uses' => 'CateController@luuMenu']);
+    Route::post('/luu-menu-moi', ['as' => 'luu-menu-moi', 'uses' => 'CateController@luuMenuMoi']);
     Route::get('/menu-da-luu', ['as' => 'danh-sach-menu', 'uses' => 'CateController@dsMenu']);
     Route::get('/count-message', ['as' => 'count-message', 'uses' => 'HomeController@getNoti']);
     Route::get('/chuong-trinh-khuyen-mai', ['as' => 'chuong-trinh-khuyen-mai', 'uses' => 'EventController@index']);
     Route::get('event/{slug}', ['as' => 'detail-event', 'uses' => 'EventController@detail']);
    
-
+    Route::get('tin-tuc/{slug}', ['as' => 'news-list', 'uses' => 'NewsController@newsList']);
     Route::post('/send-contact', ['as' => 'send-contact', 'uses' => 'ContactController@store']);
     Route::post('/set-service', ['as' => 'set-service', 'uses' => 'CartController@setService']);
     
@@ -91,7 +93,7 @@ Route::group(['namespace' => 'Frontend'], function()
     Route::get('so-sanh.html', ['as' => 'so-sanh', 'uses' => 'CompareController@index']);
     Route::get('lien-he.html', ['as' => 'contact', 'uses' => 'HomeController@contact']);
     Route::get('may-cu-gia-re.html', ['as' => 'old-device', 'uses' => 'HomeController@oldDevice']);
-    Route::get('tin-tuc.html', ['as' => 'news-list', 'uses' => 'NewsController@newsList']);
+    //Route::get('tin-tuc.html', ['as' => 'news-list', 'uses' => 'NewsController@newsList']);
     Route::get('menu-tu-chon.html', ['as' => 'menu-custom', 'uses' => 'CateController@menuCustom']);
 
     Route::get('{slug}.html', ['as' => 'parent-cate', 'uses' => 'CateController@index']);

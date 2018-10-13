@@ -130,7 +130,7 @@
               </div>
               <ul class="nav-menu">
                 <li  @if($routeName == 'home') class="active" @endif><a href="{{ route('home') }}">Trang chủ </a></li>
-                <li class="{{ (isset($pageDetail)  && $routeName == 'parent-cate' && $detailPage->slug == 'gioi-thieu') ? 'active' : '' }}"><a href="{{ route('parent-cate', 'gioi-thieu') }}"> Giới thiệu </a></li>
+                
                 <li class="{{ (!isset($pageDetail) && $routeName == 'parent-cate') || $routeName == 'dich-vu' ? 'active' : '' }} parent">
                    <a href="javascript:;">Menu</a>
                    <ul class="submenu">                            
@@ -148,8 +148,11 @@
                 </li>
                 <li class="{{ $routeName == 'menu-custom' ? 'active' : '' }}"><a href="{{ route('menu-custom')}}">Món</a></li>
                 </li>
-                <li class="{{ $routeName == 'news-list' || $routeName == 'news-detail' ? 'active' : '' }}"><a href="{{ route('news-list') }}">Sức khỏe</a></li>
-                <li class="{{ $routeName == 'news-list' || $routeName == 'news-detail' ? 'active' : '' }}"><a href="{{ route('news-list') }}">Tin tức</a></li>
+                <li class="{{ $routeName == 'menu-custom' ? 'active' : '' }}"><a href="{{ route('menu-custom')}}">Dịch vụ</a></li>
+                </li>
+                <li class="{{ $routeName == 'tao-menu' ? 'active' : '' }}"><a href="{{ route('tao-menu')}}">Tạo menu</a></li>
+                </li>
+                <li class="{{ $routeName == 'news-list' || $routeName == 'news-detail' ? 'active' : '' }}"><a href="{{ route('news-list', 'khuyen-mai') }}">Khuyến mãi</a></li>
                 <li class="{{ $routeName == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Liên hệ</a></li>
                 <li class="search-mb"><i class="fa fa-search"></i></li>
               </ul>

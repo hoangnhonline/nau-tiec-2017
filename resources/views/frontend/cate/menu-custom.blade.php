@@ -5,8 +5,8 @@
   	<div class="tieude"><h3 class="title">menu tự chọn</h3></div>
   	
 	<div>
-		<div class="table-responsive">
-		  <table border="1" cellpadding="10" cellspacing="10" width="100%" class="table-food">
+		<div class="table-responsives">
+		  <table cellpadding="10" cellspacing="10" width="100%" class="table-food table table-bordered">
 		    	@foreach($foodTypeList as $foodType)
 		    	<tr>
 		    		<td colspan="2"><p class="food-type">{!! $foodType->name !!}</p></td>
@@ -19,7 +19,7 @@
 					    	@foreach($group->food as $food)
 					    	<tr>
 					    		<td class="name_food"><p>{!! $food->name !!}</p></td>			    	
-					    		<td class="price_food"><p>{!! number_format($food->price) !!}</p></td>
+					    		<td class="price_food" style="white-space: nowrap;"><p>{!! number_format($food->price) !!}</p></td>
 					    	</tr>
 					    	@endforeach
 				    	@endforeach
@@ -27,7 +27,7 @@
 			    		@foreach($foodType->food as $food)
 				    	<tr>
 				    		<td class="name_food"><p>{!! $food->name !!}</p></td>			    	
-				    		<td class="price_food"><p>{!! number_format($food->price) !!}</p></td>
+				    		<td class="price_food" style="white-space: nowrap;"><p>{!! number_format($food->price) !!}</p></td>
 				    	</tr>
 				    	@endforeach
 			    	@endif

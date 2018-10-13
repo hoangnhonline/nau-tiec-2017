@@ -146,6 +146,17 @@ class CateController extends Controller
         return view('frontend.edit-menu', compact('foodTypeList', 'socialImage', 'seo', 'menuDetail', 'foodIdArr', 'totalPrice'));
     } 
 
+    public function taoMenu(Request $request)
+    {
+        if(!Session::get('username')){
+            return redirect()->route('home');
+        }
+        $foodTypeList = FoodType::orderBy('display_order')->get();
+        $seo['title'] = $seo['description'] = $seo['keywords'] = 'Tạo menu';
+       
+        return view('frontend.tao-menu', compact('foodTypeList', 'socialImage', 'seo', 'totalPrice'));
+    } 
+
     public function newsList(Request $request)
     {
         $settingArr = Settings::whereRaw('1')->lists('value', 'name');
@@ -191,6 +202,32 @@ class CateController extends Controller
             }
             
         }
+         Session::flash('message', 'Lưu menu thành công');
+        return redirect()->route('danh-sach-menu');
+    }
+    public function luuMenuMoi(Request $request){
+        if(!empty($request->food_id)){
+            $max = Menu::where('customer_id', Session::get('userId'))->count();
+            $name = 'Menu '.str_pad($max, 2, '0', STR_PAD_LEFT);
+
+                $rs = Menu::create([
+                    'name' => $name,
+                    'customer_id' => Session::get('userId')
+                ]);
+                $i = 0;
+                foreach($request->food_id as $food_id){
+
+                    FoodMenu::create([
+                        'menu_id' => $rs->id,
+                        'food_id' => $food_id,
+                        'display_order' => $i                            
+                    ]);
+                }
+            
+            
+        }
+        Session::flash('message', 'Lưu menu thành công');
+        return redirect()->route('danh-sach-menu');
     }
     public function dsMenu(){
         if(!Session::get('userId')){

@@ -23,11 +23,8 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li class="show-in-checkout">
-                                <a href="{{ route('account-info') }}" title="Thông tin tài khoản"> Thông tin tài khoản</a>
-                            </li>
-                            <li class="show-in-checkout">
-                                <a href="{{ route('order-history') }}" title="Đơn hàng của tôi"> Đơn hàng của tôi</a>
-                            </li>
+                                <a href="{{ route('danh-sach-menu') }}" title="Menu đã lưu"> Menu đã lưu</a>
+                            </li>                           
                             <li class="show-in-checkout"><a href="{{ route('logout') }}" rel="nofollow" class="underlined">Đăng xuất</a></li>
                         </ul>
                     </li>

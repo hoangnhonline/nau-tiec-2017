@@ -18,7 +18,7 @@
                         <li><a class="li_menu" href="{{ route('parent-cate', 'gioi-thieu') }}" >Giới thiệu</a></li>
                      <li><a class="li_menu" href="{{ route('menu-custom')}}" >Menu tự chọn</a></li>
                      <li><a class="li_menu" href="{{ route('contact')}}" >Liên hệ</a></li>
-                     <li><a class="li_menu" href="{{ route('news-list') }}" >Tin tức - Sự kiện</a></li> 
+                    </li> 
                         
                      </ul>
                   </div>
