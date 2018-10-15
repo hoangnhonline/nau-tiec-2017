@@ -175,31 +175,35 @@ class CateController extends Controller
     }
     public function luuMenu(Request $request){
         if(!empty($request->food_id)){
-            if(!$request->menu_id){
-                $rs = Menu::create([
-                    'name' => $request->name,
-                    'customer_id' => Session::get('userId')
-                ]);
-                $i = 0;
-                foreach($request->food_id as $food_id){
+            $menuDetail = Menu::find($request->menu_id);
+            
+                if($menuDetail->customer_id != Session::get('userId')){
+                    $rs = Menu::create([
+                        'name' => $menuDetail->name,
+                        'customer_id' => Session::get('userId')
+                    ]);
+                    $i = 0;
+                    foreach($request->food_id as $food_id){
 
-                    FoodMenu::create([
-                        'menu_id' => $rs->id,
-                        'food_id' => $food_id,
-                        'display_order' => $i                            
-                    ]);
+                        FoodMenu::create([
+                            'menu_id' => $rs->id,
+                            'food_id' => $food_id,
+                            'display_order' => $i                            
+                        ]);
+                    }
+                }else{
+                    FoodMenu::where('menu_id', $menuDetail->id)->delete();
+                    $i = 0;
+                    foreach($request->food_id as $food_id){
+
+                        FoodMenu::create([
+                            'menu_id' => $menuDetail->id,
+                            'food_id' => $food_id,
+                            'display_order' => $i                            
+                        ]);
+                    }
                 }
-            }else{
-                FoodMenu::where('menu_id', $request->menu_id)->delete();
-                $i = 0;
-                foreach($request->food_id as $food_id){
-                    FoodMenu::create([
-                        'menu_id' => $request->menu_id,
-                        'food_id' => $food_id,
-                        'display_order' => $i                            
-                    ]);
-                }
-            }
+            
             
         }
          Session::flash('message', 'Lưu menu thành công');

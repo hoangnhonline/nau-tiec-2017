@@ -10,9 +10,8 @@
 	    </div>
 	<form action="{{  route('luu-menu') }}" method="POST">
 		{{ csrf_field() }}
-		@if(Session::get('userId') == $menuDetail->id)
-		<input type="hidden" name="menu_id" value="{{ $menuDetail->id }}">
-		@endif
+		
+		<input type="hidden" name="menu_id" value="{{ $menuDetail->id }}">		
 		<input type="hidden" name="name" value="{{ $menuDetail->name }}">
 		<table class="table table-bordered"  id="div-content-edit">
 			<tr>
