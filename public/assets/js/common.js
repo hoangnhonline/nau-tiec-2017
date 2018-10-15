@@ -80,6 +80,8 @@ window.fbAsyncInit = function() {
    }(document, 'script', 'facebook-jssdk'));
 $(document).ready(function() {
   $('.login-by-facebook-popup').click(function() {
+    var url_redirect = $(this).data('url');
+    $('#url_fb_redirect').val(url_redirect);    
     FB.login(function(response){
       if(response.status == "connected")
       {
@@ -92,11 +94,9 @@ $(document).ready(function() {
             token : token
           },
           success : function(data){
-            if(!data.success) {
-              location.reload();
-            } else {
-              location.href = $('#route-cap-nhat-thong-tin').val();
-            }
+       
+              location.href = $('#url_fb_redirect').val();
+            
           }
         });
 

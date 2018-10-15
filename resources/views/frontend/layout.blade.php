@@ -30,7 +30,7 @@
       <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
       <link rel="stylesheet" href="{{ URL::asset('assets/plugin/font-awesome/font-awesome.min.css') }}">
       <!-- <link href="{{ URL::asset('assets/css/media.css') }}" rel="stylesheet" type="text/css" /> -->
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,greek-ext,cyrillic-ext,vietnamese,greek' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,greek-ext,cyrillic-ext,vietnamese,greek' rel='stylesheet' type='text/css'>
       <script language="javascript" type="text/javascript" src="{{ URL::asset('assets/js/jquery.min.js') }}"></script>
       <script language="javascript" type="text/javascript" src="{{ URL::asset('assets/js/bootstrap/bootstrap.min.js') }}"></script>
       <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/jqueryslidemenu.css') }}">
@@ -112,13 +112,14 @@
          
          });
       </script>  
-      <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAL928AIsIDYz9oUb-ILO5LTe_7MQnVgDA"></script>
+      <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAL928AIsIDYz9oUb-ILO5LTe_7MQnVgDA"></script>
       <link rel="stylesheet" href="{{ URL::asset('assets/css/animate.css') }}">
       <script src="{{ URL::asset('assets/js/wow.min.js') }}"></script>
       <script> new WOW().init(); </script>
       <script src="{{ URL::asset('assets/js/lucid.js') }}"></script>
       <script src="{{ URL::asset('assets/js/sweetalert2.min.js') }}"></script>
       <input type="hidden" id="route-newsletter" value="{{ route('register.newsletter') }}">
+      <input type="hidden" id="fb_redirect_url" value="{{ route('home') }}">
    </head>
    <body>
       @include('frontend.partials.header')
@@ -150,7 +151,7 @@
                 </li>
                 <li class="{{ $routeName == 'menu-custom' ? 'active' : '' }}"><a href="{{ route('menu-custom')}}">Dịch vụ</a></li>
                 </li>
-                <li class="{{ $routeName == 'tao-menu' ? 'active' : '' }} @if(!Session::get('userId')) login-by-facebook-popup @endif"><a @if(Session::get('userId')) href="{{ route('tao-menu')}}" @else href="javascript:void(0);" @endif>Tạo menu</a></li>
+                <li data-url="{{ route('tao-menu') }}" class="{{ $routeName == 'tao-menu' ? 'active' : '' }} @if(!Session::get('userId')) login-by-facebook-popup @endif"><a @if(Session::get('userId')) href="{{ route('tao-menu')}}" @else href="javascript:void(0);"  @endif>Tạo menu</a></li>
                 </li>
                 <li class="{{ $routeName == 'news-list' || $routeName == 'news-detail' ? 'active' : '' }}"><a href="{{ route('news-list', 'khuyen-mai') }}">Khuyến mãi</a></li>
                 <li class="{{ $routeName == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Liên hệ</a></li>
@@ -201,6 +202,7 @@
       </a><!-- Return To Top -->
         <input type="hidden" id="route-ajax-login-fb" value="{{route('ajax-login-by-fb')}}">
   <input type="hidden" id="fb-app-id" value="{{ env('FACEBOOK_APP_ID') }}">
+      <input type="hidden" id="url_fb_redirect" value="{{ route('home') }}">
       <style type="text/css">
         .header{
             background:url({{ URL::asset('assets/upload/hinhanh/1-8460.jpg') }});background-size:cover;box-sizing: border-box;    padding:5px 0px;

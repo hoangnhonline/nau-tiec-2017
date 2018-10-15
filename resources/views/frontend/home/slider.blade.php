@@ -72,7 +72,7 @@
 	                </div>
 	             </div>
 	              @if(!Session::get('username'))
-	             <button class="btn btn-sm btn-info login-by-facebook-popup edit-menu">Sửa menu</button>
+	             <button data-url="{{ route('sua-menu', $menu->id)}}" class="btn btn-sm btn-info login-by-facebook-popup edit-menu">Sửa menu</button>
 	             @else
 	             <a href="{{ route('sua-menu', $menu->id)}}" class="btn btn-info btn-sm edit-menu">Sửa menu</a>
 	             @endif

@@ -194,7 +194,7 @@ class CateController extends Controller
                 $i = 0;
                 foreach($request->food_id as $food_id){
                     FoodMenu::create([
-                        'menu_id' => $rs->id,
+                        'menu_id' => $request->menu_id,
                         'food_id' => $food_id,
                         'display_order' => $i                            
                     ]);
