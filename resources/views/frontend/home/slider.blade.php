@@ -71,9 +71,12 @@
 	                   @endforeach
 	                </div>
 	             </div>
+
 	              @if(!Session::get('username'))
+	              <button data-url="{{ route('tao-menu')}}" class="btn btn-sm btn-success login-by-facebook-popup tu-tao-menu">Tự tạo menu</button>
 	             <button data-url="{{ route('sua-menu', $menu->id)}}" class="btn btn-sm btn-info login-by-facebook-popup edit-menu">Sửa menu</button>
 	             @else
+	             <a href="{{ route('tao-menu')}}" class="btn btn-sm btn-success tu-tao-menu">Tự tạo menu</a>
 	             <a href="{{ route('sua-menu', $menu->id)}}" class="btn btn-info btn-sm edit-menu">Sửa menu</a>
 	             @endif
 	          </div>
@@ -139,6 +142,11 @@
     right: 5px;
     bottom: 5px;
 
+}
+.tu-tao-menu{
+	position: absolute;
+    right: 85px;
+    bottom: 5px;	
 }
 img {
     border: 0 none;
