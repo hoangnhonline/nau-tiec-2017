@@ -201,8 +201,27 @@
         <i class="fa fa-angle-up" aria-hidden="true"></i>
       </a><!-- Return To Top -->
         <input type="hidden" id="route-ajax-login-fb" value="{{route('ajax-login-by-fb')}}">
-  <input type="hidden" id="fb-app-id" value="{{ env('FACEBOOK_APP_ID') }}">
+    <input type="hidden" id="fb-app-id" value="{{ env('FACEBOOK_APP_ID') }}">
       <input type="hidden" id="url_fb_redirect" value="{{ route('home') }}">
+      <div class="menu-select">
+    <div class="wrapper-menu-select">
+        <div class="wrapper-form">
+            <div class="form-header"> <span> <span class="icon-item"><i class="fa fa-align-justify"></i></span> MENU TỰ CHỌN </span> &nbsp;                
+                <button id="close-all-menu" class="btn btn-sm">Bỏ chọn</button> <span class="action-right"> <span class="total-item">0</span> </span>
+                <a class="form-close" href="javascript:void(0);"> <i class="fa fa-times"></i> </a>
+            </div>
+            <div class="form-body">
+                <ul class="wrapper-body">
+                    <li>
+                        <div class="alert alert-warning"> <strong> <i class="icofont icofont-mega-phone"></i> </strong> Vui lòng chọn món từ danh sách các thực đơn.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-footer"> <span> <button data-toggle="modal" data-target="#bookingModal" class="btn btn-danger btn-sm">Đặt món</button> </span> <span class="footer-label">Tổng:</span> <span class="total-price">0</span> <span class="footer-label">đ</span></div>
+        </div>
+    </div>
+    <a class="toggle-menu-select" href="javascript:void(0);"> <span class="count-item-food">0</span> <i class="fa fa-align-justify"></i> Chọn </a>
+</div>
       <style type="text/css">
         .header{
             background:url({{ URL::asset('assets/upload/hinhanh/1-8460.jpg') }});background-size:cover;box-sizing: border-box;    padding:5px 0px;
@@ -274,5 +293,13 @@
       @yield('js')
       <script src="{{ URL::asset('assets/js/common.js') }}"></script>
       <script src="{{ URL::asset('assets/js/general.js') }}"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.toggle-menu-select, a.form-close').click(function(){
+            $('.menu-select .wrapper-menu-select').toggle();
+          });
+          
+        });
+      </script>
    </body>
 </html>

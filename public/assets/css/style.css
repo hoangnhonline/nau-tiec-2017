@@ -3126,7 +3126,7 @@ h3 {
 .item-wr3 .content {
     background-color: #f5f5f5;
     padding: 3px;
-    min-height: 320px;
+    height: 320px;
     overflow-y: auto;
 
 }
@@ -3699,4 +3699,198 @@ footer.footer .copyright a:hover {
     background-color: #f5f5f5;color: #232323;
     padding: 5px 10px;
     border-radius: 5px;
+}
+.edit-menu{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+
+}
+.tu-tao-menu{
+    position: absolute;
+    right: 85px;
+    bottom: 5px;    
+}
+img {
+    border: 0 none;
+    max-width: 100%;
+    height: auto;
+}
+.flexslider{
+    margin: 0 0 10px;
+}
+.section-banner img{
+    width: 100%;
+}
+    .icon ~ h5, .icon2 ~ h5 {
+        line-height: 25px;
+    }
+    .dq-fix-icon .product-list li:nth-child(1) .icon {
+    background: #82bf00;
+}
+.padding-top-5 {
+    padding-top: 5px !important;
+}
+.dq-fix-icon .icon {
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    height: 125px;
+    width: 130px;
+    display: inline-flex;
+    margin-top: 20px;
+}
+.icon, .icon2 {
+    position: relative;
+    display: inline-block;
+    font-size: 65px;
+    text-align: center;
+    color: #fff;
+    background: #82bf00;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.icon+*, .icon2+* {
+    margin-top: 10px;
+}
+ul.product-list {
+    list-style: none outside;
+}
+ul.product-list li{
+    text-align: center;
+    }
+    h5{
+    color: #737e95;
+    letter-spacing: .01em;
+    font-weight: 700;
+}
+h5:hover{
+    color: #82bf00;
+}
+.food-price{
+    color: #ca0808;
+    text-align: right;
+}
+.food-name{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.menu-select {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999999999;
+    max-width: 350px;
+    min-width: 300px;
+}
+.menu-select .wrapper-menu-select {
+    position: relative;
+    display: none;
+    background: #ccc;
+    min-width: 280px;
+    z-index: 999;
+    border: 2px solid #388e3c;
+    border-left: 0;
+    border-radius: 0 8px 0 0;
+}
+.wrapper-menu-select .form-header {
+    position: relative;
+    padding: 3px 10px;
+    background: #90c948;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 0 4px 0 0;
+}
+#hs-all-menu {
+    padding: 2px 5px;
+    background: #388e3c;
+    margin-bottom: 2px;
+}
+#hs-all-menu i {
+    font-weight: 700;
+    font-size: 16px;
+}
+#close-all-menu {
+    display: none;
+    padding: 0 5px;
+    background: #444;
+    margin-bottom: 2px;
+}
+.wrapper-menu-select .form-header .action-right {
+    float: right;
+    margin-right: 25px;
+}
+.wrapper-menu-select .form-header .action-right .total-item {
+    padding: 2px 5px;
+    background: #fff;
+    color: #444;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,.55);
+}
+.wrapper-menu-select .form-header .form-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    background: #445;
+    border-radius: 0 5px 0 0;
+    box-shadow: 0 1px 1px #111;
+    color: #fff;
+    font-size: 18px;
+}
+.icofont {
+    font-family: IcoFont!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.wrapper-menu-select .form-body {
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+}
+.wrapper-menu-select .form-body ul li:last-child {
+    border-bottom: 0;
+}
+.wrapper-menu-select .alert.alert-warning {
+    padding: 5px 10px;
+}
+.wrapper-menu-select .form-footer {
+    text-align: right;
+    background-color: #90c948;
+    font-weight: 700;
+    padding: 5px 5px 5px 0;
+}
+.menu-select .toggle-menu-select {
+    margin-left: 0;
+    margin-top: -37px;
+    background: #fc0;
+    color: #fff;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 1px 1px #000;
+    z-index: 99999;
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+}
+.menu-select .toggle-menu-select .count-item-food {
+    position: absolute;
+    top: -13px;
+    right: -9px;
+    background: #f6f6f6;
+    padding: 0 7px;
+    font-size: 11px;
+    line-height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fc0;
+    color: #000;
 }

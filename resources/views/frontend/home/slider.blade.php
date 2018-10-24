@@ -43,7 +43,7 @@
 		</div>
 	</section>
 <div class="container" style="margin-top: 15px">
-	<div id="carousel" class="flexslider">
+	
 	  <ul class="slides">
 	    @foreach($menuList as $menu)      
 	    		<?php $i = $totalPrice = 0; ?>
@@ -53,7 +53,7 @@
                   $totalPrice+= $detailFood->price;
                   ?>                  
                   @endforeach
-	    <li>  
+	    <li class="col-md-4 col-sm-6" style="padding: 10px">  
 	      <div class="item-wr3">
 	        <div>
 	          <div class="item-gia">{!! $menu->name !!}: <span> {!! number_format($totalPrice) !!} đồng/bàn</span></div>
@@ -67,18 +67,19 @@
 	                   $detailFood = DB::table('food')->where('id', $food->food_id)->first();
 	                   ?>
 	                   <?php $cf++; ?>
-	                   <p><span style="color:red; font-size: 15px;font-weight: bold;">{{ $cf }}. </span><span style="color:#000010;font-weight:bold;font-size:15px">{!! $detailFood->name !!}</span></p>
+	                   <p>
+	                   	<div class="col-xs-8 food-name"><span style="color:red; font-size: 15px;">{{ $cf }}. </span><span style="color:#000010;font-size:15px">{!! $detailFood->name !!}</span>
+	                   	</div>
+	                   	<div class="col-xs-3 food-price">{!! number_format($detailFood->price) !!}</div>
+	                   	<div class="col-xs-1">
+	                   		<label class="item-select-label" for="item-{{ $menu->id }}-{{ $detailFood->id }}">
+                                <input class="item-select-input" id="item-{{ $menu->id }}-{{ $detailFood->id }}" type="checkbox" name="select-food" value="300000" data-name="Chả cá chép Thái Lan (nguyên con) ">
+                            </label>
+	                   	</div>
+	                   </p>
 	                   @endforeach
 	                </div>
-	             </div>
-
-	              @if(!Session::get('username'))
-	              <button data-url="{{ route('tao-menu')}}" class="btn btn-sm btn-success login-by-facebook-popup tu-tao-menu">Tự tạo menu</button>
-	             <button data-url="{{ route('sua-menu', $menu->id)}}" class="btn btn-sm btn-info login-by-facebook-popup edit-menu">Sửa menu</button>
-	             @else
-	             <a href="{{ route('tao-menu')}}" class="btn btn-sm btn-success tu-tao-menu">Tự tạo menu</a>
-	             <a href="{{ route('sua-menu', $menu->id)}}" class="btn btn-info btn-sm edit-menu">Sửa menu</a>
-	             @endif
+	             </div>	             
 	          </div>
 	        </div>
 	      </div>    
@@ -86,7 +87,7 @@
 	      @endforeach    
 	    <!-- items mirrored twice, total of 12 -->
 	  </ul>
-	</div>
+	
 </div>
 <div class="spnoibat" style="margin-bottom: 30px"> 
        <div  class="row">
@@ -137,75 +138,7 @@
 </section>
 
 <style type="text/css">
-.edit-menu{
-	position: absolute;
-    right: 5px;
-    bottom: 5px;
 
-}
-.tu-tao-menu{
-	position: absolute;
-    right: 85px;
-    bottom: 5px;	
-}
-img {
-    border: 0 none;
-    max-width: 100%;
-    height: auto;
-}
-.flexslider{
-	margin: 0 0 10px;
-}
-.section-banner img{
-	width: 100%;
-}
-	.icon ~ h5, .icon2 ~ h5 {
-	    line-height: 25px;
-	}
-	.dq-fix-icon .product-list li:nth-child(1) .icon {
-    background: #82bf00;
-}
-.padding-top-5 {
-    padding-top: 5px !important;
-}
-.dq-fix-icon .icon {
-    align-items: center;
-    justify-content: center;
-    font-size: 42px;
-    height: 125px;
-    width: 130px;
-    display: inline-flex;
-    margin-top: 20px;
-}
-.icon, .icon2 {
-    position: relative;
-    display: inline-block;
-    font-size: 65px;
-    text-align: center;
-    color: #fff;
-    background: #82bf00;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    overflow: hidden;
-}
-.icon+*, .icon2+* {
-    margin-top: 10px;
-}
-ul.product-list {
-    list-style: none outside;
-}
-ul.product-list li{
-	text-align: center;
-	}
-	h5{
-    color: #737e95;
-    letter-spacing: .01em;
-    font-weight: 700;
-}
-h5:hover{
-    color: #82bf00;
-}
 </style>
 <script type="text/javascript">
 	$(window).load(function() {
