@@ -73,7 +73,7 @@
 	                   	<div class="col-xs-3 food-price">{!! number_format($detailFood->price) !!}</div>
 	                   	<div class="col-xs-1">
 	                   		<label class="item-select-label" for="item-{{ $menu->id }}-{{ $detailFood->id }}">
-                                <input class="item-select-input" id="item-{{ $menu->id }}-{{ $detailFood->id }}" type="checkbox" name="select-food" value="300000" data-name="Chả cá chép Thái Lan (nguyên con) ">
+                                <input class="item-select-input noselect" id="item-{{ $menu->id }}-{{ $detailFood->id }}" type="checkbox" data-id="{{ $detailFood->id }}"  data-value="{{ $detailFood->price }}" data-name="{!! $detailFood->name !!}">
                             </label>
 	                   	</div>
 	                   </p>
