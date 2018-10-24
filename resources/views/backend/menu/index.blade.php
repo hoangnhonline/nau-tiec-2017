@@ -33,7 +33,8 @@
             
           <table class="table table-bordered" id="table-list-data">
             <tr>
-              <th style="width: 1%">#</th>                            
+              <th style="width: 1%">#</th>  
+               <th width="150">Thumbnail</th>                          
               <th width="150">Tên menu</th>
               
               <th>Các món ăn</th>
@@ -48,7 +49,9 @@
                 
               <tr id="row-{{ $item->id }}">
                 <td><span class="order">{{ $k }}</span></td>      
-                     
+                 <td>
+                  <img class="img-thumbnail lazy" data-original="{{ Helper::showImage($item->image_url)}}" width="145">
+                </td>       
                 <td>                  
                   <a href="{{ route( 'menu.edit', [ 'id' => $item->id ]) }}">{{ $item->name }}</a>
                 </td>

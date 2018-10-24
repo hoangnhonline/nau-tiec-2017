@@ -52,7 +52,17 @@
                 <div class="form-group" >                  
                   <label>Giá<span class="red-star">*</span></label>
                   <input type="text" class="form-control" readonly="readonly" name="price" id="price" value="{{ $totalPrice }}">
-                </div>     
+                </div>  
+                <div class="form-group" style="margin-top:10px;margin-bottom:10px">  
+                  <label class="col-md-3 row">Thumbnail ( 624x468 px)</label>    
+                  <div class="col-md-9">
+                    <img id="thumbnail_image" src="{{ $detail->image_url ? Helper::showImage($detail->image_url ) : URL::asset('admin/dist/img/img.png') }}" class="img-thumbnail" width="145" height="85">
+                 
+                    <button class="btn btn-default btn-sm btnSingleUpload" data-set="image_url" data-image="thumbnail_image" type="button"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Upload</button>
+                  </div>
+                  <input type="hidden" name="image_url" id="image_url" value="{{ $detail->image_url }}"/>
+                  <div style="clear:both"></div>
+                </div>   
                 <div>
                   <div class="table-responsive">                    
                         @foreach($foodTypeList as $foodType)

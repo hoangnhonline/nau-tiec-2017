@@ -73,6 +73,9 @@
        immediately after the control sidebar -->
 <input type="hidden" id="route_update_order" value="{{ route('update-order') }}">
 <input type="hidden" id="route_get_slug" value="{{ route('get-slug') }}">
+<input type="hidden" id="url_open_kc_finder" value="{{ URL::asset('admin/dist/js/kcfinder/browse.php?type=images') }}">
+<input type="hidden" id="upload_url" value="{{ config('annam.upload_url') }}">
+<input type="hidden" id="app_url" value="{{ env('APP_URL') }}">
   <div class="control-sidebar-bg"></div>
 </div>
 <input type="hidden" id="upload_url" value="{{ config('annam.upload_url') }}">
