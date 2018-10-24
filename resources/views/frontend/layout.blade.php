@@ -318,7 +318,7 @@
                 var str = '<tr data-value="' + food_id + '" class="food">';
               str+='<td style="text-align: center"><span class="order"></span></td>';
               str+='<td style="vertical-align: center">'+ name +'</td>';
-              str+='<td style="white-space: nowrap;">' + addCommas(price);
+              str+='<td style="white-space: nowrap;color:#ca0808;text-align:right">' + addCommas(price);
               str+='<input type="hidden" class="fprice" value="'+price+'">';
               str+='<input type="hidden" class="fprice" name="food_id[]" value="' + food_id + '">';
               str+='</td><td>';
