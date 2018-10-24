@@ -67,16 +67,16 @@
 	                   $detailFood = DB::table('food')->where('id', $food->food_id)->first();
 	                   ?>
 	                   <?php $cf++; ?>
-	                   <p>
-	                   	<div class="col-xs-8 food-name"><span style="color:red; font-size: 15px;">{{ $cf }}. </span><span style="color:#000010;font-size:15px">{!! $detailFood->name !!}</span>
+	                  	<div class="row">
+	                   	<div class="col-xs-7 food-name"><span style="color:red; font-size: 15px;">{{ $cf }}. </span><span style="color:#000010;font-size:15px">{!! $detailFood->name !!}</span>
 	                   	</div>
-	                   	<div class="col-xs-3 food-price">{!! number_format($detailFood->price) !!}</div>
-	                   	<div class="col-xs-1">
+	                   	<div class="col-xs-3 food-price" style="text-align: right;">{!! number_format($detailFood->price) !!}</div>
+	                   	<div class="col-xs-2" style="text-align: right">
 	                   		<label class="item-select-label" for="item-{{ $menu->id }}-{{ $detailFood->id }}">
                                 <input class="item-select-input noselect" id="item-{{ $menu->id }}-{{ $detailFood->id }}" type="checkbox" data-id="{{ $detailFood->id }}"  data-value="{{ $detailFood->price }}" data-name="{!! $detailFood->name !!}">
                             </label>
 	                   	</div>
-	                   </p>
+	                  	</div>
 	                   @endforeach
 	                </div>
 	             </div>	             
