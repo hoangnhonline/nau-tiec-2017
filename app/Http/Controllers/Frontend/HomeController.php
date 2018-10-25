@@ -78,21 +78,21 @@ class HomeController extends Controller
                 'table_no' => $table_no,
                 'food_id_list' => $food_id_list
             ]);
-            $emailArr = ['blog.bui@gmail.com'];
+            // $emailArr = ['blog.bui@gmail.com'];
         
         
-            Mail::send('frontend.email',
-                [                   
-                    'phone'             => $phone,
-                    'table_no' => $table_no,
-                    'food_id_list' => $food_id_list,
-                ],
-                function($message) use ($emailArr) {                    
-                    $message->subject('Khách hàng đặt món');
-                    $message->to($emailArr);                    
-                    $message->from('web.0917492306@gmail.com', 'TIECNGON.VN');
-                    $message->sender('web.0917492306@gmail.com', 'TIECNGON.VN');
-            });        
+            // Mail::send('frontend.email',
+            //     [                   
+            //         'phone'             => $phone,
+            //         'table_no' => $table_no,
+            //         'food_id_list' => $food_id_list,
+            //     ],
+            //     function($message) use ($emailArr) {                    
+            //         $message->subject('Khách hàng đặt món');
+            //         $message->to($emailArr);                    
+            //         $message->from('web.0917492306@gmail.com', 'TIECNGON.VN');
+            //         $message->sender('web.0917492306@gmail.com', 'TIECNGON.VN');
+            // });        
 
             Session::flash('message', 'Gửi thông tin đặt món thành công.');
             return redirect()->route('dat-mon-thanh-cong');
