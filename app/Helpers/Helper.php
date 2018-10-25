@@ -17,8 +17,13 @@ class Helper
     }
     public static function showImage($image_url, $type = 'original'){
 
-        //return strpos($image_url, 'http') === false ? config('annam.upload_url') . $type . '/' . $image_url : $image_url;        
-        return strpos($image_url, 'http') === false ? config('annam.upload_url') . $image_url : $image_url;        
+        //return strpos($image_url, 'http') === false ? config('annam.upload_url') . $type . '/' . $image_url : $image_url;             
+        if(strpos($image_url, 'http') === false){
+            if(strpos($image_url, 'uploads') == 0){
+                $image_url = config('annam.upload_url') . $image_url;    
+            }            
+        }               
+        return $image_url;        
 
     }
     public static function showImageThumb($image_url, $object_type = 1, $folder = ''){             

@@ -57,7 +57,9 @@
 	      <div class="item-wr3">
 	        <div>
 	          <div class="item-gia">{!! $menu->name !!}: <span> {!! number_format($totalPrice) !!} đồng/bàn</span></div>
-	          <div class="clear"></div>
+	          <div>
+	          	<img src="{{ Helper::showImage($menu->image_url) }}" class="img-responsive">
+	          </div>
 	          <div class="content">
 	             <div class="hover3">
 	                <div style="padding:5px">
