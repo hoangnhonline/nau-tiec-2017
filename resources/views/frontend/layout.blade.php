@@ -231,6 +231,7 @@
         <input type="hidden" id="route-ajax-login-fb" value="{{route('ajax-login-by-fb')}}">
     <input type="hidden" id="fb-app-id" value="{{ env('FACEBOOK_APP_ID') }}">
       <input type="hidden" id="url_fb_redirect" value="{{ route('home') }}">
+      @if($routeName != 'tao-menu')
       <div class="menu-select">
     <div class="wrapper-menu-select">
         <div class="wrapper-form">
@@ -255,6 +256,7 @@
     </div>
     <a class="toggle-menu-select" href="javascript:void(0);"> <span class="count-item-food">0</span> <i class="fa fa-align-justify"></i> Chọn </a>
 </div>
+@endif
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -378,6 +380,7 @@
           });
           
         });
+        @if($routeName != 'tao-menu')
         $(document).on('click', '.noselect', function(){
             var currentHTML = $(this).html();
             var name = $(this).data('name');
@@ -496,6 +499,7 @@
             }
             return x1 + x2;
             }
+            @endif
       </script>
    </body>
 </html>
