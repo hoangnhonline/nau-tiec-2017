@@ -413,7 +413,7 @@
           if($.trim($('#phone').val()) == '' || $.trim($('#table_no').val()) == ''){
             alert('Vui lòng nhập đầy đủ thông tin.');
           }else{
-            $(this).html('<i class="fa fa-spinner"></i>').attr('disabled', 'disabled');
+            $(this).html('<i class="fa fa-spin fa-spinner"></i>').attr('disabled', 'disabled');
             $('#formDatMon').submit();
           }
         });

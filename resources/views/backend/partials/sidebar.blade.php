@@ -41,6 +41,12 @@
           <li {{ in_array(\Request::route()->getName(), ['food.create']) ? "class=active" : "" }}><a href="{{ route('food.create') }}"><i class="fa fa-circle-o"></i> Thêm món ăn</a></li>          
         </ul>
       </li>
+      <li {{ in_array(\Request::route()->getName(), ['dat-mon.index']) ? "class=active" : "" }}>
+        <a href="{{ route('dat-mon.index') }}">
+          <i class="fa fa-pencil-square-o"></i> 
+          <span>Liên hệ đặt món</span>         
+        </a>       
+      </li>
       <li class="treeview {{ in_array(\Request::route()->getName(), ['food-type.index', 'food-type.create', 'food-type.edit']) ? 'active' : '' }}">
         <a href="#">
           <i class="fa fa-twitch"></i> 

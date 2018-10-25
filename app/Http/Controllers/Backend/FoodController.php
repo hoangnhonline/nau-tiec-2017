@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use App\Models\FoodGroup;
 use App\Models\FoodType;
 use App\Models\Food;
+use App\Models\DatMon;
+
 use Helper, File, Session, Auth;
 
 class FoodController extends Controller
@@ -41,7 +43,13 @@ class FoodController extends Controller
       
         return view('backend.food.index', compact( 'items', 'foodTypeList', 'food_type_id', 'foodGroupList', 'food_group_id'));
     }
-
+    public function datmon(Request $request)
+    {
+        
+        $items = DatMon::orderBy('id', 'desc')->paginate(50);
+      
+        return view('backend.food.datmon', compact( 'items'));
+    }
     /**
     * Show the form for creating a new resource.
     *
@@ -178,5 +186,16 @@ class FoodController extends Controller
         // redirect
         Session::flash('message', 'Xóa  thành công');
         return redirect()->route('food.index', ['food_type_id' => $food_type_id, 'food_group_id' => $food_group_id]);
+    }
+    public function destroyDatMon($id)
+    {
+        // delete
+        $detail = DatMon::find($id);      
+
+        $detail->delete();
+
+        // redirect
+        Session::flash('message', 'Xóa  thành công');
+        return redirect()->route('dat-mon.index');
     }
 }

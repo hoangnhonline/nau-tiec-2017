@@ -25,6 +25,10 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'backend', 'middleware' => '
         Route::post('/update', ['as' => 'pages.update', 'uses' => 'PagesController@update']);
         Route::get('{id}/destroy', ['as' => 'pages.destroy', 'uses' => 'PagesController@destroy']);
     });
+    Route::group(['prefix' => 'dat-mon'], function () {
+        Route::get('/', ['as' => 'dat-mon.index', 'uses' => 'FoodController@datmon']);
+        Route::get('{id}/destroy', ['as' => 'dat-mon.destroy', 'uses' => 'FoodController@destroyDatMon']);
+    });
     Route::group(['prefix' => 'menu'], function () {
         Route::get('/', ['as' => 'menu.index', 'uses' => 'MenuController@index']);
         Route::get('/create', ['as' => 'menu.create', 'uses' => 'MenuController@create']);

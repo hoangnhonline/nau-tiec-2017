@@ -23,6 +23,6 @@ class DatMon extends Model  {
      *
      * @var array
      */
-    protected $fillable = ['phone', 'table_no'];
+    protected $fillable = ['phone', 'table_no', 'food_id_list'];
     
 }
