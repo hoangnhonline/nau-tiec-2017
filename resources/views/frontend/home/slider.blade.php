@@ -104,13 +104,22 @@
 			        <h4 class="panel-title">
 			          <a data-toggle="collapse" href="#collapse{!! $foodType->slug !!}">{!! $foodType->name !!}</a>
 			        </h4>
+			        @if($foodType->foodGroup->count() > 0)
+			        <ul class="list-group-mon">
+					    	@foreach($foodType->foodGroup as $group)
+					    	
+					    		<li style="display: inline;"><a style="color: #FFF" href="#mon{{ $group->slug }}">{!! $group->name !!}</a> | </li>
+					    
+					    	@endforeach
+					    		</ul>
+					 @endif
 			      </div>
 			      <div id="collapse{!! $foodType->slug !!}" class="panel-collapse">
 			        <div class="panel-body" style="max-height: 400px;overflow-y: scroll;">
 			        	<table class="table table-bordered">
 			        		@if($foodType->foodGroup->count() > 0)
 					    	@foreach($foodType->foodGroup as $group)
-					    	<tr style="color: #82bf00;font-weight: bold;text-transform: uppercase;">
+					    	<tr id="mon{{$group->slug}}" style="color: #82bf00;font-weight: bold;text-transform: uppercase;">
 					    		<td colspan="3"><p class="food-group" style="text-align: center;">{!! $group->name !!}</p></td>			    	
 					    	</tr>
 						    	@foreach($group->food as $food)
