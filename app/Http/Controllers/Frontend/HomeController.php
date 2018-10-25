@@ -11,6 +11,8 @@ use App\Models\Menu;
 use App\Models\Customer;
 use App\Models\Newsletter;
 use App\Models\Settings;
+use App\Models\FoodType;
+
 
 use Helper, File, Session, Auth, Hash;
 
@@ -43,12 +45,14 @@ class HomeController extends Controller
 
         $suckhoeList = Articles::where(['cate_id' => 7])->orderBy('id', 'desc')->limit(4)->get();
         $tiecList = Articles::where(['cate_id' => 5])->orderBy('display_order')->limit(6)->get();
-        $menuList = Menu::orderBy('display_order')->get();         
+        $menuList = Menu::orderBy('display_order')->get();   
+        $foodTypeList = FoodType::orderBy('display_order')->get();      
         return view('frontend.home.index', compact(
                                 'seo',
                                 'menuList',
                                 'suckhoeList',
-                                'tiecList'
+                                'tiecList',
+                                'foodTypeList'
                                 ));
     }
 

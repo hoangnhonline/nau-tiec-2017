@@ -3893,3 +3893,15 @@ h5:hover{
     border: 2px solid #fc0;
     color: #000;
 }
+#myModal .modal-header{
+        background-color: #90c948;
+    color: #FFF;
+    text-transform: uppercase;
+}
+.panel-title a:hover, .panel-title a:focus{
+    color: #FFF;
+    text-decoration: none;
+}
+.panel-group{
+    margin-bottom: 10px !important;
+}

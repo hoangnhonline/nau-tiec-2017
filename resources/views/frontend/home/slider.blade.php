@@ -91,6 +91,73 @@
 	  </ul>
 	
 </div>
+<section class="awe-section-2">	
+	<div class="section section-banner">
+		<div class="container">
+			<div class="tieude">
+      <h3>Danh sách món</h3>
+   </div>
+			@foreach($foodTypeList as $foodType)
+			<div class="panel-group">
+			    <div class="panel panel-default">
+			      <div class="panel-heading" style="background-color: #82bf00; color: #FFF; font-weight: bold">
+			        <h4 class="panel-title">
+			          <a data-toggle="collapse" href="#collapse{!! $foodType->slug !!}">{!! $foodType->name !!}</a>
+			        </h4>
+			      </div>
+			      <div id="collapse{!! $foodType->slug !!}" class="panel-collapse">
+			        <div class="panel-body" style="max-height: 400px;overflow-y: scroll;">
+			        	<table class="table table-bordered">
+			        		@if($foodType->foodGroup->count() > 0)
+					    	@foreach($foodType->foodGroup as $group)
+					    	<tr style="color: #82bf00;font-weight: bold;text-transform: uppercase;">
+					    		<td colspan="3"><p class="food-group" style="text-align: center;">{!! $group->name !!}</p></td>			    	
+					    	</tr>
+						    	@foreach($group->food as $food)
+
+						    	<tr>
+						    		<td class="name_food"><p>{!! $food->name !!}</p></td>			    	
+						    		<td class="price_food food-price" style="width: 1%;white-space: nowrap;">
+						    			@if($food->price > 0)
+		                                    {!! number_format($food->price) !!} 
+						    			@endif
+						    		</td>
+						    		<td style="width: 1%">
+						    			@if($food->price > 0)
+						    			<input class="item-select-input noselect" id="items-{{ $group->id }}-{{ $food->id }}" type="checkbox" data-id="{{ $food->id }}"  data-value="{{ $food->price }}" data-name="{!! $food->name !!}">
+						    			@endif
+						    		</td>
+						    	</tr>
+						    	@endforeach
+					    	@endforeach
+				    	@else
+				    		@foreach($foodType->food as $food)
+					    	<tr>
+					    		<td class="name_food"><p>{!! $food->name !!}</p></td>			    	
+					    		<td class="price_food food-price"  style="width: 1%;white-space: nowrap;">
+					    			@if($food->price > 0)
+					    				
+	                                    {!! number_format($food->price) !!}         
+	                                    
+					    			@endif
+					    		</td>
+					    		<td style="width: 1%">
+					    			@if($food->price > 0)
+						    			<input class="item-select-input noselect" id="items-{{ $food->id }}-{{ $food->id }}" type="checkbox" data-id="{{ $food->id }}"  data-value="{{ $food->price }}" data-name="{!! $food->name !!}">
+						    			@endif
+					    		</td>
+					    	</tr>
+					    	@endforeach
+				    	@endif
+			        	</table>
+			        </div>	        
+			      </div>
+			    </div>
+			</div>
+			@endforeach
+		</div>
+	</div>
+</section>
 <div class="spnoibat" style="margin-bottom: 30px"> 
        <div  class="row">
        	<div class="container">

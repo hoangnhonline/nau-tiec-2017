@@ -121,7 +121,7 @@
       <input type="hidden" id="route-newsletter" value="{{ route('register.newsletter') }}">
       <input type="hidden" id="fb_redirect_url" value="{{ route('home') }}">
    </head>
-   <body>
+   <body data-spy="scroll" data-target=".navbar" data-offset="50">
       @include('frontend.partials.header')
       <div id="menu">
          <div class="wrapper container">
@@ -222,10 +222,40 @@
                   </tr>                  
                 </table>
             </div>
-            <div class="form-footer"> <span> <button data-toggle="modal" data-target="#bookingModal" class="btn btn-danger btn-sm">Đặt món</button> </span> <span class="footer-label">Tổng:</span> <span class="total-price" id="total-price">0</span> <span class="footer-label">đ</span></div>
+            <div class="form-footer"> <span> <button data-toggle="modal" data-target="#myModal" class="btn btn-danger btn-sm">Đặt món</button> </span> <span class="footer-label">Tổng:</span> <span class="total-price" id="total-price">0</span> <span class="footer-label">đ</span></div>
         </div>
     </div>
     <a class="toggle-menu-select" href="javascript:void(0);"> <span class="count-item-food">0</span> <i class="fa fa-align-justify"></i> Chọn </a>
+</div>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Đặt món</h4>
+      </div>
+      <div class="modal-body">
+        <form action="/action_page.php">
+          <div class="form-group">
+            <label for="phone">Số điện thoại</label>
+            <input type="text" class="form-control" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Số bàn</label>
+            <input type="text" class="form-control" id="table_no" name="table_no">
+          </div>          
+          <button type="submit" class="btn btn-default">Gửi</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
 </div>
       <style type="text/css">
         .header{
@@ -300,6 +330,7 @@
       <script src="{{ URL::asset('assets/js/general.js') }}"></script>
       <script type="text/javascript">
         $(document).ready(function(){
+          $('body').scrollspy({ target: '#navbar' })
           $('.toggle-menu-select, a.form-close').click(function(){
             $('.menu-select .wrapper-menu-select').toggle();
           });
