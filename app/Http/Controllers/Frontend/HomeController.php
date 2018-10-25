@@ -78,7 +78,7 @@ class HomeController extends Controller
                 'table_no' => $table_no,
                 'food_id_list' => $food_id_list
             ]);
-            $emailArr = ['hoangnhonline@gmail.com', 'blog.bui@gmail.com'];
+            $emailArr = ['blog.bui@gmail.com'];
         
         
             Mail::send('frontend.email',
