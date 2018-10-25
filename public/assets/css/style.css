@@ -618,7 +618,6 @@ h3 {
 
 }
 .menu {
-    height: 48px;
     position: relative;
     z-index: 999;
     width: 100% !important;
@@ -668,6 +667,7 @@ h3 {
     font-family: 'Roboto';
     background-size: 100% 100% !important;
     border: 1px solid #fff;
+    display: block;
 
 }
 .menu ul li:hover>a {
@@ -3240,7 +3240,7 @@ h3 {
     }
     .nav-toogle i {
         line-height: 48px;
-        color: #fff;
+        color: #7fbd2e;
         font-size: 30px;
     }
     .nav-menu {
@@ -3314,11 +3314,14 @@ h3 {
     }
     .menu > ul > li.active > a {
       color: #fff !important;
-      font-family: 'Roboto';
-      background: #4d9351 !important;
+      font-family: 'Roboto';      
       display: block;
-      padding: 0 25px;
+      
     }
+    .menu > ul > li > a{
+        color: #FFF !important;
+    }
+
     .menu ul li .submenu,
     .menu ul li .submenu .submenu {
       background: #4d9351;
