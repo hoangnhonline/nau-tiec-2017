@@ -241,18 +241,16 @@
         <form action="/action_page.php">
           <div class="form-group">
             <label for="phone">Số điện thoại</label>
-            <input type="text" class="form-control" id="phone" name="phone">
+            <input type="text" class="form-control" id="phone" name="phone" maxlength="12">
           </div>
           <div class="form-group">
             <label for="pwd">Số bàn</label>
-            <input type="text" class="form-control" id="table_no" name="table_no">
-          </div>          
-          <button type="submit" class="btn btn-default">Gửi</button>
+            <input type="text" class="form-control" id="table_no" name="table_no" maxlength="2">
+          </div>     
+          <div class="text-center"><button type="submit" class="btn btn-success">Gửi</button></div>     
+          
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+      </div>      
     </div>
 
   </div>
