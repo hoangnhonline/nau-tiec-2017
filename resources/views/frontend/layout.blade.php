@@ -250,7 +250,7 @@
                   </tr>                  
                 </table>
             </div>
-            <div class="form-footer"> <span> <button data-toggle="modal" data-target="#myModal" class="btn btn-danger btn-sm">Đặt món</button> </span> <span class="footer-label">Tổng:</span> <span class="total-price" id="total-price">0</span> <span class="footer-label">đ</span></div>
+            <div class="form-footer"> <span> <button id="loadModalDat" style="display: none;" data-toggle="modal" data-target="#myModal" class="btn btn-danger btn-sm">Đặt món</button> </span> <span class="footer-label">Tổng:</span> <span class="total-price" id="total-price">0</span> <span class="footer-label">đ</span></div>
         </div>
     </div>
     <a class="toggle-menu-select" href="javascript:void(0);"> <span class="count-item-food">0</span> <i class="fa fa-align-justify"></i> Chọn </a>
@@ -266,17 +266,18 @@
         <h4 class="modal-title">Đặt món</h4>
       </div>
       <div class="modal-body">
-        <form action="/action_page.php">
+        <form action="{{ route('dat-mon') }}" method="POST" id="formDatMon">
+          {{ csrf_field() }}
           <div class="form-group">
             <label for="phone">Số điện thoại</label>
-            <input type="text" class="form-control" id="phone" name="phone" maxlength="12">
+            <input type="text" class="form-control number" id="phone" name="phone" maxlength="12">
           </div>
           <div class="form-group">
             <label for="pwd">Số bàn</label>
-            <input type="text" class="form-control" id="table_no" name="table_no" maxlength="2">
+            <input type="text" class="form-control number" id="table_no" name="table_no" maxlength="2">
           </div>     
-          <div class="text-center"><button type="submit" class="btn btn-success">Gửi</button></div>     
-          
+          <div class="text-center"><button type="button" id="btnDatMon" class="btn btn-success">Gửi</button></div>     
+          <input type="hidden" name="str_food_id" value="" id="str_food_id">
         </form>
       </div>      
     </div>
@@ -353,10 +354,25 @@
       </script>
       @yield('js')
       <script src="{{ URL::asset('assets/js/common.js') }}"></script>
-      <script src="{{ URL::asset('assets/js/general.js') }}"></script>
+      <script src="{{ URL::asset('assets/js/general.js') }}"></script>      
+      
       <script type="text/javascript">
         $(document).ready(function(){
-          $('body').scrollspy({ target: '#navbar' })
+          $("input.number").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter and .
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+                 // Allow: Ctrl+A, Command+A
+                (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
+                 // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                     // let it happen, don't do anything
+                     return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
           $('.toggle-menu-select, a.form-close').click(function(){
             $('.menu-select .wrapper-menu-select').toggle();
           });
@@ -368,31 +384,39 @@
             var food_id = $(this).data('id');
             var price = $(this).data('value');
             $('input[data-id='+food_id+']').hide();
-              $(this).show();
-              //$(this).parents('td').find('.food_checkbox').prop('checked', 'checked');
-              $(this).removeClass('btn-info noselect').addClass('btn-danger selected').html('<i class="fa fa-check-circle"></i>' + ' ' + currentHTML);
-              $(this).parents('tr').addClass('seleted');
-                var str = '<tr data-value="' + food_id + '" class="food">';
-              str+='<td style="text-align: center"><span class="order"></span></td>';
-              str+='<td style="vertical-align: center">'+ name +'</td>';
-              str+='<td style="white-space: nowrap;color:#ca0808;text-align:right">' + addCommas(price);
-              str+='<input type="hidden" class="fprice" value="'+price+'">';
-              str+='<input type="hidden" class="fprice" name="food_id[]" value="' + food_id + '">';
-              str+='</td><td>';
-              str+='<button data-value="'+ food_id +'" class="remove btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td></tr>';
+                $(this).show();
+                //$(this).parents('td').find('.food_checkbox').prop('checked', 'checked');
+                $(this).removeClass('btn-info noselect').addClass('btn-danger selected').html('<i class="fa fa-check-circle"></i>' + ' ' + currentHTML);
+                $(this).parents('tr').addClass('seleted');
+                  var str = '<tr data-value="' + food_id + '" class="food">';
+                str+='<td style="text-align: center"><span class="order"></span></td>';
+                str+='<td style="vertical-align: center">'+ name +'</td>';
+                str+='<td style="white-space: nowrap;color:#ca0808;text-align:right">' + addCommas(price);
+                str+='<input type="hidden" class="fprice" value="'+price+'">';
+                str+='<input type="hidden" class="fprice" name="food_id[]" value="' + food_id + '">';
+                str+='</td><td>';
+                str+='<button data-value="'+ food_id +'" class="remove btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td></tr>';
 
-            if($('tr.food').length == 0){
-              $("tr.header-table").after(str);              
+              if($('tr.food').length == 0){
+                $("tr.header-table").after(str);              
 
-            }else{
-              $("tr.food:last").after(str);
-            }
-            
-            setOrder();
-            calTotalPrice();
-            calTotalFood();
+              }else{
+                $("tr.food:last").after(str);
+              }
               
+              setOrder();
+              calTotalPrice();
+              calTotalFood();
+                setFoodId();
             });
+        $('#btnDatMon').click(function(){
+          if($.trim($('#phone').val()) == '' || $.trim($('#table_no').val()) == ''){
+            alert('Vui lòng nhập đầy đủ thông tin.');
+          }else{
+            $(this).html('<i class="fa fa-spinner"></i>').attr('disabled', 'disabled');
+            $('#formDatMon').submit();
+          }
+        });
           $(document).on('click', '.selected', function(){
             if(confirm('Quý khách chắc chắn xóa món này?')){
              var name = $(this).data('name');
@@ -406,6 +430,7 @@
               setOrder();
               calTotalPrice();
               calTotalFood();
+              setFoodId();
 
           }
             });
@@ -422,6 +447,7 @@
                 setOrder();
                 calTotalPrice();
                 calTotalFood();
+                setFoodId();
               }
             });
           });
@@ -432,12 +458,21 @@
               $(this).find('.order').html(i);
             });
           }
+          function setFoodId(){
+            var strId = '';
+            $('tr.food').each(function(){
+              strId = strId + $(this).data('value') + ',';
+            });
+            $('#str_food_id').val(strId);
+          }
           function calTotalFood(){
             $('.count-item-food, .total-item').html($('tr.food').length);
             if($('tr.food').length > 0){
               $('#nocontent').hide();
+              $('#loadModalDat').show();
             }else{
               $('#nocontent').show();
+              $('#loadModalDat').hide();
             }
           }
           function calTotalPrice(){   

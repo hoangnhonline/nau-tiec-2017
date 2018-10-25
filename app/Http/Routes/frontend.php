@@ -39,6 +39,8 @@ Route::group(['namespace' => 'Frontend'], function()
     Route::get('/load-slider', ['as' => 'load-slider', 'uses' => 'HomeController@loadSlider']);
     Route::get('/tao-menu', ['as' => 'tao-menu', 'uses' => 'CateController@taoMenu']);
     Route::post('/luu-menu', ['as' => 'luu-menu', 'uses' => 'CateController@luuMenu']);
+    Route::post('/dat-mon', ['as' => 'dat-mon', 'uses' => 'HomeController@datMon']);
+    Route::get('/dat-mon-thanh-cong', ['as' => 'dat-mon-thanh-cong', 'uses' => 'HomeController@datSuccess']);
     Route::post('/luu-menu-moi', ['as' => 'luu-menu-moi', 'uses' => 'CateController@luuMenuMoi']);
     Route::get('/menu-da-luu', ['as' => 'danh-sach-menu', 'uses' => 'CateController@dsMenu']);
     Route::get('/count-message', ['as' => 'count-message', 'uses' => 'HomeController@getNoti']);

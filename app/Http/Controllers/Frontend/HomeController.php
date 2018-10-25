@@ -12,9 +12,10 @@ use App\Models\Customer;
 use App\Models\Newsletter;
 use App\Models\Settings;
 use App\Models\FoodType;
+use App\Models\DatMon;
 
 
-use Helper, File, Session, Auth, Hash;
+use Helper, File, Session, Auth, Hash, Mail;
 
 class HomeController extends Controller
 {
@@ -62,6 +63,41 @@ class HomeController extends Controller
             $countMess = CustomerNotification::where(['customer_id' => Session::get('userId'), 'status' => 1])->count();    
         }
         return $countMess;
+    }
+    public function datSuccess(){
+        $seo['title'] = $seo['description'] = $seo['keywords'] = 'Đặt món thành công';       
+        return view('frontend.thanks', compact('seo'));
+    }
+    public function datMon(Request $request){
+        $phone = $request->phone;
+        $table_no = $request->table_no;
+        $food_id_list = $request->str_food_id;
+        if($phone != '' && $table_no != '' && $food_id_list != ''){
+            DatMon::create([
+                'phone' => $phone,
+                'table_no' => $table_no,
+                'food_id_list' => $food_id_list
+            ]);
+            $emailArr = ['hoangnhonline@gmail.com', 'blog.bui@gmail.com'];
+        
+        
+            Mail::send('frontend.email',
+                [                   
+                    'phone'             => $phone,
+                    'table_no' => $table_no,
+                    'food_id_list' => $food_id_list,
+                ],
+                function($message) use ($emailArr) {                    
+                    $message->subject('Khách hàng đặt món');
+                    $message->to($emailArr);                    
+                    $message->from('web.0917492306@gmail.com', 'TIECNGON.VN');
+                    $message->sender('web.0917492306@gmail.com', 'TIECNGON.VN');
+            });        
+
+            Session::flash('message', 'Gửi thông tin đặt món thành công.');
+            return redirect()->route('dat-mon-thanh-cong');
+        }
+
     }
     /**
     * Show the form for creating a new resource.
