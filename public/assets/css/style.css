@@ -511,7 +511,8 @@ h3 {
 
 .logo {
     margin: 0px;
-    padding-top: 30px;
+    padding-top: 5px;
+    padding-bottom:5px;
     float: left;
     margin-right: 10px;
 }
@@ -625,13 +626,18 @@ h3 {
 .menu ul {
     list-style: none;
     margin: 0px auto;
+    float: right;
+
+}
+.menu ul#mainmenu{
+    margin-top: 50px;
 }
 .menu ul li {
-    float: left;
-    line-height: 48px;
+    float: left;    
     text-align: center;
     position: relative;
     list-style: none;
+      margin-right: 5px;   
 }
 .menu ul li.search-mb {
     display: none;
@@ -653,17 +659,22 @@ h3 {
 /* .menu ul li:hover{background:#9d0300; } */
 
 .menu > ul > li > a {
-    padding: 17px 25px;
+    padding: 12px 22px;
     font-size: 14px;
     text-transform: uppercase;
     position: relative;
     text-decoration: none;
-    color: #fff;
+    color: #666;
     font-family: 'Roboto';
     background-size: 100% 100% !important;
+    border: 1px solid #fff;
+
 }
 .menu ul li:hover>a {
-    color: #fff200;
+    background: rgba(255, 255, 255, 0.1);
+    color: #7fbd2e;
+    text-decoration: none;
+    border-color: #7fbd2e;
 }
 /* cap2 */
 
@@ -756,14 +767,17 @@ h3 {
 }
 /* active */
 
-.menu > ul > li.active > a {
-    color: #fff !important;
-    font-family: 'Roboto';
-    background: #4d9351 !important;
+.menu > ul > li.active > a {    
+    font-family: 'Roboto'; 
+    background: rgba(255, 255, 255, 0.1);
+    color: #7fbd2e;    
+    text-decoration: none;
+    border-color: #7fbd2e;   
 }
 .active >ul >li >a {
     color: #fff !important;
     font-family: 'Roboto';
+
 }
 .amazingslider-box-1 {
     margin: 0px !important;
@@ -3310,8 +3324,7 @@ h3 {
       background: #4d9351;
       box-shadow: none;
       display: none;
-      left: 0px;
-      top: -10px;
+      left: 0px;      
       opacity: 1;
       padding: 0 10px;
       position: relative;
@@ -3913,4 +3926,21 @@ h5:hover{
 }
 .list-group-mon li a:hover{
     color: #fc0;
+}
+.header-top {
+    background-color: #7fbd2e;
+    color: #fff;
+    padding: 7px;
+}
+.header-top .header-top-right {
+    margin-top: 4px;
+}
+.header-top .header-top-right a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+.header-top-left{
+    margin-top: 4px;
+     font-size: 17px;
 }

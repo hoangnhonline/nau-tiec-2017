@@ -121,15 +121,43 @@
       <input type="hidden" id="route-newsletter" value="{{ route('register.newsletter') }}">
       <input type="hidden" id="fb_redirect_url" value="{{ route('home') }}">
    </head>
-   <body data-spy="scroll" data-target=".navbar" data-offset="50">
-      @include('frontend.partials.header')
+   <body>
+      <div class="header-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 hidden-sm hidden-xs">
+              <div class="header-top-left">
+                <i class="fa fa-shopping-cart"></i>
+                <span>TỔ CHỨC TIỆC LƯU ĐỘNG CHUYÊN NGHIỆP TẠI VIỆT NAM</span> 
+              </div>          
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 text-right"> 
+              <div class="header-top-right">            
+                <a href="tel:0902425068" class="margin-right-10 item-contact" style="margin-right: 10px">
+                  <i class="fa phone-square" title="Điện thoại liên hệ"></i>
+                  090 2425 068
+                </a>
+                <a href="mailto:cskh@tiecngon.vn" target="_top" class="item-contact">
+                  <i class="fa fa-envelope" aria-hidden="true" title="Email liên hệ"></i>
+                  cskh@tiecngon.vn
+                </a>
+              </div>                    
+            </div>
+          </div>  
+        </div>    
+      </div>
       <div id="menu">
          <div class="wrapper container">
+            <div class="logo">
+                <a href="{{ route('home') }}">
+                    <img src="{{ URL::asset('assets/upload/hinhanh/nguyenhadasdamsau1095468130x113-9243_130x115.png') }}" alt="logo" />
+                </a>
+            </div>
             <div class="menu">
               <div class="nav-toogle">
                 <i class="fa fa-bars"></i>
               </div>
-              <ul class="nav-menu">
+              <ul class="nav-menu" id="mainmenu">
                 <li  @if($routeName == 'home') class="active" @endif><a href="{{ route('home') }}">Trang chủ </a></li>
                 
                 <li class="{{ (!isset($pageDetail) && $routeName == 'parent-cate') || $routeName == 'dich-vu' ? 'active' : '' }} parent">
@@ -157,7 +185,7 @@
                 <li class="{{ $routeName == 'contact' ? 'active' : '' }}"><a href="{{ route('contact') }}">Liên hệ</a></li>
                 <li class="search-mb"><i class="fa fa-search"></i></li>
               </ul>
-              <div class="search">                 
+              <!-- <div class="search">                 
                  <div id="search">
                     <div class='txtsrch'>
                         <form action="{{ route('search') }}" method="GET" >
@@ -167,7 +195,7 @@
                     <div class='btnsrch'><i class="fa fa-search"></i></div>
                     <div class="clear"></div>
                  </div>
-              </div>
+              </div> -->
             </div>
          </div>
          <script type="text/javascript" src="{{ URL::asset('assets/js/jquery.lockfixed.min.js') }}"></script>
@@ -260,7 +288,7 @@
             background:url({{ URL::asset('assets/upload/hinhanh/1-8460.jpg') }});background-size:cover;box-sizing: border-box;    padding:5px 0px;
         }
         #menu{
-          background-color: #82bf00;
+          background-color: #FFF;
         }
         .tt_gt h3 {
           padding: 10px;
