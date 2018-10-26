@@ -29,7 +29,8 @@ class NewsController extends Controller
         $seo['description'] = $cateDetail->meta_description ? $cateDetail->meta_description : $cateDetail->title;
         $seo['keywords'] = $cateDetail->meta_keywords ? $cateDetail->meta_keywords : $cateDetail->title;
         $socialImage = $cateDetail->image_url;
-        return view('frontend.news.index', compact('title', 'hotArr', 'articlesList', 'cateDetail', 'seo', 'socialImage', 'page'));
+        $tiecList = Articles::where(['cate_id' => 5])->orderBy('display_order')->limit(6)->get();
+        return view('frontend.news.index', compact('title', 'hotArr', 'articlesList', 'cateDetail', 'seo', 'socialImage', 'page', 'tiecList'));
     }      
 
      public function newsDetail(Request $request)
@@ -53,7 +54,8 @@ class NewsController extends Controller
           
             $tagSelected = Articles::getListTag($id);
             $cateDetail = ArticlesCate::find($detail->cate_id);
-            return view('frontend.news.news-detail', compact('title',  'hotArr', 'detail', 'otherArr', 'seo', 'socialImage', 'tagSelected', 'cateDetail'));
+             $tiecList = Articles::where(['cate_id' => 5])->orderBy('display_order')->limit(6)->get();
+            return view('frontend.news.news-detail', compact('title',  'hotArr', 'detail', 'otherArr', 'seo', 'socialImage', 'tagSelected', 'cateDetail', 'tiecList'));
         }else{
             return view('erros.404');
         }
