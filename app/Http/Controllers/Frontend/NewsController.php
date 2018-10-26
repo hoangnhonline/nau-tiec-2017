@@ -29,7 +29,9 @@ class NewsController extends Controller
         $seo['description'] = $cateDetail->meta_description ? $cateDetail->meta_description : $cateDetail->title;
         $seo['keywords'] = $cateDetail->meta_keywords ? $cateDetail->meta_keywords : $cateDetail->title;
         $socialImage = $cateDetail->image_url;
-        return view('frontend.news.index', compact('title', 'hotArr', 'articlesList', 'cateDetail', 'seo', 'socialImage', 'page'));
+        $tiecList = Articles::where(['cate_id' => 5])->orderBy('display_order')->limit(6)->get();
+        $lastestArr = Articles::orderBy('id', 'desc')->limit(5)->get();
+        return view('frontend.news.index', compact('title', 'hotArr', 'articlesList', 'cateDetail', 'seo', 'socialImage', 'page', 'tiecList', 'lastestArr'));
     }      
 
      public function newsDetail(Request $request)
@@ -45,7 +47,8 @@ class NewsController extends Controller
             $title = trim($detail->meta_title) ? $detail->meta_title : $detail->title;
 
             $hotArr = Articles::where( ['cate_id' => $detail->cate_id, 'is_hot' => 1] )->where('id', '<>', $id)->orderBy('id', 'desc')->limit(5)->get();
-            $otherArr = Articles::where( ['cate_id' => $detail->cate_id] )->where('id', '<>', $id)->orderBy('id', 'desc')->limit(4)->get();
+            $otherArr = Articles::where( ['cate_id' => $detail->cate_id] )->where('id', '<>', $id)->orderBy('id', 'desc')->limit(6)->get();
+            $lastestArr = Articles::where('id', '<>', $id)->orderBy('id', 'desc')->limit(5)->get();
             $seo['title'] = $detail->meta_title ? $detail->meta_title : $detail->title;
             $seo['description'] = $detail->meta_description ? $detail->meta_description : $detail->title;
             $seo['keywords'] = $detail->meta_keywords ? $detail->meta_keywords : $detail->title;
@@ -53,7 +56,8 @@ class NewsController extends Controller
           
             $tagSelected = Articles::getListTag($id);
             $cateDetail = ArticlesCate::find($detail->cate_id);
-            return view('frontend.news.news-detail', compact('title',  'hotArr', 'detail', 'otherArr', 'seo', 'socialImage', 'tagSelected', 'cateDetail'));
+             $tiecList = Articles::where(['cate_id' => 5])->orderBy('display_order')->limit(6)->get();
+            return view('frontend.news.news-detail', compact('title',  'hotArr', 'detail', 'otherArr', 'seo', 'socialImage', 'tagSelected', 'cateDetail', 'tiecList', 'lastestArr'));
         }else{
             return view('erros.404');
         }

@@ -30,24 +30,44 @@
       </div>
       <div class="row">
       <?php $c = 0; ?>
-      @foreach($menuList as $menu)
-      <?php $c++; ?>
+      @foreach($menuList as $menu)      
+          <?php $i = $totalPrice = 0; ?>
+                @foreach($menu->foodMenu as $food)
+                <?php $i++;
+                $detailFood = DB::table('food')->where('id', $food->food_id)->first();
+                $totalPrice+= $detailFood->price;
+                ?>                  
+                @endforeach
       <div class="item-wr3 col-sm-4 col-xs-12">
         <div>
-          <div class="item-gia">{!! $menu->name !!}: <span> {!! number_format($menu->price) !!} đồng/bàn</span></div>
-          <div class="clear"></div>
-          <div style="border: 1px solid #4E7547;padding: 3px;">
-             <div class="hover3">
-                <div style="padding:5px">
-                <?php $cf = 0; ?>
-                   @foreach($menu->foodMenu as $food)
-                   <?php $cf++; ?>
-                   <p><span style="color:red; font-size: 15px;font-weight: bold;">{{ $cf }}. </span><span style="color:#0000FF;font-weight:bold;font-size:16px">{!! $food->name !!}</span></p>
-                   @endforeach
-                </div>
-             </div>
+            <div class="item-gia">{!! $menu->name !!}: <span> {!! number_format($totalPrice) !!} đồng/bàn</span></div>
+            <div>
+              <img src="{{ Helper::showImage($menu->image_url) }}" class="img-responsive">
+            </div>
+            <div class="content">
+               <div class="hover3">
+                  <div style="padding:5px">
+                  <?php $cf = 0; ?>
+                     @foreach($menu->foodMenu as $food)
+                     <?php 
+                     $detailFood = DB::table('food')->where('id', $food->food_id)->first();
+                     ?>
+                     <?php $cf++; ?>
+                      <div class="row">
+                      <div class="col-xs-7 food-name"><span style="color:red; font-size: 15px;">{{ $cf }}. </span><span style="color:#000010;font-size:15px">{!! $detailFood->name !!}</span>
+                      </div>
+                      <div class="col-xs-3 food-price" style="text-align: right;">{!! number_format($detailFood->price) !!}</div>
+                      <div class="col-xs-2" style="text-align: right">
+                        <label class="item-select-label" for="item-{{ $menu->id }}-{{ $detailFood->id }}">
+                                <input class="item-select-input noselect" id="item-{{ $menu->id }}-{{ $detailFood->id }}" type="checkbox" data-id="{{ $detailFood->id }}"  data-value="{{ $detailFood->price }}" data-name="{!! $detailFood->name !!}">
+                            </label>
+                      </div>
+                      </div>
+                     @endforeach
+                  </div>
+               </div>              
+            </div>
           </div>
-        </div>
       </div>
       @if($c%3 == 0)
       @endif

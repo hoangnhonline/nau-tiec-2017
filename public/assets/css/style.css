@@ -3737,7 +3737,8 @@ img {
     margin: 0 0 10px;
 }
 .section-banner img{
-    width: 100%;
+    
+    height: 170px;
 }
     .icon ~ h5, .icon2 ~ h5 {
         line-height: 25px;
@@ -3952,3 +3953,49 @@ h5:hover{
     margin-top: 4px;
      font-size: 17px;
 }
+.sidebar{
+  padding-top: 20px;
+}
+.block-sidebar {
+    margin-bottom: 20px;
+}
+.block-sidebar .block-title .title {
+    font-size: 15px;
+    color: #82bf00;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #82bf00;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.hotl {
+  color: #ca0808;
+  font-size: 17px;
+  font-weight: bold;
+}
+div.hotline{
+  text-align: center;
+}
+.icons{
+      position: relative;
+    display: inline-block;    
+    text-align: center;    
+    overflow: hidden;
+}
+.danhmuc h5{
+  margin-top: 5px;
+}
+.danhmuc h5 a:hover{
+  color: #82bf00
+}
+.danhmuc .lastest-title{
+  margin-top: 5px;
+  text-align: left;
+}
+.danhmuc .lastest-title a:hover{
+  color: #82bf00
+}
+#tieude h2{
+  margin-bottom: 15px;
+  font-size:  22px;
+}
+.date{margin-bottom: 15px;}

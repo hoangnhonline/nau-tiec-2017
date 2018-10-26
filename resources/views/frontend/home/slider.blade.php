@@ -183,7 +183,7 @@
 			<div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
 				<div class="box mg_mb mg_l_mb">
 					<div class="block-video">
-						<iframe width="100%" height="442" src="https://www.youtube.com/embed/QwpE4TIOVYM" frameborder="0" allowfullscreen id="load_video"></iframe>
+						<iframe width="100%" height="345" src="https://www.youtube.com/embed/QwpE4TIOVYM" frameborder="0" allowfullscreen id="load_video"></iframe>
 					</div>
 				</div>
 			</div>
@@ -192,21 +192,21 @@
 					<div class="col-md-6 col-xs-6">
 						<div class="box margin-bottom-15">
 							<a href="#" title="dualeo-food">
-								<img src="//bizweb.dktcdn.net/100/310/257/themes/673736/assets/banner_box_2.jpg?1537585127278" alt="alt">
+								<img src="{{ URL::asset('assets/images/banner_box_2.jpg') }}" alt="alt">
 							</a>
 						</div>
 					</div>
 					<div class="col-md-6 col-xs-6">
 						<div class="box margin-bottom-15">
 							<a href="#" title="dualeo-food">
-								<img src="//bizweb.dktcdn.net/100/310/257/themes/673736/assets/banner_box_3.jpg?1537585127278" alt="alt">
+								<img src="{{ URL::asset('assets/images/banner_box_3.jpg') }}" alt="alt">
 							</a>
 						</div>
 					</div>
 				</div>
 				<div class="box padding-top-5">
 					<a href="#" title="dualeo-food">
-						<img class="img-responsive" src="//bizweb.dktcdn.net/100/310/257/themes/673736/assets/banner_box_4.jpg?1537585127278" alt="alt">
+						<img class="img-responsive" src="{{ URL::asset('assets/images/banner_box_4.jpg') }}" alt="alt">
 					</a>
 				</div>
 			</div>
