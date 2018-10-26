@@ -37,16 +37,18 @@ class BannerController extends Controller
         
         if( $object_type == 3){
             if( $object_id == 1){
-                $detail->name = "Slide trang chủ";
+                $detail->name = "Banner slide home";
             }elseif( $object_id == 2){
-                $detail->name = "Banner trượt bên trái";
+                $detail->name = "Banner Home 01";
             }elseif( $object_id == 3){
-                $detail->name = "Banner trượt bên phải";
+                $detail->name = "Banner Home 02";
             }elseif( $object_id == 4){
-                $detail->name = "Banner top ( cạnh logo )";
+                $detail->name = "Banner Home 03";
             }elseif($object_id == 5){
-                $detail->name = "Banner giữa trang";
-            }
+                $detail->name = "Banner Home 04";
+            } elseif($object_id == 6){
+                $detail->name = "Banner blog";
+            } 
         }
         if($object_type == 4){
             $detail = LandingProjects::find($object_id);
@@ -81,15 +83,17 @@ class BannerController extends Controller
         }
          if( $object_type == 3){
             if( $object_id == 1){
-                $detail->name = "Slide trang chủ";
+                $detail->name = "Banner slide home";
             }elseif( $object_id == 2){
-                $detail->name = "Banner trượt bên trái";
+                $detail->name = "Banner Home 01";
             }elseif( $object_id == 3){
-                $detail->name = "Banner trượt bên phải";
+                $detail->name = "Banner Home 02";
             }elseif( $object_id == 4){
-                $detail->name = "Banner top ( cạnh logo )";
+                $detail->name = "Banner Home 03";
             }elseif($object_id == 5){
-                $detail->name = "Banner giữa trang";
+                $detail->name = "Banner Home 04";
+            } elseif($object_id == 6){
+                $detail->name = "Banner blog";
             }         
         }
         if($object_type == 4){
@@ -117,22 +121,8 @@ class BannerController extends Controller
             'slug.required' => 'Bạn chưa nhập slug',
         ]);
         */
-        $dataArr['status'] = isset($dataArr['status'])  ? 1 : 0;
-        
-        if($dataArr['image_url'] && $dataArr['image_name']){
-            
-            $tmp = explode('/', $dataArr['image_url']);
-
-            if(!is_dir('uploads/'.date('Y/m/d'))){
-                mkdir('uploads/'.date('Y/m/d'), 0777, true);
-            }
-
-            $destionation = date('Y/m/d'). '/'. end($tmp);
-            
-            File::move(config('icho.upload_path').$dataArr['image_url'], config('icho.upload_path').$destionation);
-            
-            $dataArr['image_url'] = $destionation;
-        }
+        $dataArr['status'] = isset($dataArr['status'])  ? 1 : 0;        
+    
         $dataArr['created_user'] = Auth::user()->id;
 
         $dataArr['updated_user'] = Auth::user()->id;
@@ -193,21 +183,6 @@ class BannerController extends Controller
         
         $dataArr['updated_user'] = Auth::user()->id;
         $dataArr['status'] = isset($dataArr['status'])  ? 1 : 0;
-
-        if($dataArr['image_url'] && $dataArr['image_name']){
-            
-            $tmp = explode('/', $dataArr['image_url']);
-
-            if(!is_dir('uploads/'.date('Y/m/d'))){
-                mkdir('uploads/'.date('Y/m/d'), 0777, true);
-            }
-
-            $destionation = date('Y/m/d'). '/'. end($tmp);
-            
-            File::move(config('icho.upload_path').$dataArr['image_url'], config('icho.upload_path').$destionation);
-            
-            $dataArr['image_url'] = $destionation;
-        }
         
         $model = Banner::find($dataArr['id']);
 

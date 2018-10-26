@@ -47,13 +47,19 @@ class HomeController extends Controller
         $suckhoeList = Articles::where(['cate_id' => 7])->orderBy('id', 'desc')->limit(4)->get();
         $tiecList = Articles::where(['cate_id' => 5])->orderBy('display_order')->limit(6)->get();
         $menuList = Menu::orderBy('display_order')->get();   
-        $foodTypeList = FoodType::orderBy('display_order')->get();      
+        $foodTypeList = FoodType::orderBy('display_order')->get();  
+        $bannerList = Banner::where('object_type', 3)->get();
+        $bannerArr = [];
+        foreach($bannerList as $banner){
+            $bannerArr[$banner->object_id][] = $banner;
+        }    
         return view('frontend.home.index', compact(
                                 'seo',
                                 'menuList',
                                 'suckhoeList',
                                 'tiecList',
-                                'foodTypeList'
+                                'foodTypeList',
+                                'bannerArr'
                                 ));
     }
 

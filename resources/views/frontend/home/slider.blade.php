@@ -1,27 +1,26 @@
+@if(isset($bannerArr[1]))
 <div id="sliders">
 	<!-- Place somewhere in the <body> of your page -->
 	<div id="slider" class="flexslider">
 	  <ul class="slides">
+	  	<?php $i = 0; ?>
+		@foreach($bannerArr[1] as $banner)
+		<?php $i++; ?>
 	    <li>
-	      <img src="{{ URL::asset('assets/upload/hinhanh/851030260805617_1050x430.jpg') }}" alt="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)">
+    	@if($banner->ads_url !='')
+		<a href="{{ $banner->ads_url }}" title="banner slide {{ $i }}">
+		@endif
+	      <img src="{{ Helper::showImage($banner->image_url) }}" alt="banner slide {{ $i }}">
+	      @if($banner->ads_url !='')
+			</a>
+			@endif
 	    </li>
-	    <li>
-	      <img src="{{ URL::asset('assets/upload/hinhanh/514788675288178_1050x430.jpg') }}" alt="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)">
-	    </li>
-	    <li>
-	      <img src="{{ URL::asset('assets/upload/hinhanh/178565249131446_1050x430.jpg') }}" alt="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)">
-	    </li>
-	    <li>
-	      <img src="{{ URL::asset('assets/upload/hinhanh/469799659221213_1050x430.jpg') }}" alt="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)">
-	    </li>
-	    <li>
-	      <img src="{{ URL::asset('assets/upload/hinhanh/096712954104955_1050x430.jpg') }}" alt="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)"  title="Bạn cần đặt tiệc gấp - Liên hệ ngay 0909 340 797 - 0969 156 575 (Anh Phong)">
-	    </li>
-	    <!-- items mirrored twice, total of 12 -->
+	    @endforeach
+	    
 	  </ul>
 	</div>	
 </div>
-
+@endif
 	<section class=" bg-color dq-fix-icon" style="background-color: #f5f5f5;margin-top: -5px;">
 		<div class="container">			
 			<ul class="row product-list">
@@ -167,15 +166,27 @@
 		</div>
 	</div>
 </section>
+@if(isset($bannerArr[2]))
 <div class="spnoibat" style="margin-bottom: 30px"> 
        <div  class="row">
        	<div class="container">
-       	<img class="img-responsive" src="{{ URL::asset('assets/images/quytrinh.jpg') }}" alt="alt" style="width: 100%">
+       	<?php $i = 0; ?>
+		@foreach($bannerArr[2] as $banner)
+		<?php $i++; ?>       	
+       	@if($banner->ads_url !='')
+		<a href="{{ $banner->ads_url }}" title="banner slide {{ $i }}">
+		@endif
+	      <img src="{{ Helper::showImage($banner->image_url) }}" alt="banner quy trinh {{ $i }}" style="width: 100%">
+	      @if($banner->ads_url !='')
+			</a>
+			@endif
+       	@endforeach
        </div>
         </div>
      
    <div class="clear"></div>
 </div>
+@endif
 <section class="awe-section-2">	
 	<div class="section section-banner">
 	<div class="container">
@@ -190,23 +201,54 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="row">
 					<div class="col-md-6 col-xs-6">
+						@if(isset($bannerArr[3]))
 						<div class="box margin-bottom-15">
-							<a href="#" title="dualeo-food">
-								<img src="{{ URL::asset('assets/images/banner_box_2.jpg') }}" alt="alt">
-							</a>
+							<?php $i = 0; ?>
+							@foreach($bannerArr[3] as $banner)
+							<?php $i++; ?>       	
+					       	@if($banner->ads_url !='')
+							<a href="{{ $banner->ads_url }}" title="banner home {{ $i }}">
+							@endif
+						      <img src="{{ Helper::showImage($banner->image_url) }}" alt="banner home {{ $i }}" style="width: 100%" class="img-responsive">
+						      @if($banner->ads_url !='')
+								</a>
+								@endif
+					       	@endforeach
 						</div>
+						@endif
 					</div>
 					<div class="col-md-6 col-xs-6">
+						@if(isset($bannerArr[4]))
 						<div class="box margin-bottom-15">
-							<a href="#" title="dualeo-food">
-								<img src="{{ URL::asset('assets/images/banner_box_3.jpg') }}" alt="alt">
-							</a>
+							<?php $i = 0; ?>
+							@foreach($bannerArr[4] as $banner)
+							<?php $i++; ?>       	
+					       	@if($banner->ads_url !='')
+							<a href="{{ $banner->ads_url }}" title="banner home {{ $i }}">
+							@endif
+						      <img src="{{ Helper::showImage($banner->image_url) }}" alt="banner home {{ $i }}" style="width: 100%" class="img-responsive">
+						      @if($banner->ads_url !='')
+								</a>
+								@endif
+					       	@endforeach
 						</div>
+						@endif
 					</div>
 				</div>
 				<div class="box padding-top-5">
-					<a href="#" title="dualeo-food">
-						<img class="img-responsive" src="{{ URL::asset('assets/images/banner_box_4.jpg') }}" alt="alt">
+					@if(isset($bannerArr[5]))
+						<?php $i = 0; ?>
+							@foreach($bannerArr[5] as $banner)
+							<?php $i++; ?>       	
+					       	@if($banner->ads_url !='')
+							<a href="{{ $banner->ads_url }}" title="banner home {{ $i }}">
+							@endif
+						      <img src="{{ Helper::showImage($banner->image_url) }}" alt="banner home {{ $i }}" style="width: 100%" class="img-responsive">
+						      @if($banner->ads_url !='')
+								</a>
+								@endif
+					   	@endforeach
+					  @endif
 					</a>
 				</div>
 			</div>

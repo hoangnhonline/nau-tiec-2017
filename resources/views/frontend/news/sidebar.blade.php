@@ -1,123 +1,64 @@
-<div class="col-md-3 col-sm-3 col-xs-12 block_cate_right">
-    <div class="block_sidebar">
-      <div class="block block_product">
-        <h3 class="block_title">
-          <strong>Sản Phẩm Mới</strong>
-        </h3>
-        <div class="block_content">
-          <div class="block-content grid-float-products  carousel-products ">
-                            <div class="product-items owl-carousel nav-top-right nav-border nav-sm" data-nav="true" data-dots="false" data-margin="30" data-responsive='{"0":{"items":1},"480":{"items":1},"600":{"items":1},"992":{"items":1}}'>
-                                <div class="item">
-                                    <div class="product-item">
-                                        <div class="product-item-info">
-                                            <div class="product-item-head">
-                                                <a href="" class="product-item-photo">
-                                                    <img alt="" src="{{ URL::asset('assets/images/sidebar_product/1.jpg') }}">
-                                                </a>
-                                            </div><!-- /product-item-info -->
-                                            <div class="product-item-details">
-                                                <h2 class="product-item-name">
-                                                    <a href="#" class="">Meizu M5S</a>
-                                                </h2>
-                                                <p class="price">4.190.000₫</p>
-                                            </div><!-- /product-item-details -->
-                                        </div>
-                                    </div><!-- /product-item -->
-                                    <div class="product-item">
-                                        <div class="product-item-info">
-                                            <div class="product-item-head">
-                                                <a href="" class="product-item-photo">
-                                                    <img alt="" src="{{ URL::asset('assets/images/sidebar_product/1.jpg') }}">
-                                                </a>
-                                            </div><!-- /product-item-info -->
-                                            <div class="product-item-details">
-                                                <h2 class="product-item-name">
-                                                    <a href="#" class="">Meizu M5S</a>
-                                                </h2>
-                                                <p class="price">4.190.000₫</p>
-                                            </div><!-- /product-item-details -->
-                                        </div>
-                                    </div><!-- /product-item -->
-                                    <div class="product-item">
-                                        <div class="product-item-info">
-                                            <div class="product-item-head">
-                                                <a href="" class="product-item-photo">
-                                                    <img alt="" src="{{ URL::asset('assets/images/sidebar_product/1.jpg') }}">
-                                                </a>
-                                            </div><!-- /product-item-info -->
-                                            <div class="product-item-details">
-                                                <h2 class="product-item-name">
-                                                    <a href="#" class="">Meizu M5S</a>
-                                                </h2>
-                                                <p class="price">4.190.000₫</p>
-                                            </div><!-- /product-item-details -->
-                                        </div>
-                                    </div><!-- /product-item -->
-                                </div><!-- /item -->
-                                <div class="item">
-                                    <div class="product-item">
-                                        <div class="product-item-info">
-                                            <div class="product-item-head">
-                                                <a href="" class="product-item-photo">
-                                                    <img alt="" src="{{ URL::asset('assets/images/sidebar_product/1.jpg') }}">
-                                                </a>
-                                            </div><!-- /product-item-info -->
-                                            <div class="product-item-details">
-                                                <h2 class="product-item-name">
-                                                    <a href="#" class="">Meizu M5S</a>
-                                                </h2>
-                                                <p class="price">4.190.000₫</p>
-                                            </div><!-- /product-item-details -->
-                                        </div>
-                                    </div><!-- /product-item -->
-                                    <div class="product-item">
-                                        <div class="product-item-info">
-                                            <div class="product-item-head">
-                                                <a href="" class="product-item-photo">
-                                                    <img alt="" src="{{ URL::asset('assets/images/sidebar_product/1.jpg') }}">
-                                                </a>
-                                            </div><!-- /product-item-info -->
-                                            <div class="product-item-details">
-                                                <h2 class="product-item-name">
-                                                    <a href="#" class="">Meizu M5S</a>
-                                                </h2>
-                                                <p class="price">4.190.000₫</p>
-                                            </div><!-- /product-item-details -->
-                                        </div>
-                                    </div><!-- /product-item -->
-                                    <div class="product-item">
-                                        <div class="product-item-info">
-                                            <div class="product-item-head">
-                                                <a href="" class="product-item-photo">
-                                                    <img alt="" src="{{ URL::asset('assets/images/sidebar_product/1.jpg') }}">
-                                                </a>
-                                            </div><!-- /product-item-info -->
-                                            <div class="product-item-details">
-                                                <h2 class="product-item-name">
-                                                    <a href="#" class="">Meizu M5S</a>
-                                                </h2>
-                                                <p class="price">4.190.000₫</p>
-                                            </div><!-- /product-item-details -->
-                                        </div>
-                                    </div><!-- /product-item -->
-                                </div><!-- /item -->
-                            </div>
-                        </div>
+<div class="col-md-3 sidebar">
+      <div class="block-sidebar block-news-sb">
+        <div class="block-title">
+          <p class="title">HOTLINE</p>
         </div>
-      </div><!-- /block_product -->
-      <div class="block block_adv">
-        <div class="block_content">
-          <a href="#" title="">
-            <img src="{{ URL::asset('assets/images/sidebar_product/fitbit-dung.jpg') }}" alt="">
-          </a>
+        <div class="block-content hotline">
+            <div class="wrap-news-list" style="padding-top: 15px;">
+                <p class="hotl"> 090 2425 068 ( A.Duy )</p>
+                <p class="hotl">0981 498 043 ( A.Dũng )</p>
+            </div>
         </div>
-      </div><!-- /block_adv -->
-      <div class="block block_adv">
-        <div class="block_content">
-          <a href="#" title="">
-            <img src="{{ URL::asset('assets/images/sidebar_product/visen3.jpg') }}" alt="">
-          </a>                    
+      </div>
+
+      <div class="block-sidebar block-news-sb">
+        <div class="block-title">
+          <p class="title">DANH MỤC</p>
         </div>
-      </div><!-- /block_adv -->
-    </div>
-  </div><!-- /block_cate_right -->
+        <div class="block-content danhmuc">
+            <div class="wrap-news-list">
+                <ul class="row product-list">
+                  @foreach($tiecList as $articles)              
+                  <li class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="icons">
+                      <a href="{{ route('news-detail', ['slug' => $articles->slug, 'id' => $articles->id]) }}" title="{!! $articles->title !!}">
+                        <img style="width: 100%" src="{!! Helper::showImage($articles->image_url) !!}" alt="{!! $articles->title !!}" class="img-responsive img-thumbnail">
+                      </a>
+                    </div>
+                    <h5>
+                      <a href="{{ route('news-detail', ['slug' => $articles->slug, 'id' => $articles->id]) }}" title="{!! $articles->title !!}">
+                      {!! $articles->title !!}
+                      </a>
+                    </h5>       
+                  </li>           
+                  @endforeach         
+                </ul>
+            </div>
+        </div>
+      </div>
+      <div class="block-sidebar block-news-sb">
+        <div class="block-title">
+          <p class="title">TIN MỚI NHẤT</p>
+        </div>
+        <div class="block-content danhmuc">
+            <div class="wrap-news-list">
+                <ul class="row product-list">
+                  @foreach($lastestArr as $articles)              
+                  <li class="col-xs-12">
+                    <div class="icons">
+                      <a href="{{ route('news-detail', ['slug' => $articles->slug, 'id' => $articles->id]) }}" title="{!! $articles->title !!}">
+                        <img style="width: 100%" src="{!! Helper::showImage($articles->image_url) !!}" alt="{!! $articles->title !!}">
+                      </a>
+                    </div>
+                    <p class="lastest-title">
+                      <a href="{{ route('news-detail', ['slug' => $articles->slug, 'id' => $articles->id]) }}" title="{!! $articles->title !!}">
+                      {!! $articles->title !!}
+                      </a>
+                    </p>       
+                  </li>           
+                  @endforeach         
+                </ul>
+            </div>
+        </div>
+      </div>
+</div>

@@ -40,16 +40,14 @@
                   </div>
               @endif              
                  <div class="form-group" style="margin-top:10px;margin-bottom:10px">  
-                  <label class="col-md-3 row">Banner </label>    
+                  <label class="col-md-3 row">Image </label>    
                   <div class="col-md-9">
-                    <img id="thumbnail_image" src="{{ old('image_url') ? Helper::showImage(old('image_url')) : URL::asset('admin/dist/img/img.png') }}" class="img-thumbnail" width="145" height="85">
-                    
-                    <input type="file" id="file-image" style="display:none" />
-                 
-                    <button class="btn btn-default" id="btnUploadImage" type="button"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Upload</button>
+                    <img id="thumbnail_image" src="{{ old('image_url') ? Helper::showImage(old('image_url')) : URL::asset('admin/dist/img/img.png') }}" class="img-thumbnail" width="145" height="85">                 
+                    <button class="btn btn-default btn-sm btnSingleUpload" data-set="image_url" data-image="thumbnail_image" type="button"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Upload</button>
                   </div>
+                  <input type="hidden" name="image_url" id="image_url" value="{{ old('image_url') }}"/>
                   <div style="clear:both"></div>
-                </div>  
+              </div>  <!--image--> 
                 <div class="form-group">
                   <label>Ẩn / Hiện</label>
                   <select name="status" class="form-control" id="status">
@@ -69,8 +67,7 @@
                   <label>Liên kết</label>
                   <input type="text" name="ads_url" id="ads_url" value="{{ old('ads_url') }}" class="form-control">
                 </div>  
-                <input type="hidden" name="image_url" id="image_url" value="{{ old('image_url') }}"/>          
-            	<input type="hidden" name="image_name" id="image_name" value="{{ old('image_name') }}"/>
+               
                 <input type="hidden" name="object_id" value="{{ $object_id }}">
                 <input type="hidden" name="object_type" value="{{ $object_type }}">
             </div>                        

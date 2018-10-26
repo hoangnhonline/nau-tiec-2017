@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\ArticlesCate;
 use App\Models\Articles;
+use App\Models\Banner;
 use Helper, File, Session, Auth;
 use Mail;
 
@@ -31,7 +32,12 @@ class NewsController extends Controller
         $socialImage = $cateDetail->image_url;
         $tiecList = Articles::where(['cate_id' => 5])->orderBy('display_order')->limit(6)->get();
         $lastestArr = Articles::orderBy('id', 'desc')->limit(5)->get();
-        return view('frontend.news.index', compact('title', 'hotArr', 'articlesList', 'cateDetail', 'seo', 'socialImage', 'page', 'tiecList', 'lastestArr'));
+        $bannerList = Banner::where('object_type', 3)->get();
+        $bannerArr = [];
+        foreach($bannerList as $banner){
+            $bannerArr[$banner->object_id][] = $banner;
+        }  
+        return view('frontend.news.index', compact('title', 'hotArr', 'articlesList', 'cateDetail', 'seo', 'socialImage', 'page', 'tiecList', 'lastestArr', 'bannerArr'));
     }      
 
      public function newsDetail(Request $request)
@@ -57,7 +63,12 @@ class NewsController extends Controller
             $tagSelected = Articles::getListTag($id);
             $cateDetail = ArticlesCate::find($detail->cate_id);
              $tiecList = Articles::where(['cate_id' => 5])->orderBy('display_order')->limit(6)->get();
-            return view('frontend.news.news-detail', compact('title',  'hotArr', 'detail', 'otherArr', 'seo', 'socialImage', 'tagSelected', 'cateDetail', 'tiecList', 'lastestArr'));
+             $bannerList = Banner::where('object_type', 3)->get();
+            $bannerArr = [];
+            foreach($bannerList as $banner){
+                $bannerArr[$banner->object_id][] = $banner;
+            } 
+            return view('frontend.news.news-detail', compact('title',  'hotArr', 'detail', 'otherArr', 'seo', 'socialImage', 'tagSelected', 'cateDetail', 'tiecList', 'lastestArr', 'bannerArr'));
         }else{
             return view('erros.404');
         }
