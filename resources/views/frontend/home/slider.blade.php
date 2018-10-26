@@ -194,7 +194,7 @@
 			<div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
 				<div class="box mg_mb mg_l_mb">
 					<div class="block-video">
-						<iframe width="100%" height="345" src="https://www.youtube.com/embed/QwpE4TIOVYM" frameborder="0" allowfullscreen id="load_video"></iframe>
+						<iframe width="100%" height="345" src="https://www.youtube.com/embed/{{ $settingArr['video_id_home'] }}" frameborder="0" allowfullscreen id="load_video"></iframe>
 					</div>
 				</div>
 			</div>

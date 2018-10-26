@@ -64,6 +64,10 @@
                   <input type="text" class="form-control" name="twitter_fanpage" id="twitter_fanpage" value="{{ $settingArr['twitter_fanpage'] }}">
                 </div>
                 <div class="form-group">
+                  <label>YOUTUBE ID VIDEO TRANG CHỦ</label>
+                  <input type="text" class="form-control" name="video_id_home" id="video_id_home" value="{{ $settingArr['video_id_home'] }}">
+                </div>
+                <div class="form-group">
                   <label>Email CC</label>
                   <textarea class="form-control" rows="3" name="email_cc" id="email_cc">{{ $settingArr['email_cc'] }}</textarea>
                 </div>
