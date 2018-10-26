@@ -3744,6 +3744,8 @@ img {
     }
     .dq-fix-icon .product-list li:nth-child(1) .icon {
     background: #82bf00;
+    border: 5px solid #82bf00;
+    box-shadow: 2px 2px 5px 2px #0a632c;
 }
 .padding-top-5 {
     padding-top: 5px !important;
@@ -3756,6 +3758,8 @@ img {
     width: 130px;
     display: inline-flex;
     margin-top: 20px;
+    border: 5px solid #82bf00;
+    box-shadow: 2px 2px 5px 2px #0a632c;
 }
 .icon, .icon2 {
     position: relative;
