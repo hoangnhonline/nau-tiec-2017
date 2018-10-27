@@ -256,27 +256,3 @@
 	</div>
 </div>
 </section>
-
-<style type="text/css">
-
-</style>
-<script type="text/javascript">
-	$(window).load(function() {
-	  $('#slider').flexslider({
-	    controlNav: false,
-	    animationLoop: true,
-	    slideshow: true,
-		slideshowSpeed: 5000,    
-	    animation: "slide",
-	  });
-	  $('#carousel').flexslider({
-	    animation: "slide",
-	    controlNav: false,
-	    animationLoop: true,
-	    slideshow: true,
-	    slideshowSpeed: 4000,
-	    itemWidth: 294,
-	    itemMargin: 5,	  
-	  });
-	});
-</script>

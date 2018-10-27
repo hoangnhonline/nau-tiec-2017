@@ -9,7 +9,30 @@
   (function($){
     "use strict";
   /* ==================================================== */
-
+  $.ajaxSetup({
+      headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+  });
+  $('nav#menu').mmenu();
+  $('#slider').flexslider({
+      controlNav: false,
+      animationLoop: true,
+      slideshow: true,
+    slideshowSpeed: 5000,    
+      animation: "slide",
+    });
+   $('body').append('<div id="top" ></div>');
+   $(window).scroll(function() {
+       if($(window).scrollTop() > 100) {
+           $('#top').fadeIn();
+       } else {
+           $('#top').fadeOut();
+       }
+   });
+   $('#top').click(function() {
+       $('html, body').animate({scrollTop:0},500);
+   });
   /*
    * 1. Click icon search show search moblie
   */
@@ -103,4 +126,33 @@ $(document).ready(function() {
       }
     }, {scope: 'public_profile,email'});
   });  
+});
+$(document).ready(function(){
+  $("input.number").keydown(function (e) {
+    // Allow: backspace, delete, tab, escape, enter and .
+    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+         // Allow: Ctrl+A, Command+A
+        (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
+         // Allow: home, end, left, right, down, up
+        (e.keyCode >= 35 && e.keyCode <= 40)) {
+             // let it happen, don't do anything
+             return;
+    }
+    // Ensure that it is a number and stop the keypress
+    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+        e.preventDefault();
+    }
+});
+  $('.toggle-menu-select, a.form-close').click(function(){
+    $('.menu-select .wrapper-menu-select').toggle();
+  });
+  
+});
+jQuery(document).ready(function() {          
+  $('.content iframe').each(function(index, el) {
+    $(this).wrap( "<div class='video-container'></div>" );
+  });
+    $('.content table').each(function(index, el) {
+    $(this).wrap( "<div class='table-responsive'></div>" );
+  });           
 });

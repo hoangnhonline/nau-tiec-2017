@@ -3442,6 +3442,9 @@ h3 {
         width: 100%;
         text-align: center;
     }
+    .menu{
+        clear: both;
+    }
     .logo img, {
         margin: 0 auto;
     }
@@ -3999,3 +4002,70 @@ div.hotline{
   font-size:  22px;
 }
 .date{margin-bottom: 15px;}
+.tieude h3:after {
+
+background: url(../upload/hinhanh/bdtd.png) no-repeat;
+}
+
+.tieude h3:before {
+
+background: url(../upload/hinhanh/bdtd1.png) no-repeat;
+}
+.header{
+    background:url(../upload/hinhanh/1-8460.jpg);background-size:cover;box-sizing: border-box;    padding:5px 0px;
+}
+#menu{
+  background-color: #FFF;
+}
+.tt_gt h3 {
+  padding: 10px;
+  background: url(../upload/hinhanh/brleft.png) no-repeat;
+}
+.tieude_mn {
+    background: url(../upload/hinhanh/brlist.png) repeat-x;
+}
+.moudle-left ul li a {
+
+    background: url(../upload/hinhanh/brlist.png) repeat-x;
+  }
+  .moudle-left ul li a:after {
+
+  background: url(../upload/hinhanh/check1.png);
+}
+.tieude_mn h3:before {
+ 
+  background: url(../upload/hinhanh/check.png) no-repeat;
+}
+
+.khungtt div:nth-child(4):before {
+  
+  background: url(../upload/hinhanh/ic4.png) no-repeat;
+}
+
+.khungtt div:nth-child(3):before {
+ 
+  background: url(../upload/hinhanh/ic3.png) no-repeat;
+}
+ .khungtt div:nth-child(2):before {
+ 
+  background: url(../upload/hinhanh/ic2.png) no-repeat;
+}
+.khungtt div:nth-child(1):before {
+ 
+  background: url(../upload/hinhanh/ic1.png) no-repeat;
+        }
+        .item-wr3 .hover3{
+          min-height: 230px;
+        }
+        .item-wr .hover2{
+          min-height: 140px
+        }
+li.menu-cap-2, .submenu li.parent{
+    border-bottom:1px dashed #c4c4c4;
+}
+.item-contact{
+    margin-right: 10px;
+}
+#loadModalDat{
+    display: none;
+}
