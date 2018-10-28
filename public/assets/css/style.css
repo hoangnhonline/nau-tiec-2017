@@ -664,12 +664,11 @@ h3 {
     text-transform: uppercase;
     position: relative;
     text-decoration: none;
-    color: #666;
+    color: #090909;
     font-family: 'Roboto';
     background-size: 100% 100% !important;
     border: 1px solid #fff;
     display: block;
-
 }
 .menu ul li:hover>a {
     background: rgba(255, 255, 255, 0.1);
@@ -710,7 +709,7 @@ h3 {
     transition: all ease-out 0.2s;
 }
 .menu ul li>ul li {
-    background-color: #4d9351;
+    background-color: #000000;
     width: 240px;
     text-align: left;
     line-height: 30px !important;
@@ -768,12 +767,12 @@ h3 {
 }
 /* active */
 
-.menu > ul > li.active > a {    
-    font-family: 'Roboto'; 
+.menu > ul > li.active > a {
+    font-family: 'Roboto';
     background: rgba(255, 255, 255, 0.1);
-    color: #7fbd2e;    
+    color: #e56100;
     text-decoration: none;
-    border-color: #7fbd2e;   
+    border-color: #000000;
 }
 .active >ul >li >a {
     color: #fff !important;
@@ -1863,7 +1862,7 @@ h3 {
     z-index: 9;
     position: relative;
     font-size: 16px;
-    color: #82bf00;
+    color: #ff7800;
     font-weight: bold;
 }
 .tieude h3:after {
@@ -2999,10 +2998,10 @@ h3 {
 }
 .item-gia {
     font-family: 'Roboto';
-    background: #82bf00;
+    background: #000000;
     line-height: 38px;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
+    /* border-top-left-radius: 0.5em; */
+    /* border-top-right-radius: 0.5em; */
     text-indent: 10px;
     text-align: center;
     color: #fff;
@@ -3139,7 +3138,7 @@ h3 {
     text-shadow: 3px 3px 5px #fff, 3px 3px 5px #fff, 3px -3px 5px #fff, -3px 3px 5px #fff;
 }
 .item-wr3 .content {
-    background-color: #f5f5f5;
+    background-color: #ff96009e;
     padding: 3px;
     height: 320px;
     overflow-y: auto;
@@ -3572,7 +3571,7 @@ footer.footer .site-footer {
     background-color: #212126;
     background-repeat: no-repeat;
     background-size: cover;
-    border-top: 3px solid #39b54a;
+    border-top: 3px solid #fd8b04;
     width: 100%;
     height: 100%;
     margin-top: -5px;
@@ -3626,7 +3625,7 @@ footer.footer .title-menu a {
     line-height: 32px;
     border-radius: 50%;
     text-decoration: none;
-    border: 2px solid #82bf00;
+    border: 2px solid #ff8605;
 }
 .mid-footer .social_footer .follow_option {
     float: left;
@@ -3647,7 +3646,7 @@ footer.footer .widget-ft.last {
     margin-right: 10px;
 }
 .mid-footer .social_footer .follow_option li a .fa {
-    color: #82bf00;
+    color: #ff8605;
     font-size: 14px;
     line-height: 30px;
     margin-right: 0px;
@@ -3674,7 +3673,7 @@ li{
 }
 .btn.btn-primary, input.btn-primary[type="submit"] {
     padding: 0 25px;
-    background: #39b54a;
+    background: #ff6f05;
     color: #fff;
     border-radius: 30px;
     font-size: 14px;
@@ -3747,9 +3746,10 @@ img {
         line-height: 25px;
     }
     .dq-fix-icon .product-list li:nth-child(1) .icon {
-    background: #82bf00;
-    border: 5px solid #82bf00;
-    box-shadow: 2px 2px 5px 2px #0a632c;
+    background: none;
+    border: 1px solid #ffffff;
+    box-shadow: 2px 2px 5px 2px #383838;
+    /* box-shadow: 2px 2px 5px 2px #9f9f9f; */
 }
 .padding-top-5 {
     padding-top: 5px !important;
@@ -3762,8 +3762,8 @@ img {
     width: 130px;
     display: inline-flex;
     margin-top: 20px;
-    border: 5px solid #82bf00;
-    box-shadow: 2px 2px 5px 2px #0a632c;
+    border: 1px solid #ffffff;
+    box-shadow: 2px 2px 5px 2px #383838;
 }
 .icon, .icon2 {
     position: relative;
@@ -3771,7 +3771,7 @@ img {
     font-size: 65px;
     text-align: center;
     color: #fff;
-    background: #82bf00;
+    background: none;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -3895,7 +3895,7 @@ h5:hover{
 .menu-select .toggle-menu-select {
     margin-left: 0;
     margin-top: -37px;
-    background: #fc0;
+    background: #ff8605;
     color: #fff;
     font-weight: 700;
     padding: 4px 8px;
@@ -3940,7 +3940,7 @@ h5:hover{
     color: #fc0;
 }
 .header-top {
-    background-color: #7fbd2e;
+    background-color: #000000;
     color: #fff;
     padding: 7px;
 }
@@ -4068,4 +4068,18 @@ li.menu-cap-2, .submenu li.parent{
 }
 #loadModalDat{
     display: none;
+}
+ul.product-list {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.content .row {
+    border-bottom: 1px dashed #ffffff;
+    padding: 5px;
+}
+.product-list h5 a {
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 16px;
+    word-spacing: -3px;
 }

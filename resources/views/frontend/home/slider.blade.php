@@ -21,7 +21,7 @@
 	</div>	
 </div>
 @endif
-	<section class=" bg-color dq-fix-icon" style="background-color: #f5f5f5;margin-top: -5px;">
+	<section class=" bg-color dq-fix-icon" style="background-color: #000000;margin-top: -5px;">
 		<div class="container">			
 			<ul class="row product-list">
 				@foreach($tiecList as $articles)							
@@ -99,7 +99,7 @@
 			@foreach($foodTypeList as $foodType)
 			<div class="panel-group">
 			    <div class="panel panel-default">
-			      <div class="panel-heading" style="background-color: #82bf00; color: #FFF; font-weight: bold">
+			      <div class="panel-heading" style="background-color: #252525; color: #FFF; font-weight: bold">
 			        <h4 class="panel-title">
 			          <a data-toggle="collapse" href="#collapse{!! $foodType->slug !!}">{!! $foodType->name !!}</a>
 			        </h4>
@@ -118,8 +118,8 @@
 			        	<table class="table table-bordered">
 			        		@if($foodType->foodGroup->count() > 0)
 					    	@foreach($foodType->foodGroup as $group)
-					    	<tr id="mon{{$group->slug}}" style="color: #82bf00;font-weight: bold;text-transform: uppercase;">
-					    		<td colspan="3"><p class="food-group" style="text-align: center;">{!! $group->name !!}</p></td>			    	
+					    	<tr id="mon{{$group->slug}}" style="color: #000000; font-weight: bold; font-size: 20px; text-transform: uppercase;">
+					    		<td colspan="3"><p class="food-group" style="text-align: center;padding-top: 15px;">{!! $group->name !!}</p></td>			    	
 					    	</tr>
 						    	@foreach($group->food as $food)
 
