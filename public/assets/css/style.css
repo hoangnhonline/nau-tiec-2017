@@ -302,7 +302,7 @@ h3 {
     color: #555;
     background-color: #fff;
     background-image: none;
-    border: 1px solid #95C7DA;
+    border: 1px solid #eee;
     box-sizing: border-box;
     margin-bottom: 10px;
     border-radius: 3px;
@@ -3817,7 +3817,7 @@ h5:hover{
 .wrapper-menu-select .form-header {
     position: relative;
     padding: 3px 10px;
-    background: #90c948;
+    background: #e56100;
     font-weight: 700;
     color: #fff;
     border-radius: 0 4px 0 0;
@@ -3883,7 +3883,7 @@ h5:hover{
 }
 .wrapper-menu-select .form-footer {
     text-align: right;
-    background-color: #90c948;
+    background-color: #e56100;
     font-weight: 700;
     padding: 5px 5px 5px 0;
 }
@@ -3914,7 +3914,7 @@ h5:hover{
     color: #000;
 }
 #myModal .modal-header{
-        background-color: #90c948;
+        background-color: #e56100;
     color: #FFF;
     text-transform: uppercase;
 }
