@@ -107,7 +107,7 @@
 			        <ul class="list-group-mon">
 					    	@foreach($foodType->foodGroup as $group)
 					    	
-					    		<li style="display: inline;"><a style="color: #FFF" href="#mon{{ $group->slug }}">{!! $group->name !!}</a> | </li>
+					    		<li style="display: inline;"><a style="color: #ff6f05;text-transform: lowercase;" href="#mon{{ $group->slug }}">{!! $group->name !!}</a> // </li>
 					    
 					    	@endforeach
 					    		</ul>
