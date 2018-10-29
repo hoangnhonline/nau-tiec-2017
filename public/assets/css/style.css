@@ -113,7 +113,7 @@ a {
 }
 a:hover {
     text-decoration: none;
-    color: #F00;
+    color: #e56100;
 }
 h3 {
     font-weight: normal;
@@ -302,7 +302,7 @@ h3 {
     color: #555;
     background-color: #fff;
     background-image: none;
-    border: 1px solid #95C7DA;
+    border: 1px solid #eee;
     box-sizing: border-box;
     margin-bottom: 10px;
     border-radius: 3px;
@@ -672,9 +672,9 @@ h3 {
 }
 .menu ul li:hover>a {
     background: rgba(255, 255, 255, 0.1);
-    color: #7fbd2e;
+    color: #e56100;
     text-decoration: none;
-    border-color: #7fbd2e;
+    border-color: #e56100;
 }
 /* cap2 */
 
@@ -772,7 +772,7 @@ h3 {
     background: rgba(255, 255, 255, 0.1);
     color: #e56100;
     text-decoration: none;
-    border-color: #000000;
+    border-color: #e56100;
 }
 .active >ul >li >a {
     color: #fff !important;
@@ -1500,7 +1500,7 @@ h3 {
     background: #F6F6F6;
 }
 .footer {
-    background-color: #82bf00;
+    background-color: #e56100;
     position: relative;
 }
 .footer .fixed-ft {
@@ -3150,11 +3150,11 @@ h3 {
 }
 .item-wr3 .content::-webkit-scrollbar {
     width: 2px;
-    background-color: #82bf00;
+    background-color: #e56100;
 }
 .item-wr3 .content::-webkit-scrollbar-thumb {
     background-color: #000000;
-    border: 2px solid #82bf00;
+    border: 2px solid #e56100;
 }
 .box_hma {
     position: relative;
@@ -3244,7 +3244,7 @@ h3 {
         font-size: 30px;
     }
     .nav-menu {
-      background-color: #82bf00;
+      background-color: #e56100;
       height: auto !important;
       margin: 0;
       clear: both;
@@ -3667,18 +3667,13 @@ li{
 }
 .mid-footer .contact_mail .btn {
     margin-top: -3px;
-    line-height: 34px;
-    height: 34px;
-    border-radius: 3px;
+    
 }
 .btn.btn-primary, input.btn-primary[type="submit"] {
-    padding: 0 25px;
-    background: #ff6f05;
+
+    background: #e56100;
     color: #fff;
-    border-radius: 30px;
-    font-size: 14px;
-    font-family: "Roboto","HelveticaNeue","Helvetica Neue",sans-serif;
-    border: 1px solid transparent;
+   
 }
 .backtop .fa {
     font-size: 22px;
@@ -3792,7 +3787,7 @@ ul.product-list li{
     font-weight: 700;
 }
 h5:hover{
-    color: #82bf00;
+    color: #e56100;
 }
 .food-price{
     color: #ca0808;
@@ -3822,7 +3817,7 @@ h5:hover{
 .wrapper-menu-select .form-header {
     position: relative;
     padding: 3px 10px;
-    background: #90c948;
+    background: #e56100;
     font-weight: 700;
     color: #fff;
     border-radius: 0 4px 0 0;
@@ -3888,7 +3883,7 @@ h5:hover{
 }
 .wrapper-menu-select .form-footer {
     text-align: right;
-    background-color: #90c948;
+    background-color: #e56100;
     font-weight: 700;
     padding: 5px 5px 5px 0;
 }
@@ -3919,7 +3914,7 @@ h5:hover{
     color: #000;
 }
 #myModal .modal-header{
-        background-color: #90c948;
+        background-color: #e56100;
     color: #FFF;
     text-transform: uppercase;
 }
@@ -3964,9 +3959,9 @@ h5:hover{
 }
 .block-sidebar .block-title .title {
     font-size: 15px;
-    color: #82bf00;
+    color: #e56100;
     padding-bottom: 5px;
-    border-bottom: 1px solid #82bf00;
+    border-bottom: 1px solid #e56100;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -3988,14 +3983,14 @@ div.hotline{
   margin-top: 5px;
 }
 .danhmuc h5 a:hover{
-  color: #82bf00
+  color: #e56100
 }
 .danhmuc .lastest-title{
   margin-top: 5px;
   text-align: left;
 }
 .danhmuc .lastest-title a:hover{
-  color: #82bf00
+  color: #e56100
 }
 #tieude h2{
   margin-bottom: 15px;
@@ -4083,6 +4078,13 @@ ul.product-list {
     font-size: 16px;
     word-spacing: -3px;
 }
+
 .panel-default>.panel-heading+.panel-collapse>.panel-body {
     background: #ededed;
+}
+.fadeInLeft{
+    color : #e56100; margin-bottom:20px;font-weight:bold
+}
+h3.fadeInLeft{
+    font-size:24px;
 }
