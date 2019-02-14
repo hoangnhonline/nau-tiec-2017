@@ -61,7 +61,10 @@
                   <label>Slug <span class="red-star">*</span></label>                  
                   <input type="text" class="form-control" name="slug" id="slug" value="{{ old('slug') }}">
                 </div>
-                
+                <div class="form-group">                  
+                  <label>URL</label>                  
+                  <input type="text" class="form-control" name="url" id="url" value="{{ old('url') }}">
+                </div>
                 <div class="form-group" style="margin-top:10px;margin-bottom:10px">  
                   <label class="col-md-3 row">Thumbnail ( 600x336 px)</label>    
                   <div class="col-md-9">

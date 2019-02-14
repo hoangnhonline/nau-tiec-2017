@@ -118,6 +118,17 @@
     <div class="bottom">
     </div>
     @include('frontend.partials.footer')
+    <div class="ppocta-ft-fix">
+	<div id="messengerButton"> 
+		<a href="http://fb.com/msg/tiecngon.vn" target="_blank" onclick="_gaq.push(['_trackEvent', 'Call To Action', 'Messenger Button', 'Mobile']);"><i></i></a>
+	</div>
+	<div id="zaloButton"> 
+		<a href="http://zalo.me/0938766885" target="_blank" onclick="_gaq.push(['_trackEvent', 'Call To Action', 'Zalo Button', 'Mobile']);"><i></i></a>
+	</div>
+	<div id="callNowButton"> 
+		<a href="tel:0938766885" onclick="_gaq.push(['_trackEvent', 'Call To Action', 'Call Button', 'Mobile']);"><i></i></a>
+	</div>
+    </div>
     <a id="return-to-top" class="td-scroll-up" href="javascript:void(0)">
         <i class="fa fa-angle-up" aria-hidden="true"></i>
     </a>

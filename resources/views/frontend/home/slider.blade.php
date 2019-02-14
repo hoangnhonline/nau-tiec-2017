@@ -27,12 +27,21 @@
 				@foreach($tiecList as $articles)							
 				<li class="col-md-2 col-sm-4 col-xs-6">
 					<div class="icon">
+						@if($articles->url)
+						<a style="height: 100%" href="{{ $articles->url }}" title="{!! $articles->title !!}" target="_blank">
+						@else
 						<a style="height: 100%" href="{{ route('news-detail', ['slug' => $articles->slug, 'id' => $articles->id]) }}" title="{!! $articles->title !!}">
+						@endif
 							<img style="height: 100%" src="{!! Helper::showImage($articles->image_url) !!}" alt="{!! $articles->title !!}">
 						</a>
 					</div>
 					<h5>
+
+						@if($articles->url)
+						<a href="{{ $articles->url }}" title="{!! $articles->title !!}" target="_blank">
+						@else
 						<a href="{{ route('news-detail', ['slug' => $articles->slug, 'id' => $articles->id]) }}" title="{!! $articles->title !!}">
+						@endif
 						{!! $articles->title !!}
 						</a>
 					</h5>				
@@ -194,7 +203,7 @@
 			<div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
 				<div class="box mg_mb mg_l_mb">
 					<div class="block-video">
-						<iframe width="100%" height="345" src="https://www.youtube.com/embed/{{ $settingArr['video_id_home'] }}" frameborder="0" allowfullscreen id="load_video"></iframe>
+						<iframe width="100%" height="345" src="https://www.youtube.com/embed/{{ $settingArr['video_id_home'] }}?rel=0&showinfo=0&controls=0" frameborder="0" allowfullscreen id="load_video" allow="autoplay"></iframe>
 					</div>
 				</div>
 			</div>
